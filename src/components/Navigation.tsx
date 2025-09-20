@@ -449,11 +449,6 @@ export const Navigation: React.FC = () => {
                   Menu de Dieu
                 </span>
                 
-                {/* Effet de lueur externe */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent opacity-30 blur-sm group-hover:opacity-50 transition-all duration-1000 font-black text-2xl sm:text-5xl tracking-wider whitespace-nowrap">
-                  Menu de Dieu
-                </div>
-                
                 {/* Bordure lumineuse animée */}
                 <div className="absolute -inset-3 bg-gradient-to-r from-cyan-400 via-purple-400 via-pink-400 to-yellow-400 rounded-3xl opacity-30 blur-2xl animate-pulse group-hover:opacity-60 group-hover:blur-3xl transition-all duration-1000"></div>
                 
