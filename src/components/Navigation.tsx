@@ -142,10 +142,10 @@ export const Navigation: React.FC = () => {
     const currentPhrase = phrases[currentPhraseIndex];
     
     if (!isDeleting && !isTyping) {
-      // Attendre 3 secondes avant de commencer à supprimer
+      // Attendre 1 seconde avant de commencer à supprimer
       const waitTimer = setTimeout(() => {
         setIsDeleting(true);
-      }, 3000);
+      }, 1000);
       return () => clearTimeout(waitTimer);
     }
     
