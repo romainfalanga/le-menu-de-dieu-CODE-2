@@ -462,8 +462,69 @@ export const Navigation: React.FC = () => {
             </div>
           </div>
           
+          {/* Phrase stylisée sous le titre */}
+          <div className="mt-8 sm:mt-12 mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
+            <div className="relative group cursor-default">
+              {/* Fond principal avec gradient animé */}
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-purple-800/90 to-indigo-800/90 rounded-2xl"></div>
+              
+              {/* Couche de grille futuriste */}
+              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,182,212,0.08)_1px,transparent_1px),linear-gradient(rgba(6,182,212,0.08)_1px,transparent_1px)] bg-[size:20px_20px] rounded-2xl"></div>
+              
+              {/* Effet de vagues énergétiques */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 via-purple-500/5 via-pink-500/5 to-transparent bg-[length:200%_100%] animate-gradient-x rounded-2xl"></div>
+              
+              {/* Bordures lumineuses */}
+              <div className="absolute inset-0 rounded-2xl border border-cyan-400/30 shadow-[0_0_20px_rgba(6,182,212,0.2)]"></div>
+              <div className="absolute inset-1 rounded-2xl border border-purple-400/20 shadow-[0_0_15px_rgba(147,51,234,0.15)]"></div>
+              
+              {/* Particules flottantes */}
+              <div className="absolute inset-0 overflow-hidden rounded-2xl">
+                {[...Array(4)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="absolute w-1 h-1 bg-white rounded-full animate-ping opacity-30"
+                    style={{
+                      top: `${Math.random() * 100}%`,
+                      left: `${Math.random() * 100}%`,
+                      animationDelay: `${Math.random() * 4}s`,
+                      animationDuration: `${3 + Math.random() * 2}s`
+                    }}
+                  />
+                ))}
+              </div>
+              
+              {/* Lueur externe pulsante */}
+              <div className="absolute -inset-2 bg-gradient-to-r from-cyan-600/10 via-purple-600/10 to-pink-600/10 rounded-2xl blur-xl animate-pulse opacity-50"></div>
+              
+              {/* Effet holographique */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-300/3 via-purple-300/3 to-transparent bg-[length:300%_100%] animate-gradient-x rounded-2xl opacity-40"></div>
+              
+              {/* Texte principal */}
+              <div className="relative z-10 p-4 sm:p-6 text-center">
+                <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
+                  « Si Dieu avait un menu pour créer l'univers, il ressemblerait à ça »
+                </p>
+                
+                {/* Bordure lumineuse animée autour du texte */}
+                <div className="absolute -inset-2 bg-gradient-to-r from-cyan-400/20 via-purple-400/20 to-pink-400/20 rounded-2xl opacity-20 blur-lg animate-pulse"></div>
+                
+                {/* Effet de scan horizontal */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-scan rounded-2xl"></div>
+                
+                {/* Reflets cristallins */}
+                <div className="absolute top-2 left-1/4 w-1/2 h-0.5 bg-gradient-to-r from-transparent via-white/60 to-transparent blur-sm opacity-40"></div>
+                <div className="absolute bottom-2 right-1/4 w-1/3 h-0.5 bg-gradient-to-r from-transparent via-cyan-300/60 to-transparent blur-sm opacity-30"></div>
+              </div>
+              
+              {/* Particules orbitales */}
+              <div className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+              <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-purple-400 rounded-full animate-ping opacity-60 animation-delay-300"></div>
+            </div>
+          </div>
+          
           {/* Bouton de fermeture X en haut à droite du contenu */}
-          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 max-w-5xl w-full mt-12 sm:mt-20 flex-shrink-0">
+          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 max-w-5xl w-full flex-shrink-0">
             {navigationItems.map((item, index) => (
               <Link
                 key={item.path}
