@@ -31,7 +31,7 @@ const TeleportingBinaryDigits: React.FC = () => {
               return {
                 ...digit,
                 visible: false,
-                nextChangeTime: now + 100 // Réapparaître dans exactement 100ms
+                nextChangeTime: now + 50 // Réapparaître dans exactement 50ms
               };
             } else {
               // Réapparaître à un nouvel endroit avec de nouvelles propriétés
@@ -43,14 +43,14 @@ const TeleportingBinaryDigits: React.FC = () => {
                 opacity: Math.random() * 0.3 + 0.1,
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
-                nextChangeTime: now + 2000 // Rester visible 2 secondes avant prochaine téléportation
+                nextChangeTime: now + Math.random() * 200 + 100 // Rester visible 0.1s à 0.3s avant prochaine téléportation
               };
             }
           }
           return digit;
         })
       );
-    }, 50); // Vérification toutes les 50ms
+    }, 10); // Vérification toutes les 10ms
 
     return () => clearInterval(interval);
   }, []);
@@ -106,7 +106,7 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
               return {
                 ...digit,
                 visible: false,
-                nextChangeTime: now + 200 // Réapparaître dans exactement 200ms
+                nextChangeTime: now + 1000 // Réapparaître dans exactement 1 seconde
               };
             } else {
               // Réapparaître à un nouvel endroit avec de nouvelles propriétés
@@ -118,14 +118,14 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
                 color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
-                nextChangeTime: now + 2000 // Rester visible 2 secondes avant prochaine téléportation
+                nextChangeTime: now + Math.random() * 2000 + 1000 // Rester visible 1s à 3s avant prochaine téléportation
               };
             }
           }
           return digit;
         })
       );
-    }, 50); // Vérification toutes les 50ms
+    }, 100); // Vérification toutes les 100ms
 
     return () => clearInterval(interval);
   }, []);
