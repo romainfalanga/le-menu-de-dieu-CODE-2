@@ -602,8 +602,20 @@ export const Navigation: React.FC = () => {
                 <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
                   <span className="sm:hidden">
                     {(() => {
-                      const fullText = "L'univers est un jeu, alors amuse-toi";
-                      const breakPoint = "L'univers est un jeu, ";
+                      const currentPhrase = phrases[currentPhraseIndex];
+                      
+                      // Définir les points de rupture pour chaque phrase
+                      let breakPoint = "";
+                      if (currentPhrase === "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça") {
+                        breakPoint = "Si Dieu avait un menu pour créer l'univers, ";
+                      } else if (currentPhrase === "L'univers est un jeu, alors amuse-toi") {
+                        breakPoint = "L'univers est un jeu, ";
+                      }
+                      
+                      // Si pas de point de rupture défini, afficher normalement
+                      if (!breakPoint) {
+                        return displayedText;
+                      }
                       
                       if (displayedText.length <= breakPoint.length) {
                         // Avant le point de rupture, afficher normalement
