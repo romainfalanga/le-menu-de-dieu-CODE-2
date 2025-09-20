@@ -470,7 +470,7 @@ export const Navigation: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-30"></div>
         
         {/* Chiffres binaires 0 et 1 flottants dans l'espace-temps */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
           <TeleportingBinaryDigitsMenu />
         </div>
         
