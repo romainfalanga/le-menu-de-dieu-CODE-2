@@ -218,10 +218,10 @@ export const Navigation: React.FC = () => {
             {/* Bouton Menu Hamburger / Fermer - toujours présent */}
             <button
               onClick={toggleMobileMenu}
-              className={`relative group text-white rounded-3xl p-6 sm:p-8 transition-all duration-1000 transform hover:scale-125 active:scale-95 shadow-[0_0_50px_rgba(6,182,212,0.5)] hover:shadow-[0_0_80px_rgba(147,51,234,0.8)] border-4 border-cyan-400/40 hover:border-purple-400/80 ${
+              className={`relative group text-white rounded-3xl p-6 sm:p-8 shadow-[0_0_50px_rgba(6,182,212,0.5)] hover:shadow-[0_0_80px_rgba(147,51,234,0.8)] border-4 border-cyan-400/40 hover:border-purple-400/80 ${
                 isMobileMenuOpen 
-                  ? 'bg-gradient-to-r from-red-600/95 via-pink-600/95 to-red-600/95 hover:from-red-700/95 hover:via-pink-700/95 hover:to-red-700/95' 
-                  : 'bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-indigo-900/95 hover:from-cyan-600/95 hover:via-purple-600/95 hover:to-pink-600/95'
+                  ? 'bg-gradient-to-r from-red-600/95 via-pink-600/95 to-red-600/95' 
+                  : 'bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-indigo-900/95'
               }`}
             >
               {/* Fond principal avec gradient animé */}
@@ -299,37 +299,37 @@ export const Navigation: React.FC = () => {
               </div>
               
               {/* Icône Menu/Fermer avec effets multiples */}
-              <div className="relative z-10 transition-all duration-1000 group-hover:scale-110">
+              <div className="relative z-10">
                 <div className="relative">
                   {/* Icône principale - change selon l'état */}
                   {isMobileMenuOpen ? (
-                    <X className="w-8 h-8 sm:w-10 sm:h-10 relative z-10 drop-shadow-[0_0_15px_rgba(239,68,68,0.8)] group-hover:drop-shadow-[0_0_25px_rgba(239,68,68,1)] transition-all duration-1000" />
+                    <X className="w-8 h-8 sm:w-10 sm:h-10 relative z-10 drop-shadow-[0_0_15px_rgba(239,68,68,0.8)]" />
                   ) : (
-                    <Menu className="w-8 h-8 sm:w-10 sm:h-10 relative z-10 drop-shadow-[0_0_15px_rgba(6,182,212,0.8)] group-hover:drop-shadow-[0_0_25px_rgba(147,51,234,1)] transition-all duration-1000" />
+                    <Menu className="w-8 h-8 sm:w-10 sm:h-10 relative z-10 drop-shadow-[0_0_15px_rgba(6,182,212,0.8)]" />
                   )}
                   
                   {/* Effet de lueur externe sur l'icône */}
-                  <div className="absolute inset-0 opacity-30 blur-sm group-hover:opacity-60 transition-all duration-1000">
+                  <div className="absolute inset-0 opacity-30 blur-sm">
                     {isMobileMenuOpen ? (
-                      <X className="w-8 h-8 sm:w-10 sm:h-10 text-red-400 group-hover:text-red-300 transition-colors duration-1000" />
+                      <X className="w-8 h-8 sm:w-10 sm:h-10 text-red-400" />
                     ) : (
-                      <Menu className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400 group-hover:text-purple-400 transition-colors duration-1000" />
+                      <Menu className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400" />
                     )}
                   </div>
                   
                   {/* Bordure lumineuse animée autour de l'icône */}
-                  <div className={`absolute -inset-2 rounded-2xl opacity-20 blur-lg animate-pulse group-hover:opacity-40 group-hover:blur-xl transition-all duration-1000 ${
+                  <div className={`absolute -inset-2 rounded-2xl opacity-20 blur-lg animate-pulse ${
                     isMobileMenuOpen 
                       ? 'bg-gradient-to-r from-red-400 via-pink-400 via-red-400 to-pink-400' 
                       : 'bg-gradient-to-r from-cyan-400 via-purple-400 via-pink-400 to-yellow-400'
                   }`}></div>
                   
                   {/* Effet de scan horizontal sur l'icône */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-scan rounded-2xl"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 animate-scan rounded-2xl"></div>
                   
                   {/* Reflets cristallins sur l'icône */}
-                  <div className="absolute top-0 left-1/4 w-1/2 h-0.5 bg-gradient-to-r from-transparent via-white/90 to-transparent blur-sm opacity-40 group-hover:opacity-80 transition-all duration-1000"></div>
-                  <div className="absolute bottom-0 right-1/4 w-1/3 h-0.5 bg-gradient-to-r from-transparent via-cyan-300/90 to-transparent blur-sm opacity-30 group-hover:opacity-70 transition-all duration-1000"></div>
+                  <div className="absolute top-0 left-1/4 w-1/2 h-0.5 bg-gradient-to-r from-transparent via-white/90 to-transparent blur-sm opacity-40"></div>
+                  <div className="absolute bottom-0 right-1/4 w-1/3 h-0.5 bg-gradient-to-r from-transparent via-cyan-300/90 to-transparent blur-sm opacity-30"></div>
                 </div>
               </div>
               
@@ -342,8 +342,8 @@ export const Navigation: React.FC = () => {
               <div className="absolute -bottom-2 -right-2 w-2 h-2 bg-yellow-400 rounded-full animate-ping opacity-50 group-hover:opacity-80 transition-opacity duration-1000 animation-delay-700"></div>
               
               {/* Anneaux énergétiques qui s'étendent au hover */}
-              <div className="absolute inset-0 rounded-full border-2 border-cyan-400/0 group-hover:border-cyan-400/30 group-hover:scale-150 transition-all duration-1000 animate-pulse"></div>
-              <div className="absolute inset-0 rounded-full border border-purple-400/0 group-hover:border-purple-400/20 group-hover:scale-200 transition-all duration-1500 animate-pulse animation-delay-300"></div>
+              <div className="absolute inset-0 rounded-full border-2 border-cyan-400/0 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-full border border-purple-400/0 animate-pulse animation-delay-300"></div>
             </button>
           </div>
         </div>
@@ -357,7 +357,7 @@ export const Navigation: React.FC = () => {
         className={`fixed top-0 left-0 right-0 bg-gradient-to-br from-slate-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-2xl border-b-2 border-cyan-400/40 shadow-2xl transition-all duration-700 ease-in-out z-[99999] ${
           isMobileMenuOpen 
             ? 'h-screen opacity-100 visible overflow-y-auto pointer-events-auto' 
-            : 'h-0 opacity-0 invisible overflow-hidden pointer-events-none transform -translate-y-full'
+            : 'h-0 opacity-0 invisible overflow-hidden pointer-events-none'
         }`}
         style={{ zIndex: 99999 }}
         onClick={(e) => {
