@@ -463,7 +463,7 @@ export const Navigation: React.FC = () => {
           </div>
           
           {/* Phrase stylisée sous le titre */}
-          <div className="mt-12 sm:mt-16 mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
+          <div className="mt-8 sm:mt-16 mb-8 sm:mb-12 max-w-4xl mx-auto px-4">
             <div className="relative group cursor-default">
               {/* Fond principal avec gradient animé */}
               <div className="absolute inset-0 bg-gradient-to-r from-slate-800/90 via-purple-800/90 to-indigo-800/90 rounded-2xl"></div>
