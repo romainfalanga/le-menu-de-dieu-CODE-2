@@ -161,12 +161,12 @@ export const Navigation: React.FC = () => {
           }
           return prev.slice(0, -1);
         });
-      }, 50); // 50ms entre chaque suppression
+      }, 30); // 30ms entre chaque suppression (plus rapide)
       return () => clearTimeout(deleteTimer);
     }
     
     if (isTyping) {
-      // Écrire caractère par caractère
+      // Écrire caractère par caractère (plus rapide)
       const typeTimer = setTimeout(() => {
         setDisplayedText(prev => {
           if (prev.length === currentPhrase.length) {
@@ -175,7 +175,7 @@ export const Navigation: React.FC = () => {
           }
           return currentPhrase.slice(0, prev.length + 1);
         });
-      }, 80); // 80ms entre chaque caractère
+      }, 50); // 50ms entre chaque caractère (plus rapide)
       return () => clearTimeout(typeTimer);
     }
   }, [currentPhraseIndex, isDeleting, isTyping, displayedText, phrases]);
