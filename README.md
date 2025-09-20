@@ -36,23 +36,41 @@ npm run build
 
 ## 🌐 Déploiement sur Netlify
 
-1. **Build le projet** :
+1. **Cloner et installer** :
+   ```bash
+   git clone https://github.com/votre-username/le-menu-de-dieu.git
+   cd le-menu-de-dieu
+   npm install
+   ```
+
+2. **Build le projet** :
    ```bash
    npm run build
    ```
 
-2. **Connecter à GitHub** :
+3. **Connecter à GitHub** :
    - Créer un nouveau repository sur GitHub
    - Pousser le code vers GitHub
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/votre-username/le-menu-de-dieu.git
+   git push -u origin main
+   ```
 
-3. **Déployer sur Netlify** :
+4. **Déployer sur Netlify** :
    - Connecter le repository GitHub à Netlify
    - Configurer le build command : `npm run build`
    - Configurer le publish directory : `dist`
    - Le fichier `netlify.toml` est déjà configuré
 
-4. **Domaine personnalisé** :
+5. **Domaine personnalisé** :
    - Configurer `lemenudedieu.netlify.app` ou votre domaine personnalisé
+
+## 🚀 Déploiement Automatique
+
+Une fois connecté à Netlify, chaque push sur la branche `main` déclenchera automatiquement un nouveau déploiement.
 
 ## 📁 Structure du Projet
 

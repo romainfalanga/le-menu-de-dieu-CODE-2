@@ -31,7 +31,7 @@ const TeleportingBinaryDigits: React.FC = () => {
               return {
                 ...digit,
                 visible: false,
-                nextChangeTime: now + 50 // Réapparaître dans exactement 50ms
+                nextChangeTime: now + 100 // Réapparaître dans exactement 100ms
               };
             } else {
               // Réapparaître à un nouvel endroit avec de nouvelles propriétés
@@ -43,14 +43,14 @@ const TeleportingBinaryDigits: React.FC = () => {
                 opacity: Math.random() * 0.3 + 0.1,
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
-                nextChangeTime: now + Math.random() * 200 + 100 // Rester visible 0.1s à 0.3s avant prochaine téléportation
+                nextChangeTime: now + 2000 // Rester visible 2 secondes avant prochaine téléportation
               };
             }
           }
           return digit;
         })
       );
-    }, 10); // Vérification toutes les 10ms
+    }, 50); // Vérification toutes les 50ms
 
     return () => clearInterval(interval);
   }, []);
@@ -60,14 +60,14 @@ const TeleportingBinaryDigits: React.FC = () => {
       {digits.map(digit => (
         <div
           key={digit.id}
-          className={`absolute ${digit.size} font-mono text-cyan-400 transition-opacity duration-300 select-none ${
+          className={`absolute ${digit.size} font-mono text-green-400 transition-opacity duration-300 select-none ${
             digit.visible ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
             top: `${digit.top}%`,
             left: `${digit.left}%`,
             opacity: digit.visible ? digit.opacity : 0,
-            textShadow: '0 0 10px rgba(34, 211, 238, 0.5)',
+            textShadow: '0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2)',
             transform: 'translate(-50%, -50%)'
           }}
         >
@@ -87,7 +87,6 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
         digit: Math.random() > 0.5 ? '1' : '0',
         top: Math.random() * 90 + 5,
         left: Math.random() * 90 + 5,
-        color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
         size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 2000 + 1000 // 1s à 3s
@@ -106,7 +105,7 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
               return {
                 ...digit,
                 visible: false,
-                nextChangeTime: now + 1000 // Réapparaître dans exactement 1 seconde
+                nextChangeTime: now + 200 // Réapparaître dans exactement 200ms
               };
             } else {
               // Réapparaître à un nouvel endroit avec de nouvelles propriétés
@@ -115,17 +114,16 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
                 digit: Math.random() > 0.5 ? '1' : '0',
                 top: Math.random() * 90 + 5,
                 left: Math.random() * 90 + 5,
-                color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
-                nextChangeTime: now + Math.random() * 2000 + 1000 // Rester visible 1s à 3s avant prochaine téléportation
+                nextChangeTime: now + 2000 // Rester visible 2 secondes avant prochaine téléportation
               };
             }
           }
           return digit;
         })
       );
-    }, 100); // Vérification toutes les 100ms
+    }, 50); // Vérification toutes les 50ms
 
     return () => clearInterval(interval);
   }, []);
@@ -135,13 +133,14 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
       {digits.map(digit => (
         <div
           key={digit.id}
-          className={`absolute ${digit.color} ${digit.size} font-mono font-bold transition-opacity duration-300 drop-shadow-[0_0_8px_currentColor] ${
+          className={`absolute text-green-400 ${digit.size} font-mono font-bold transition-opacity duration-300 ${
             digit.visible ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
             top: `${digit.top}%`,
             left: `${digit.left}%`,
-            transform: 'translate(-50%, -50%)'
+            transform: 'translate(-50%, -50%)',
+            textShadow: '0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2)'
           }}
         >
           {digit.digit}
@@ -600,7 +599,41 @@ export const Navigation: React.FC = () => {
               {/* Texte principal */}
               <div className="relative z-10 p-4 sm:p-6 text-center">
                 <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
-                  {displayedText}
+                  <span className="sm:hidden">
+                    {(() => {
+                      const currentPhrase = phrases[currentPhraseIndex];
+                      
+                      // Définir les points de rupture pour chaque phrase
+                      let breakPoint = "";
+                      if (currentPhrase === "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça") {
+                        breakPoint = "Si Dieu avait un menu pour créer ";
+                      } else if (currentPhrase === "L'univers est un jeu, alors amuse-toi") {
+                        breakPoint = "L'univers est un jeu, ";
+                      }
+                      
+                      // Si pas de point de rupture défini, afficher normalement
+                      if (!breakPoint) {
+                        return displayedText;
+                      }
+                      
+                      if (displayedText.length <= breakPoint.length) {
+                        // Avant le point de rupture, afficher normalement
+                        return displayedText;
+                      } else {
+                        // Après le point de rupture, séparer en deux lignes
+                        const firstPart = breakPoint.trim();
+                        const secondPart = displayedText.substring(breakPoint.length);
+                        return (
+                          <>
+                            {firstPart}
+                            <br />
+                            {secondPart}
+                          </>
+                        );
+                      }
+                    })()}
+                  </span>
+                  <span className="hidden sm:inline">{displayedText}</span>
                   {/* Curseur clignotant */}
                   <span className="inline-block w-0.5 h-6 sm:h-7 bg-cyan-300 ml-1 animate-pulse"></span>
                 </p>
