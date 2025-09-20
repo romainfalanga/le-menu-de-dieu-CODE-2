@@ -142,10 +142,10 @@ export const Navigation: React.FC = () => {
     const currentPhrase = phrases[currentPhraseIndex];
     
     if (!isDeleting && !isTyping) {
-      // Attendre 1 seconde avant de commencer à supprimer
+      // Attendre 3 secondes avant de commencer à supprimer
       const waitTimer = setTimeout(() => {
         setIsDeleting(true);
-      }, 1000);
+      }, 3000);
       return () => clearTimeout(waitTimer);
     }
     
@@ -161,12 +161,12 @@ export const Navigation: React.FC = () => {
           }
           return prev.slice(0, -1);
         });
-      }, 30); // 30ms entre chaque suppression (plus rapide)
+      }, 50); // 50ms entre chaque suppression
       return () => clearTimeout(deleteTimer);
     }
     
     if (isTyping) {
-      // Écrire caractère par caractère (plus rapide)
+      // Écrire caractère par caractère
       const typeTimer = setTimeout(() => {
         setDisplayedText(prev => {
           if (prev.length === currentPhrase.length) {
@@ -175,7 +175,7 @@ export const Navigation: React.FC = () => {
           }
           return currentPhrase.slice(0, prev.length + 1);
         });
-      }, 50); // 50ms entre chaque caractère (plus rapide)
+      }, 80); // 80ms entre chaque caractère
       return () => clearTimeout(typeTimer);
     }
   }, [currentPhraseIndex, isDeleting, isTyping, displayedText, phrases]);
@@ -185,7 +185,7 @@ export const Navigation: React.FC = () => {
     if (displayedText === '') {
       setIsTyping(true);
     }
-  }, []);
+  }, [displayedText]);
   
   const navigationItems = [
     {
