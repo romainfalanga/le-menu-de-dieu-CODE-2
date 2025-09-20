@@ -3,26 +3,63 @@ import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Zap } from 'lucide-react';
 
-// Composant pour les chiffres binaires qui se téléportent
+// Composant pour les chiffres binaires qui se téléportent (version avancée avec détection de collision)
 const TeleportingBinaryDigits: React.FC = () => {
+  // Fonction pour vérifier si deux positions se chevauchent
+  const checkCollision = (newTop: number, newLeft: number, existingDigits: any[], minDistance: number = 0.8) => {
+    return existingDigits.some(digit => {
+      if (!digit.visible) return false; // Ignore les chiffres invisibles
+      const distance = Math.sqrt(
+        Math.pow(newTop - digit.top, 2) + Math.pow(newLeft - digit.left, 2)
+      );
+      return distance < minDistance;
+    });
+  };
+
+  // Fonction pour générer une position sans collision
+  const generateSafePosition = (existingDigits: any[], maxAttempts: number = 5) => {
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      const newTop = Math.random() * 90 + 5;
+      const newLeft = Math.random() * 90 + 5;
+      
+      if (!checkCollision(newTop, newLeft, existingDigits)) {
+        return { top: newTop, left: newLeft };
+      }
+    }
+    
+    // Si aucune position sûre n'est trouvée, retourner une position aléatoire
+    return {
+      top: Math.random() * 90 + 5,
+      left: Math.random() * 90 + 5
+    };
+  };
+
   const [digits, setDigits] = React.useState(() => 
-    Array.from({ length: 15 }, (_, i) => {
-      return {
+    Array.from({ length: 28 }, (_, i) => {
+      // Génération initiale avec détection de collision
+      const existingDigits: any[] = [];
+      const position = generateSafePosition(existingDigits);
+      
+      const newDigit = {
         id: i,
         value: Math.random() > 0.5 ? '1' : '0',
-        top: Math.random() * 90 + 5,
-        left: Math.random() * 90 + 5,
+        top: position.top,
+        left: position.left,
         opacity: Math.random() * 0.3 + 0.1,
         size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 200 + 100 // 0.1s à 0.3s
       };
+      
+      existingDigits.push(newDigit);
+      return newDigit;
     })
   );
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
+      
       setDigits(prevDigits => 
         prevDigits.map(digit => {
           if (now >= digit.nextChangeTime) {
@@ -31,32 +68,34 @@ const TeleportingBinaryDigits: React.FC = () => {
               return {
                 ...digit,
                 visible: false,
-                nextChangeTime: now + 100 // Réapparaître dans exactement 100ms
+                nextChangeTime: now + 100 // Réapparaître dans exactement 0.1 seconde
               };
             } else {
-              // Réapparaître à un nouvel endroit avec de nouvelles propriétés
+              // Réapparaître à un nouvel endroit avec de nouvelles propriétés (sans collision)
+              const position = generateSafePosition(prevDigits.filter(d => d.id !== digit.id && d.visible));
+              
               return {
                 ...digit,
                 value: Math.random() > 0.5 ? '1' : '0',
-                top: Math.random() * 90 + 5,
-                left: Math.random() * 90 + 5,
+                top: position.top,
+                left: position.left,
                 opacity: Math.random() * 0.3 + 0.1,
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
-                nextChangeTime: now + 2000 // Rester visible 2 secondes avant prochaine téléportation
+                nextChangeTime: now + Math.random() * 200 + 100 // Rester visible 0.1s à 0.3s avant prochaine téléportation
               };
             }
           }
           return digit;
         })
       );
-    }, 50); // Vérification toutes les 50ms
+    }, 10); // Vérification toutes les 10ms
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <>
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {digits.map(digit => (
         <div
           key={digit.id}
@@ -74,30 +113,67 @@ const TeleportingBinaryDigits: React.FC = () => {
           {digit.value}
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
 // Composant pour les chiffres binaires qui se téléportent dans le menu étendu
 const TeleportingBinaryDigitsMenu: React.FC = () => {
+  // Fonction pour vérifier si deux positions se chevauchent
+  const checkCollision = (newTop: number, newLeft: number, existingDigits: any[], minDistance: number = 0.8) => {
+    return existingDigits.some(digit => {
+      if (!digit.visible) return false; // Ignore les chiffres invisibles
+      const distance = Math.sqrt(
+        Math.pow(newTop - digit.top, 2) + Math.pow(newLeft - digit.left, 2)
+      );
+      return distance < minDistance;
+    });
+  };
+
+  // Fonction pour générer une position sans collision
+  const generateSafePosition = (existingDigits: any[], maxAttempts: number = 5) => {
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      const newTop = Math.random() * 90 + 5;
+      const newLeft = Math.random() * 90 + 5;
+      
+      if (!checkCollision(newTop, newLeft, existingDigits)) {
+        return { top: newTop, left: newLeft };
+      }
+    }
+    
+    // Si aucune position sûre n'est trouvée, retourner une position aléatoire
+    return {
+      top: Math.random() * 90 + 5,
+      left: Math.random() * 90 + 5
+    };
+  };
+
   const [digits, setDigits] = React.useState(() => 
     Array.from({ length: 28 }, (_, i) => {
-      return {
+      // Génération initiale avec détection de collision
+      const existingDigits: any[] = [];
+      const position = generateSafePosition(existingDigits);
+      
+      const newDigit = {
         id: i,
         digit: Math.random() > 0.5 ? '1' : '0',
-        top: Math.random() * 90 + 5,
-        left: Math.random() * 90 + 5,
+        top: position.top,
+        left: position.left,
         color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
         size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 2000 + 1000 // 1s à 3s
       };
+      
+      existingDigits.push(newDigit);
+      return newDigit;
     })
   );
 
   React.useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
+      
       setDigits(prevDigits => 
         prevDigits.map(digit => {
           if (now >= digit.nextChangeTime) {
@@ -109,12 +185,14 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
                 nextChangeTime: now + 200 // Réapparaître dans exactement 200ms
               };
             } else {
-              // Réapparaître à un nouvel endroit avec de nouvelles propriétés
+              // Réapparaître à un nouvel endroit avec de nouvelles propriétés (sans collision)
+              const position = generateSafePosition(prevDigits.filter(d => d.id !== digit.id && d.visible));
+              
               return {
                 ...digit,
                 digit: Math.random() > 0.5 ? '1' : '0',
-                top: Math.random() * 90 + 5,
-                left: Math.random() * 90 + 5,
+                top: position.top,
+                left: position.left,
                 color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,

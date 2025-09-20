@@ -1,120 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Code, Layers, Zap, Atom, Cpu, Binary, ChevronDown, ChevronUp, ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
-// Composant pour les chiffres binaires qui se téléportent
-const TeleportingBinaryDigits: React.FC = () => {
-  // Fonction pour vérifier si deux positions se chevauchent
-  const checkCollision = (newTop: number, newLeft: number, existingDigits: any[], minDistance: number = 0.8) => {
-    return existingDigits.some(digit => {
-      if (!digit.visible) return false; // Ignore les chiffres invisibles
-      const distance = Math.sqrt(
-        Math.pow(newTop - digit.top, 2) + Math.pow(newLeft - digit.left, 2)
-      );
-      return distance < minDistance;
-    });
-  };
-
-  // Fonction pour générer une position sans collision
-  const generateSafePosition = (existingDigits: any[], maxAttempts: number = 5) => {
-    for (let attempt = 0; attempt < maxAttempts; attempt++) {
-      const newTop = Math.random() * 90 + 5;
-      const newLeft = Math.random() * 90 + 5;
-      
-      if (!checkCollision(newTop, newLeft, existingDigits)) {
-        return { top: newTop, left: newLeft };
-      }
-    }
-    
-    // Si aucune position sûre n'est trouvée, retourner une position aléatoire
-    return {
-      top: Math.random() * 90 + 5,
-      left: Math.random() * 90 + 5
-    };
-  };
-
-  const [digits, setDigits] = React.useState(() => 
-    Array.from({ length: 28 }, (_, i) => {
-      // Génération initiale avec détection de collision
-      const existingDigits: any[] = [];
-      const position = generateSafePosition(existingDigits);
-      
-      const newDigit = {
-        id: i,
-        value: Math.random() > 0.5 ? '1' : '0',
-        top: position.top,
-        left: position.left,
-        opacity: Math.random() * 0.3 + 0.1,
-        size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
-        visible: true,
-        nextChangeTime: Date.now() + Math.random() * 200 + 100 // 0.1s à 0.3s
-      };
-      
-      existingDigits.push(newDigit);
-      return newDigit;
-    })
-  );
-
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      const now = Date.now();
-      
-      setDigits(prevDigits => 
-        prevDigits.map(digit => {
-          if (now >= digit.nextChangeTime) {
-            if (digit.visible) {
-              // Disparaître complètement
-              return {
-                ...digit,
-                visible: false,
-                nextChangeTime: now + 100 // Réapparaître dans exactement 0.1 seconde
-              };
-            } else {
-              // Réapparaître à un nouvel endroit avec de nouvelles propriétés (sans collision)
-              const position = generateSafePosition(prevDigits.filter(d => d.id !== digit.id && d.visible));
-              
-              return {
-                ...digit,
-                value: Math.random() > 0.5 ? '1' : '0',
-                top: position.top,
-                left: position.left,
-                opacity: Math.random() * 0.3 + 0.1,
-                size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
-                visible: true,
-                nextChangeTime: now + Math.random() * 200 + 100 // Rester visible 0.1s à 0.3s avant prochaine téléportation
-              };
-            }
-          }
-          return digit;
-        })
-      );
-    }, 10); // Vérification toutes les 10ms
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      {digits.map(digit => (
-        <div
-          key={digit.id}
-          className={`absolute ${digit.size} font-mono text-cyan-400 transition-opacity duration-300 select-none ${
-            digit.visible ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            top: `${digit.top}%`,
-            left: `${digit.left}%`,
-            opacity: digit.visible ? digit.opacity : 0,
-            textShadow: '0 0 10px rgba(34, 211, 238, 0.5)',
-            transform: 'translate(-50%, -50%)'
-          }}
-        >
-          {digit.value}
-        </div>
-      ))}
-    </div>
-  );
-};
-
 export const UniverseAppPage: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(-1); // -1 pour la page d'intro
 
@@ -301,9 +187,6 @@ export const UniverseAppPage: React.FC = () => {
         {/* Effet de particules en arrière-plan */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-indigo-900/20"></div>
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(147,51,234,0.05)_50%,transparent_75%)] bg-[length:60px_60px] animate-pulse"></div>
-        
-        {/* Chiffres binaires téléportants pour la dernière section */}
-        {currentSection === 5 && <TeleportingBinaryDigits />}
         
         {/* Bouton échelle supérieure (4 flèches vers l'extérieur) */}
         {/* Section actuelle */}
