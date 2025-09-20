@@ -463,7 +463,7 @@ export const Navigation: React.FC = () => {
           </div>
           
           {/* Bouton de fermeture X en haut à droite du contenu */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl w-full mt-12 sm:mt-20 flex-shrink-0">
+          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 max-w-5xl w-full mt-12 sm:mt-20 flex-shrink-0">
             {navigationItems.map((item, index) => (
               <Link
                 key={item.path}
@@ -478,7 +478,7 @@ export const Navigation: React.FC = () => {
                     setIsMobileMenuOpen(false);
                   }, 100);
                 }}
-                className={`relative group flex items-center justify-center p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 transition-all duration-300 sm:duration-700 transform hover:scale-105 active:scale-95 ${
+                className={`relative group flex items-center justify-center p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 transition-all duration-300 sm:duration-700 transform hover:scale-105 active:scale-95 flex-1 sm:max-w-xs ${
                   location.pathname === item.path
                     ? `bg-gradient-to-br from-slate-800/95 to-slate-700/95 ${item.borderColor} ${item.shadowColor} shadow-2xl`
                     : `bg-slate-800/95 border-slate-600/50 hover:bg-gradient-to-br hover:from-slate-700/95 hover:to-slate-600/95 ${item.hoverBorderColor} ${item.hoverShadowColor} hover:shadow-2xl`
