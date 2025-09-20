@@ -14,7 +14,7 @@ export const BlackHoleConceptPage: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 pt-4 sm:pt-6">
         {/* En-tête */}
         <header className="text-center mb-6 sm:mb-8 lg:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-300 via-gray-300 via-black to-purple-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(147,51,234,0.8)] mb-3 sm:mb-4 px-2">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-300 via-gray-300 via-black to-purple-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(147,51,234,0.8)] mb-3 sm:mb-4 px-2 whitespace-nowrap">
             Horizon des Événements
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-purple-200 max-w-4xl mx-auto px-4">
