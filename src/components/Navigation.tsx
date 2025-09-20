@@ -186,8 +186,6 @@ export const Navigation: React.FC = () => {
       setIsTyping(true);
     }
   }, []);
-    
-  }, [displayedText]);
   
   const navigationItems = [
     {
