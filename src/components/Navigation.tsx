@@ -607,7 +607,7 @@ export const Navigation: React.FC = () => {
                       // Définir les points de rupture pour chaque phrase
                       let breakPoint = "";
                       if (currentPhrase === "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça") {
-                        breakPoint = "Si Dieu avait un menu pour créer l'univers, ";
+                        breakPoint = "Si Dieu avait un menu pour créer ";
                       } else if (currentPhrase === "L'univers est un jeu, alors amuse-toi") {
                         breakPoint = "L'univers est un jeu, ";
                       }
