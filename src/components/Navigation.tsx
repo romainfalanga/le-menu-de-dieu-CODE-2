@@ -84,10 +84,9 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
     Array.from({ length: 28 }, (_, i) => {
       return {
         id: i,
-        value: Math.random() > 0.5 ? '1' : '0',
+        digit: Math.random() > 0.5 ? '1' : '0',
         top: Math.random() * 90 + 5,
         left: Math.random() * 90 + 5,
-        opacity: Math.random() * 0.3 + 0.1,
         size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 2000 + 1000 // 1s à 3s
@@ -112,10 +111,9 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
               // Réapparaître à un nouvel endroit avec de nouvelles propriétés
               return {
                 ...digit,
-                value: Math.random() > 0.5 ? '1' : '0',
+                digit: Math.random() > 0.5 ? '1' : '0',
                 top: Math.random() * 90 + 5,
                 left: Math.random() * 90 + 5,
-                opacity: Math.random() * 0.3 + 0.1,
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
                 nextChangeTime: now + 2000 // Rester visible 2 secondes avant prochaine téléportation
@@ -141,12 +139,11 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
           style={{
             top: `${digit.top}%`,
             left: `${digit.left}%`,
-            opacity: digit.visible ? digit.opacity : 0,
-            textShadow: '0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2)',
-            transform: 'translate(-50%, -50%)'
+            transform: 'translate(-50%, -50%)',
+            textShadow: '0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2)'
           }}
         >
-          {digit.value}
+          {digit.digit}
         </div>
       ))}
     </>
