@@ -6,7 +6,7 @@ import { Menu, X, Zap } from 'lucide-react';
 // Composant pour les chiffres binaires qui se téléportent
 const TeleportingBinaryDigits: React.FC = () => {
   const [digits, setDigits] = React.useState(() => 
-    Array.from({ length: 28 }, (_, i) => {
+    Array.from({ length: 15 }, (_, i) => {
       return {
         id: i,
         value: Math.random() > 0.5 ? '1' : '0',
@@ -23,7 +23,6 @@ const TeleportingBinaryDigits: React.FC = () => {
   React.useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
-      
       setDigits(prevDigits => 
         prevDigits.map(digit => {
           if (now >= digit.nextChangeTime) {
@@ -32,7 +31,7 @@ const TeleportingBinaryDigits: React.FC = () => {
               return {
                 ...digit,
                 visible: false,
-                nextChangeTime: now + 100 // Réapparaître dans exactement 0.1 seconde
+                nextChangeTime: now + 50 // Réapparaître dans exactement 50ms
               };
             } else {
               // Réapparaître à un nouvel endroit avec de nouvelles propriétés
@@ -88,7 +87,7 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
         digit: Math.random() > 0.5 ? '1' : '0',
         top: Math.random() * 90 + 5,
         left: Math.random() * 90 + 5,
-        color: ['text-green-400', 'text-green-300', 'text-emerald-400', 'text-lime-400', 'text-green-500'][Math.floor(Math.random() * 5)],
+        color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
         size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 2000 + 1000 // 1s à 3s
@@ -111,13 +110,12 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
               };
             } else {
               // Réapparaître à un nouvel endroit avec de nouvelles propriétés
-              
               return {
                 ...digit,
                 digit: Math.random() > 0.5 ? '1' : '0',
                 top: Math.random() * 90 + 5,
                 left: Math.random() * 90 + 5,
-                color: ['text-green-400', 'text-green-300', 'text-emerald-400', 'text-lime-400', 'text-green-500'][Math.floor(Math.random() * 5)],
+                color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
                 nextChangeTime: now + Math.random() * 2000 + 1000 // Rester visible 1s à 3s avant prochaine téléportation
@@ -143,6 +141,7 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
           style={{
             top: `${digit.top}%`,
             left: `${digit.left}%`,
+            transform: 'translate(-50%, -50%)'
           }}
         >
           {digit.digit}
@@ -180,10 +179,10 @@ export const Navigation: React.FC = () => {
     const currentPhrase = phrases[currentPhraseIndex];
     
     if (!isDeleting && !isTyping) {
-      // Attendre 3 secondes avant de commencer à supprimer
+      // Attendre 1 seconde avant de commencer à supprimer
       const waitTimer = setTimeout(() => {
         setIsDeleting(true);
-      }, 3000);
+      }, 1000);
       return () => clearTimeout(waitTimer);
     }
     
@@ -199,7 +198,7 @@ export const Navigation: React.FC = () => {
           }
           return prev.slice(0, -1);
         });
-      }, 50); // 50ms entre chaque suppression
+      }, 30); // 30ms entre chaque suppression
       return () => clearTimeout(deleteTimer);
     }
     
@@ -213,7 +212,7 @@ export const Navigation: React.FC = () => {
           }
           return currentPhrase.slice(0, prev.length + 1);
         });
-      }, 80); // 80ms entre chaque caractère
+      }, 50); // 50ms entre chaque caractère
       return () => clearTimeout(typeTimer);
     }
   }, [currentPhraseIndex, isDeleting, isTyping, displayedText, phrases]);
