@@ -296,18 +296,18 @@ export const Navigation: React.FC = () => {
       {/* Barre de navigation principale */}
       <nav className="relative bg-gradient-to-r from-slate-900/95 via-blue-900/95 to-purple-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl z-50">
         {/* Effet de grille futuriste en arrière-plan */}
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-30"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:20px_20px] opacity-20 z-10"></div>
         
         {/* Chiffres binaires 0 et 1 flottants dans la nav bar */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
           <TeleportingBinaryDigits />
         </div>
         
         {/* Ligne lumineuse animée en haut */}
-        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
+        <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse z-10"></div>
         
         {/* Ligne lumineuse animée en bas */}
-        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse z-10"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center py-4 sm:py-6 relative">
