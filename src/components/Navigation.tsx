@@ -478,7 +478,7 @@ export const Navigation: React.FC = () => {
                     setIsMobileMenuOpen(false);
                   }, 100);
                 }}
-                className={`relative group block p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 transition-all duration-300 sm:duration-700 transform hover:scale-105 active:scale-95 ${
+                className={`relative group flex items-center justify-center p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 transition-all duration-300 sm:duration-700 transform hover:scale-105 active:scale-95 ${
                   location.pathname === item.path
                     ? `bg-gradient-to-br from-slate-800/95 to-slate-700/95 ${item.borderColor} ${item.shadowColor} shadow-2xl`
                     : `bg-slate-800/95 border-slate-600/50 hover:bg-gradient-to-br hover:from-slate-700/95 hover:to-slate-600/95 ${item.hoverBorderColor} ${item.hoverShadowColor} hover:shadow-2xl`
@@ -497,11 +497,10 @@ export const Navigation: React.FC = () => {
                 </div>
                 
                 {/* Contenu */}
-                <div className="relative z-10 text-center">
-                  <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500`}>
+                <div className="relative z-10">
+                  <h3 className={`text-xl sm:text-2xl font-bold ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500 text-center`}>
                     {item.title}
                   </h3>
-                  <div className={`w-12 sm:w-16 h-1 bg-gradient-to-r ${item.glowFrom} ${item.glowTo} mx-auto rounded-full group-hover:w-16 sm:group-hover:w-24 transition-all duration-300 sm:duration-500`}></div>
                 </div>
                 
                 {/* Effet de scan */}
