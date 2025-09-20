@@ -600,7 +600,14 @@ export const Navigation: React.FC = () => {
               {/* Texte principal */}
               <div className="relative z-10 p-4 sm:p-6 text-center">
                 <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
-                  {displayedText}
+                  {displayedText === "L'univers est un jeu, alors amuse-toi" ? (
+                    <>
+                      <span className="sm:hidden">L'univers est un jeu,<br />alors amuse-toi</span>
+                      <span className="hidden sm:inline">L'univers est un jeu, alors amuse-toi</span>
+                    </>
+                  ) : (
+                    displayedText
+                  )}
                   {/* Curseur clignotant */}
                   <span className="inline-block w-0.5 h-6 sm:h-7 bg-cyan-300 ml-1 animate-pulse"></span>
                 </p>
