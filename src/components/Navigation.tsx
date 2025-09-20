@@ -117,6 +117,13 @@ const TeleportingBinaryDigits: React.FC = () => {
 export const Navigation: React.FC = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  
+  // Phrases qui changent toutes les 3 secondes
+  const phrases = [
+    "L'univers est un jeu, alors amuse-toi",
+    "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça"
+  ];
   
   // Fermer le menu lors du changement de route avec un délai pour éviter les conflits
   useEffect(() => {
@@ -126,6 +133,15 @@ export const Navigation: React.FC = () => {
     
     return () => clearTimeout(timer);
   }, [location.pathname]);
+  
+  // Changement automatique des phrases toutes les 3 secondes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentPhraseIndex(prevIndex => (prevIndex + 1) % phrases.length);
+    }, 3000); // 3 secondes
+    
+    return () => clearInterval(interval);
+  }, [phrases.length]);
   
   const navigationItems = [
     {
@@ -503,7 +519,7 @@ export const Navigation: React.FC = () => {
               {/* Texte principal */}
               <div className="relative z-10 p-4 sm:p-6 text-center">
                 <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
-                  « Si Dieu avait un menu pour créer l'univers, il ressemblerait à ça »
+                  {phrases[currentPhraseIndex]}
                 </p>
                 
                 {/* Bordure lumineuse animée autour du texte */}
