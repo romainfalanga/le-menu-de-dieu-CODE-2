@@ -60,14 +60,14 @@ const TeleportingBinaryDigits: React.FC = () => {
       {digits.map(digit => (
         <div
           key={digit.id}
-          className={`absolute ${digit.size} font-mono text-green-400 transition-opacity duration-300 select-none ${
+          className={`absolute ${digit.size} font-mono text-cyan-400 transition-opacity duration-300 select-none ${
             digit.visible ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
             top: `${digit.top}%`,
             left: `${digit.left}%`,
             opacity: digit.visible ? digit.opacity : 0,
-            textShadow: '0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2)',
+            textShadow: '0 0 10px rgba(34, 211, 238, 0.5)',
             transform: 'translate(-50%, -50%)'
           }}
         >
@@ -87,6 +87,7 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
         digit: Math.random() > 0.5 ? '1' : '0',
         top: Math.random() * 90 + 5,
         left: Math.random() * 90 + 5,
+        color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
         size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 2000 + 1000 // 1s à 3s
@@ -114,6 +115,7 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
                 digit: Math.random() > 0.5 ? '1' : '0',
                 top: Math.random() * 90 + 5,
                 left: Math.random() * 90 + 5,
+                color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
                 size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
                 visible: true,
                 nextChangeTime: now + 2000 // Rester visible 2 secondes avant prochaine téléportation
@@ -133,14 +135,13 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
       {digits.map(digit => (
         <div
           key={digit.id}
-          className={`absolute text-green-400 ${digit.size} font-mono font-bold transition-opacity duration-300 ${
+          className={`absolute ${digit.color} ${digit.size} font-mono font-bold transition-opacity duration-300 drop-shadow-[0_0_8px_currentColor] ${
             digit.visible ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
             top: `${digit.top}%`,
             left: `${digit.left}%`,
-            transform: 'translate(-50%, -50%)',
-            textShadow: '0 0 10px rgba(34, 197, 94, 0.8), 0 0 20px rgba(34, 197, 94, 0.4), 0 0 30px rgba(34, 197, 94, 0.2)'
+            transform: 'translate(-50%, -50%)'
           }}
         >
           {digit.digit}
@@ -599,41 +600,14 @@ export const Navigation: React.FC = () => {
               {/* Texte principal */}
               <div className="relative z-10 p-4 sm:p-6 text-center">
                 <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
-                  <span className="sm:hidden">
-                    {(() => {
-                      const currentPhrase = phrases[currentPhraseIndex];
-                      
-                      // Définir les points de rupture pour chaque phrase
-                      let breakPoint = "";
-                      if (currentPhrase === "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça") {
-                        breakPoint = "Si Dieu avait un menu pour créer ";
-                      } else if (currentPhrase === "L'univers est un jeu, alors amuse-toi") {
-                        breakPoint = "L'univers est un jeu, ";
-                      }
-                      
-                      // Si pas de point de rupture défini, afficher normalement
-                      if (!breakPoint) {
-                        return displayedText;
-                      }
-                      
-                      if (displayedText.length <= breakPoint.length) {
-                        // Avant le point de rupture, afficher normalement
-                        return displayedText;
-                      } else {
-                        // Après le point de rupture, séparer en deux lignes
-                        const firstPart = breakPoint.trim();
-                        const secondPart = displayedText.substring(breakPoint.length);
-                        return (
-                          <>
-                            {firstPart}
-                            <br />
-                            {secondPart}
-                          </>
-                        );
-                      }
-                    })()}
-                  </span>
-                  <span className="hidden sm:inline">{displayedText}</span>
+                  {displayedText === "L'univers est un jeu, alors amuse-toi" ? (
+                    <>
+                      <span className="sm:hidden">L'univers est un jeu,<br />alors amuse-toi</span>
+                      <span className="hidden sm:inline">L'univers est un jeu, alors amuse-toi</span>
+                    </>
+                  ) : (
+                    displayedText
+                  )}
                   {/* Curseur clignotant */}
                   <span className="inline-block w-0.5 h-6 sm:h-7 bg-cyan-300 ml-1 animate-pulse"></span>
                 </p>
