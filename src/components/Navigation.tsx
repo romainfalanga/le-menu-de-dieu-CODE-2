@@ -88,7 +88,6 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
         digit: Math.random() > 0.5 ? '1' : '0',
         top: Math.random() * 90 + 5,
         left: Math.random() * 90 + 5,
-        color: ['text-cyan-400', 'text-cyan-300', 'text-blue-400', 'text-sky-400', 'text-cyan-500'][Math.floor(Math.random() * 5)],
         size: ['text-xl', 'text-2xl', 'text-3xl'][Math.floor(Math.random() * 3)],
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 2000 + 1000 // 1s à 3s
@@ -135,12 +134,15 @@ const TeleportingBinaryDigitsMenu: React.FC = () => {
       {digits.map(digit => (
         <div
           key={digit.id}
-          className={`absolute ${digit.color} ${digit.size} font-mono font-bold transition-opacity duration-300 drop-shadow-[0_0_8px_currentColor] ${
+          className={`absolute ${digit.size} font-mono transition-opacity duration-300 select-none ${
             digit.visible ? 'opacity-100' : 'opacity-0'
           }`}
           style={{
             top: `${digit.top}%`,
             left: `${digit.left}%`,
+            opacity: digit.visible ? 0.4 : 0,
+            color: '#00FF41',
+            textShadow: '0 0 10px #00FF41, 0 0 20px #00FF41, 0 0 30px #00FF41',
             transform: 'translate(-50%, -50%)'
           }}
         >
@@ -470,13 +472,13 @@ export const Navigation: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-30"></div>
         
         {/* Chiffres binaires 0 et 1 flottants dans l'espace-temps */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-20">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
           <TeleportingBinaryDigitsMenu />
         </div>
         
         {/* Contenu du menu avec les liens de navigation */}
         <div 
-          className="h-full flex flex-col items-center justify-start p-4 sm:p-8 pt-24 sm:pt-32 pb-20 overflow-y-auto"
+          className="h-full flex flex-col items-center justify-start p-4 sm:p-8 pt-24 sm:pt-32 pb-20 overflow-y-auto relative z-10"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Titre "Menu de Dieu" intégré dans le contenu */}
