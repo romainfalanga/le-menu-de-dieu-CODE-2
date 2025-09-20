@@ -121,8 +121,8 @@ export const Navigation: React.FC = () => {
   
   // Phrases qui changent toutes les 3 secondes
   const phrases = [
-    "L'univers est un jeu, alors amuse-toi",
-    "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça"
+    "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça",
+    "L'univers est un jeu, alors amuse-toi"
   ];
   
   // Fermer le menu lors du changement de route avec un délai pour éviter les conflits
@@ -134,11 +134,11 @@ export const Navigation: React.FC = () => {
     return () => clearTimeout(timer);
   }, [location.pathname]);
   
-  // Changement automatique des phrases toutes les 3 secondes
+  // Changement automatique des phrases toutes les 5 secondes
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPhraseIndex(prevIndex => (prevIndex + 1) % phrases.length);
-    }, 3000); // 3 secondes
+    }, 5000); // 5 secondes
     
     return () => clearInterval(interval);
   }, [phrases.length]);
