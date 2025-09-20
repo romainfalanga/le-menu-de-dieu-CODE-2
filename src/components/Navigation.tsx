@@ -503,9 +503,6 @@ export const Navigation: React.FC = () => {
                 
                 {/* Contenu */}
                 <div className="relative z-10 text-center">
-                  <div className="text-5xl sm:text-6xl mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300 sm:duration-500">
-                    {item.icon}
-                  </div>
                   <h3 className={`text-xl sm:text-2xl font-bold mb-3 sm:mb-4 ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500`}>
                     {item.title}
                   </h3>
