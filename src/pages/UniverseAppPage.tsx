@@ -104,8 +104,7 @@ const TeleportingBinaryDigits: React.FC = () => {
             top: `${digit.top}%`,
             left: `${digit.left}%`,
             opacity: digit.visible ? digit.opacity : 0,
-            color: '#00FF41',
-            textShadow: '0 0 10px #00FF41, 0 0 20px #00FF41, 0 0 30px #00FF41',
+            textShadow: '0 0 10px rgba(34, 211, 238, 0.5)',
             transform: 'translate(-50%, -50%)'
           }}
         >
