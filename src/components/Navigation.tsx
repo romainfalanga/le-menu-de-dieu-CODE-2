@@ -601,12 +601,26 @@ export const Navigation: React.FC = () => {
               <div className="relative z-10 p-4 sm:p-6 text-center">
                 <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
                   <span className="sm:hidden">
-                    {displayedText.replace("L'univers est un jeu, alors amuse-toi", "L'univers est un jeu,\nalors amuse-toi").split('\n').map((line, index) => (
-                      <span key={index}>
-                        {line}
-                        {index === 0 && displayedText.includes("alors") && <br />}
-                      </span>
-                    ))}
+                    {(() => {
+                      const fullText = "L'univers est un jeu, alors amuse-toi";
+                      const breakPoint = "L'univers est un jeu, ";
+                      
+                      if (displayedText.length <= breakPoint.length) {
+                        // Avant le point de rupture, afficher normalement
+                        return displayedText;
+                      } else {
+                        // Après le point de rupture, séparer en deux lignes
+                        const firstPart = breakPoint.trim();
+                        const secondPart = displayedText.substring(breakPoint.length);
+                        return (
+                          <>
+                            {firstPart}
+                            <br />
+                            {secondPart}
+                          </>
+                        );
+                      }
+                    })()}
                   </span>
                   <span className="hidden sm:inline">{displayedText}</span>
                   {/* Curseur clignotant */}
