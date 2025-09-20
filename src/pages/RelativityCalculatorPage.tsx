@@ -139,7 +139,7 @@ export const RelativityCalculatorPage: React.FC = () => {
       <div className="container mx-auto px-2 sm:px-4 lg:px-6 py-2 sm:py-4 lg:py-6 relative z-10 max-w-full pt-4 sm:pt-6">
         {/* En-tête */}
         <header className="text-center mb-3 sm:mb-4 lg:mb-6">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-1 sm:mb-2 lg:mb-3 px-2 drop-shadow-lg">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-gradient-to-r from-cyan-300 via-blue-300 via-purple-300 to-violet-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(59,130,246,0.8)] mb-1 sm:mb-2 lg:mb-3 px-2">
             Relativité Restreinte
           </h1>
           <p className="text-xs sm:text-sm lg:text-base text-blue-200/90 max-w-3xl mx-auto px-2 sm:px-4 leading-relaxed">

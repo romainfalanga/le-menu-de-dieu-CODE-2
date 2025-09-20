@@ -315,7 +315,7 @@ export const UniverseAppPage: React.FC = () => {
                 
                 {/* Titre principal */}
                 <div className="mb-3 sm:mb-4">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-300 via-purple-300 via-pink-300 to-yellow-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(6,182,212,0.8)] mb-3 sm:mb-4 leading-tight">
                     L'univers est une application
                   </h1>
                 </div>
