@@ -118,6 +118,9 @@ export const Navigation: React.FC = () => {
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   
   // Phrases qui changent toutes les 3 secondes
   const phrases = [
@@ -134,14 +137,57 @@ export const Navigation: React.FC = () => {
     return () => clearTimeout(timer);
   }, [location.pathname]);
   
-  // Changement automatique des phrases toutes les 5 secondes
+  // Effet de machine à écrire avec suppression et écriture
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentPhraseIndex(prevIndex => (prevIndex + 1) % phrases.length);
-    }, 5000); // 5 secondes
+    const currentPhrase = phrases[currentPhraseIndex];
     
-    return () => clearInterval(interval);
-  }, [phrases.length]);
+    if (!isDeleting && !isTyping) {
+      // Attendre 3 secondes avant de commencer à supprimer
+      const waitTimer = setTimeout(() => {
+        setIsDeleting(true);
+      }, 3000);
+      return () => clearTimeout(waitTimer);
+    }
+    
+    if (isDeleting) {
+      // Supprimer caractère par caractère (plus rapide)
+      const deleteTimer = setTimeout(() => {
+        setDisplayedText(prev => {
+          if (prev.length === 0) {
+            setIsDeleting(false);
+            setIsTyping(true);
+            setCurrentPhraseIndex(prevIndex => (prevIndex + 1) % phrases.length);
+            return '';
+          }
+          return prev.slice(0, -1);
+        });
+      }, 50); // 50ms entre chaque suppression
+      return () => clearTimeout(deleteTimer);
+    }
+    
+    if (isTyping) {
+      // Écrire caractère par caractère
+      const typeTimer = setTimeout(() => {
+        setDisplayedText(prev => {
+          if (prev.length === currentPhrase.length) {
+            setIsTyping(false);
+            return prev;
+          }
+          return currentPhrase.slice(0, prev.length + 1);
+        });
+      }, 80); // 80ms entre chaque caractère
+      return () => clearTimeout(typeTimer);
+    }
+  }, [currentPhraseIndex, isDeleting, isTyping, displayedText, phrases]);
+  
+  // Initialiser le texte au premier rendu
+  useEffect(() => {
+    if (displayedText === '') {
+      setIsTyping(true);
+    }
+  }, []);
+    
+  }, [displayedText]);
   
   const navigationItems = [
     {
@@ -519,7 +565,9 @@ export const Navigation: React.FC = () => {
               {/* Texte principal */}
               <div className="relative z-10 p-4 sm:p-6 text-center">
                 <p className="text-lg sm:text-xl lg:text-2xl font-semibold bg-gradient-to-r from-cyan-200 via-purple-200 via-pink-200 to-yellow-200 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] leading-relaxed italic">
-                  {phrases[currentPhraseIndex]}
+                  {displayedText}
+                  {/* Curseur clignotant */}
+                  <span className="inline-block w-0.5 h-6 sm:h-7 bg-cyan-300 ml-1 animate-pulse"></span>
                 </p>
                 
                 {/* Bordure lumineuse animée autour du texte */}
