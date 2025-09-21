@@ -84,7 +84,7 @@ const GodCodingSimulation: React.FC = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  // Génération de séquences binaires aléatoires de 50 rangées de 30 chiffres
+  // Génération de séquences binaires aléatoires de 15 rangées de 40 chiffres
   const binarySequences = React.useMemo(() => {
     return Array.from({ length: 8 }, () => {
       // Génère 15 rangées de 40 chiffres binaires chacune
@@ -112,7 +112,7 @@ const GodCodingSimulation: React.FC = () => {
       // Taper caractère par caractère
       const typeTimer = setTimeout(() => {
         setCurrentCode(prev => prev + currentSequence[prev.length]);
-      }, 1.3); // Très rapide pour écrire 1500 caractères en ~2 secondes
+      }, 1.3); // Très rapide pour écrire 600 caractères en ~0.8 secondes
       return () => clearTimeout(typeTimer);
     }
     
@@ -149,7 +149,6 @@ const GodCodingSimulation: React.FC = () => {
         </h3>
       </div>
       
-      <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 h-[300px] overflow-y-auto">
       <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400">
         <pre className="text-xs sm:text-sm whitespace-pre-wrap leading-tight">
           {currentCode}
