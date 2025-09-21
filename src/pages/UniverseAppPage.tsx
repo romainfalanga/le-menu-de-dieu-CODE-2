@@ -387,11 +387,7 @@ export const UniverseAppPage: React.FC = () => {
                   
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 inline-block border border-white/20">
                     <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-xs sm:text-sm lg:text-base font-bold text-cyan-300">
-                      <span>{currentSectionData.content.universe.split(',')[0]}</span>
-                      <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-                      <span className="text-yellow-300">{currentSectionData.scale}</span>
-                      <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-                      <span>{currentSectionData.content.application.split(',')[0]}</span>
+                      <span className="text-white">{currentSectionData.title}</span>
                     </div>
                   </div>
                 </div>
@@ -402,7 +398,7 @@ export const UniverseAppPage: React.FC = () => {
                   <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/40 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-purple-400/40 shadow-2xl">
                     <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 border border-purple-300/30">
                       <h3 className="text-base sm:text-lg font-bold text-purple-200 text-center">
-                      Univers : {currentSectionData.content.universe.split(',')[0]}
+                        Univers : {currentSectionData.content.universe.split(',')[0]}
                       </h3>
                     </div>
                     <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
@@ -453,7 +449,7 @@ export const UniverseAppPage: React.FC = () => {
                   <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/40 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-blue-400/40 shadow-2xl">
                     <div className="bg-blue-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 border border-blue-300/30">
                       <h3 className="text-base sm:text-lg font-bold text-blue-200 text-center">
-                      Application : {currentSectionData.content.application.split(',')[0]}
+                        Application : {currentSectionData.content.application.split(',')[0]}
                       </h3>
                     </div>
                     <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
