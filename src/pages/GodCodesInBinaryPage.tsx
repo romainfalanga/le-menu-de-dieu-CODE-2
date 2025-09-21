@@ -108,7 +108,7 @@ const GodCodingSimulation: React.FC = () => {
       // Taper caractère par caractère
       const typeTimer = setTimeout(() => {
         setCurrentCode(prev => prev + currentSequence[prev.length]);
-      }, 150);
+      }, 50);
       return () => clearTimeout(typeTimer);
     }
     
@@ -117,7 +117,7 @@ const GodCodingSimulation: React.FC = () => {
       const pauseTimer = setTimeout(() => {
         setIsTyping(false);
         setIsDeleting(true);
-      }, 1500);
+      }, 800);
       return () => clearTimeout(pauseTimer);
     }
     
@@ -125,7 +125,7 @@ const GodCodingSimulation: React.FC = () => {
       // Supprimer caractère par caractère
       const deleteTimer = setTimeout(() => {
         setCurrentCode(prev => prev.slice(0, -1));
-      }, 80);
+      }, 30);
       return () => clearTimeout(deleteTimer);
     }
     
@@ -133,7 +133,7 @@ const GodCodingSimulation: React.FC = () => {
       // Suppression terminée, passer à la séquence suivante
       setIsDeleting(false);
       setSequenceIndex(prev => (prev + 1) % binarySequences.length);
-    }
+    }, 200);
   }, [isTyping, isDeleting, currentCode, sequenceIndex, binarySequences]);
   
   return (
@@ -150,10 +150,6 @@ const GodCodingSimulation: React.FC = () => {
           {currentCode}
           {isTyping && <span className="animate-pulse text-green-300">|</span>}
         </span>
-      </div>
-      
-      <div className="mt-3 text-xs sm:text-sm text-gray-400 italic">
-        Chaque bit modifie instantanément la réalité à tous les niveaux...
       </div>
     </div>
   );
