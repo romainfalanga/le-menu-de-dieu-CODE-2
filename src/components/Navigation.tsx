@@ -705,6 +705,11 @@ export const Navigation: React.FC = () => {
                     ? `bg-gradient-to-br from-slate-800/95 to-slate-700/95 ${item.borderColor} ${item.shadowColor} shadow-2xl`
                     : `bg-slate-800/95 border-slate-600/50 hover:bg-gradient-to-br hover:from-slate-700/95 hover:to-slate-600/95 ${item.hoverBorderColor} ${item.hoverShadowColor} hover:shadow-2xl`
                 }`}
+                className={`relative group flex items-center justify-center p-6 sm:p-8 lg:p-10 xl:p-12 rounded-2xl sm:rounded-3xl border-2 transition-all duration-300 sm:duration-700 transform hover:scale-105 active:scale-95 flex-1 sm:max-w-xs lg:max-w-sm xl:max-w-md ${
+                  location.pathname === item.path
+                    ? `bg-gradient-to-br from-slate-800/95 to-slate-700/95 ${item.borderColor} ${item.shadowColor} shadow-2xl`
+                    : `bg-slate-800/95 border-slate-600/50 hover:bg-gradient-to-br hover:from-slate-700/95 hover:to-slate-600/95 ${item.hoverBorderColor} ${item.hoverShadowColor} hover:shadow-2xl`
+                }`}
               >
                 {/* Effet de grille futuriste */}
                 <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:15px_15px] rounded-2xl sm:rounded-3xl opacity-30"></div>
@@ -720,7 +725,7 @@ export const Navigation: React.FC = () => {
                 
                 {/* Contenu */}
                 <div className="relative z-10">
-                  <h3 className={`text-xl sm:text-2xl font-bold ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500 text-center whitespace-nowrap`}>
+                  <h3 className={`text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500 text-center whitespace-nowrap`}>
                     {item.title}
                   </h3>
                 </div>
