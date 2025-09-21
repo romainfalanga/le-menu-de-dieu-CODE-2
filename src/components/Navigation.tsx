@@ -326,6 +326,26 @@ export const Navigation: React.FC = () => {
       dotColor: 'bg-teal-400',
       dotColor2: 'bg-cyan-400',
       icon: '🔬'
+    },
+    {
+      path: '/scale-lab',
+      title: 'Le Laboratoire des Échelles',
+      shortTitle: 'Le Laboratoire des Échelles',
+      gradient: 'from-emerald-500/20 to-green-500/20',
+      hoverGradient: 'hover:from-emerald-500/10 hover:to-green-500/10',
+      textColor: 'text-emerald-300',
+      hoverTextColor: 'hover:text-emerald-300',
+      borderColor: 'border-emerald-400/30',
+      hoverBorderColor: 'hover:border-emerald-400/20',
+      shadowColor: 'shadow-emerald-500/25',
+      hoverShadowColor: 'hover:shadow-emerald-500/20',
+      glowFrom: 'from-emerald-400/10',
+      glowTo: 'to-green-400/10',
+      hoverGlowFrom: 'from-emerald-400/5',
+      hoverGlowTo: 'to-green-400/5',
+      dotColor: 'bg-emerald-400',
+      dotColor2: 'bg-green-400',
+      icon: '⚖️'
     }
   ];
 
@@ -665,7 +685,7 @@ export const Navigation: React.FC = () => {
           </div>
           
           {/* Bouton de fermeture X en haut à droite du contenu */}
-          <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 max-w-5xl w-full flex-shrink-0">
+          <div className="flex flex-col sm:flex-row sm:justify-center sm:flex-wrap gap-6 sm:gap-8 max-w-5xl w-full flex-shrink-0">
             {navigationItems.map((item, index) => (
               <Link
                 key={item.path}
@@ -700,7 +720,7 @@ export const Navigation: React.FC = () => {
                 
                 {/* Contenu */}
                 <div className="relative z-10">
-                  <h3 className={`text-xl sm:text-2xl font-bold ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500 text-center`}>
+                  <h3 className={`text-xl sm:text-2xl font-bold ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500 text-center whitespace-nowrap`}>
                     {item.title}
                   </h3>
                 </div>
