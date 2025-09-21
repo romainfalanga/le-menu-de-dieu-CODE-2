@@ -363,15 +363,18 @@ export const UniverseAppPage: React.FC = () => {
                       
                       <div className="space-y-2 sm:space-y-3">
                         {[
-                          { level: "Macroscopique", desc: "Ce que nous voyons : humains, objets, monde visible", color: "bg-purple-900/40 border-purple-400" },
-                          { level: "Moléculaire", desc: "Assemblages d'atomes : ADN, protéines, matériaux", color: "bg-blue-900/40 border-blue-400" },
-                          { level: "Atomique", desc: "Briques de la matière : hydrogène, carbone, fer", color: "bg-green-900/40 border-green-400" },
-                          { level: "Nucléaire", desc: "Cœur des atomes : protons et neutrons", color: "bg-yellow-900/40 border-yellow-400" },
-                          { level: "Particules", desc: "Constituants ultimes : quarks, leptons, bosons", color: "bg-orange-900/40 border-orange-400" },
-                          { level: "Planck", desc: "Granularité ultime de l'espace-temps", color: "bg-red-900/40 border-red-400" }
+                          { level: "Échelle macroscopique", scale: "10⁻⁴ m à 1 m", desc: "Ce que nous voyons : humains, objets, monde visible", color: "bg-purple-900/40 border-purple-400" },
+                          { level: "Échelle moléculaire", scale: "10⁻⁹ à 10⁻⁶ m", desc: "Assemblages d'atomes : ADN, protéines, matériaux", color: "bg-blue-900/40 border-blue-400" },
+                          { level: "Échelle atomique", scale: "10⁻¹⁰ m", desc: "Briques de la matière : hydrogène, carbone, fer", color: "bg-green-900/40 border-green-400" },
+                          { level: "Échelle nucléaire", scale: "10⁻¹⁵ m", desc: "Cœur des atomes : protons et neutrons", color: "bg-yellow-900/40 border-yellow-400" },
+                          { level: "Échelle des particules fondamentales", scale: "10⁻¹⁸ m", desc: "Constituants ultimes : quarks, leptons, bosons", color: "bg-orange-900/40 border-orange-400" },
+                          { level: "Échelle de Planck", scale: "10⁻³⁵ m", desc: "Granularité ultime de l'espace-temps", color: "bg-red-900/40 border-red-400" }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
-                            <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
+                            <div className="font-bold text-white text-xs sm:text-sm">
+                              {item.level}
+                              <span className="text-cyan-300 font-mono ml-2">{item.scale}</span>
+                            </div>
                             <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
                           </div>
                         ))}
