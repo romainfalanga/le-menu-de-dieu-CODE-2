@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Code, Layers, Zap, Atom, Cpu, Binary, ChevronDown, ChevronUp, ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Composant pour les chiffres binaires qui se téléportent
@@ -119,6 +119,14 @@ const TeleportingBinaryDigits: React.FC = () => {
 
 export const UniverseAppPage: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(-1); // -1 pour la page d'intro
+  const location = useLocation();
+
+  // Gestion de la navigation directe vers l'échelle de Planck
+  useEffect(() => {
+    if (location.state && (location.state as any).targetSection === 5) {
+      setCurrentSection(5);
+    }
+  }, [location]);
 
   const sections = [
     {
