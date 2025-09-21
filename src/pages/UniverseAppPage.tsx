@@ -439,13 +439,13 @@ export const UniverseAppPage: React.FC = () => {
                     </div>
                     <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
                       <p>
-                        À partir de l'échelle atomique, tout change : nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
+                        À partir de l'échelle atomique (~10⁻¹⁰ m), tout change : nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
                       </p>
                       <p>
-                        <strong className="text-cyan-300">Dans l'univers :</strong> Dès l'échelle atomique (10⁻¹⁰ m), les entités physiques (atomes, électrons, protons, neutrons, quarks...) peuvent exister dans des superpositions de plusieurs états quantiques simultanément. Par exemple, dans l'<strong className="text-purple-300">expérience de la double fente</strong>, un électron ou même un atome peut passer par les deux fentes à la fois, créant des interférences avec lui-même ! Leur façon d'exister n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'une observation ou mesure "effondre" cette superposition en un état défini.
+                        <strong className="text-cyan-300">Dans l'univers :</strong> à cette échelle, les entités physiques (atomes, électrons, particules) existent dans plusieurs états à la fois. Dans l'<strong className="text-purple-300">expérience de la double fente</strong>, par exemple, un électron ou un atome passe simultanément par les deux fentes, créant des interférences avec lui-même. Leur existence est une <strong className="text-yellow-300">probabilité</strong> diffuse jusqu'à ce qu'une observation ou une mesure "effondre" cette superposition en un état défini.
                       </p>
                       <p>
-                        <strong className="text-green-300">Dans l'application :</strong> Si on applique la logique de la mécanique quantique à l'application de l'univers, le code JavaScript n'existe pas d'une seule manière fixe. Il n'est qu'une <strong className="text-yellow-300">probabilité</strong> parmi une quantité infinie de façons possibles de coder un composant. Dans l'application de l'univers, le JavaScript n'existe concrètement que lorsqu'on "observe" sous le capot d'un composant React - comme si l'acte d'inspection "matérialisait" une implémentation spécifique parmi toutes les possibilités !
+                        <strong className="text-green-300">Dans l'application :</strong> en suivant cette logique, le code Java Script d'un composant n'existe pas sous une seule forme fixe. Il est une <strong className="text-yellow-300">probabilité</strong> parmi une infinité de façons possibles de l'écrire. Ce n'est qu'au moment où l'on "observe" sous le capot d'un composant React que le code se matérialise dans une version précise, comme si l'acte d'inspection faisait émerger une implémentation unique parmi toutes les possibilités.
                       </p>
                     </div>
                   </div>
