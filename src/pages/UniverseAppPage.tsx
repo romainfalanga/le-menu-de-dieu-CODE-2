@@ -320,6 +320,63 @@ export const UniverseAppPage: React.FC = () => {
                 )}
               </div>
             </div>
+          ) : (
+            // Pages d'échelles
+            <div className="w-full flex items-start justify-center p-2 sm:p-4 pt-2">
+              <div className="max-w-6xl mx-auto w-full">
+                
+                {/* Bouton Agrandir */}
+                {currentSection > -1 && (
+                  <div className="flex justify-center mb-2 sm:mb-3">
+                    <button
+                      onClick={goToUpperScale}
+                      className="group bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-full w-20 h-20 sm:w-24 sm:h-24 shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 border-2 border-white/20"
+                    >
+                      <div className="flex items-center justify-center h-full transition-all duration-500 group-hover:scale-110">
+                        <span className="text-xs sm:text-sm font-bold transition-all duration-500 group-hover:text-xs sm:group-hover:text-sm group-hover:font-extrabold text-center leading-tight">Agrandir</span>
+                      </div>
+                    </button>
+                  </div>
+                )}
+
+                {/* En-tête de section */}
+                <div className="text-center mb-3 sm:mb-4">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-r ${currentSectionData.color} shadow-2xl mb-3 sm:mb-4`}>
+                    {currentSectionData.icon}
+                  </div>
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 sm:mb-2">
+                    {currentSectionData.title}
+                  </h2>
+                  <p className="text-sm sm:text-base text-gray-300 font-mono">
+                    {currentSectionData.scale}
+                  </p>
+                </div>
+
+                {/* Contenu principal */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  {/* Section Univers */}
+                  <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/40 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-purple-400/40 shadow-2xl">
+                    <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 border border-purple-300/30">
+                      <h3 className="text-base sm:text-lg font-bold text-purple-200 text-center">
+                        Univers : {currentSectionData.content.universe.split(',')[0]}
+                      </h3>
+                    </div>
+                    <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
+                      {currentSectionData.content.universe}
+                    </p>
+                    
+                    {/* Connexions univers */}
+                    <div className="space-y-1 sm:space-y-2">
+                      {currentSectionData.content.universeConnections?.above && (
+                        <div className="bg-green-900/30 backdrop-blur-sm rounded-md p-1.5 sm:p-2 border border-green-400/30">
+                          <h4 className="font-bold text-green-300 mb-1 flex items-center text-xs">
+                            <ChevronUp className="w-3 h-3 mr-1" />
+                            Au-dessus
+                          </h4>
+                          <p className="text-gray-200 text-xs leading-relaxed">
+                            {currentSectionData.content.universeConnections.above}
+                          </p>
+                        </div>
                       )}
                       
                       {currentSectionData.content.universeConnections?.below && (
@@ -466,19 +523,19 @@ export const UniverseAppPage: React.FC = () => {
         {/* Indicateurs de navigation */}
         {currentSection !== -1 && (
           <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
-          <div className="flex flex-col space-y-2">
-            {sections.slice(1).map((section, index) => (
-              <button
-                key={section.id}
-                onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                  index === currentSection
-                    ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
+            <div className="flex flex-col space-y-2">
+              {sections.slice(1).map((section, index) => (
+                <button
+                  key={section.id}
+                  onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                    index === currentSection
+                      ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         )}
 
