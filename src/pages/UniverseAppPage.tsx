@@ -255,15 +255,19 @@ export const UniverseAppPage: React.FC = () => {
   };
 
   const goToLowerScale = () => {
+    console.log('goToLowerScale called. currentSection:', currentSection);
     if (currentSection === 4) {
       // Redirection vers la dimension de Dieu
+      console.log('Navigating to Dimension de Dieu');
       navigate('/dimension-de-dieu');
-    } else if (currentSection < 3) { // Maintenant on s'arrête à l'index 3 (section id: 4)
+    } else if (currentSection < 4) { // Maintenant on s'arrête à l'index 4 (section id: 4)
+      console.log('Incrementing currentSection from', currentSection, 'to', currentSection + 1);
       setCurrentSection(prev => prev + 1);
     }
   };
 
   const currentSectionData = sections[currentSection + 1]; // +1 car l'intro est à l'index -1
+  console.log('Current Section ID:', currentSection, 'Section Data:', currentSectionData?.title);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
