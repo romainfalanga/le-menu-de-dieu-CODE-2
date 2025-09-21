@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { Code, Layers, Zap, Atom, Cpu, Binary, ChevronDown, ChevronUp, ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Composant pour les chiffres binaires qui se téléportent
@@ -499,7 +500,7 @@ export const UniverseAppPage: React.FC = () => {
                 </div>
 
                 {/* Bouton Rétrécir pour les pages d'échelles */}
-                {currentSection < sections.length - 2 && (
+                {currentSection < sections.length - 2 && currentSection !== 5 && (
                   <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
                     <button
                       onClick={goToLowerScale}
@@ -509,6 +510,49 @@ export const UniverseAppPage: React.FC = () => {
                         <span className="text-xs sm:text-sm font-bold transition-all duration-500 group-hover:text-xs sm:group-hover:text-sm group-hover:font-extrabold text-center leading-tight">Rétrécir</span>
                       </div>
                     </button>
+                  </div>
+                )}
+
+                {/* Bouton spécial "Dieu code en Binaire" pour l'échelle de Planck */}
+                {currentSection === 5 && (
+                  <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
+                    <Link
+                      to="/god-binary"
+                      className="group relative bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 hover:from-yellow-700 hover:via-orange-700 hover:to-red-700 text-white rounded-full px-8 py-4 sm:px-12 sm:py-6 shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 border-4 border-yellow-400/50 hover:border-yellow-300/70 overflow-hidden"
+                    >
+                      {/* Effet de lueur divine */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-orange-400/20 to-red-400/20 rounded-full blur-xl animate-pulse"></div>
+                      
+                      {/* Particules divines */}
+                      <div className="absolute inset-0 overflow-hidden rounded-full">
+                        {[...Array(6)].map((_, i) => (
+                          <div
+                            key={i}
+                            className="absolute w-1 h-1 bg-yellow-300 rounded-full animate-ping opacity-70"
+                            style={{
+                              top: `${Math.random() * 100}%`,
+                              left: `${Math.random() * 100}%`,
+                              animationDelay: `${Math.random() * 2}s`,
+                              animationDuration: `${1.5 + Math.random() * 1.5}s`
+                            }}
+                          />
+                        ))}
+                      </div>
+                      
+                      {/* Effet de scan divin */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-scan rounded-full"></div>
+                      
+                      {/* Contenu du bouton */}
+                      <div className="relative z-10 flex items-center justify-center">
+                        <Binary className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 group-hover:animate-pulse" />
+                        <span className="text-base sm:text-lg lg:text-xl font-bold whitespace-nowrap group-hover:text-yellow-100 transition-colors duration-300">
+                          Dieu code en Binaire
+                        </span>
+                      </div>
+                      
+                      {/* Bordure lumineuse animée */}
+                      <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full opacity-30 blur-lg animate-pulse group-hover:opacity-60 group-hover:blur-xl transition-all duration-500"></div>
+                    </Link>
                   </div>
                 )}
               </div>
