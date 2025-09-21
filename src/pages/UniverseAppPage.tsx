@@ -545,28 +545,29 @@ export const UniverseAppPage: React.FC = () => {
                   </div>
                 )}
 
+              </div>
+            )}
+          </div>
+
+          {/* Indicateurs de navigation */}
+          {currentSection !== -1 && (
+            <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
+              <div className="flex flex-col space-y-2">
+                {sections.slice(1).map((section, index) => ( // Affiche toutes les sections sauf l'intro
+                  <button
+                    key={section.id}
+                    onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
+                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                      index === currentSection
+                        ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
+                        : 'bg-white/30 hover:bg-white/50'
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           )}
         </div>
-
-        {/* Indicateurs de navigation */}
-        {currentSection !== -1 && (
-          <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
-            <div className="flex flex-col space-y-2">
-              {sections.slice(1).map((section, index) => ( // Affiche toutes les sections sauf l'intro
-                <button
-                  key={section.id}
-                  onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                    index === currentSection
-                      ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        )}
 
       </div>
     </div>
