@@ -465,21 +465,21 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                             level: "Échelle atomique", 
                             scale: "10⁻¹⁰ m", 
                             desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer", 
-                            connection: "→ Stabilité et identité chimique données par le noyau",
+                            connection: "→ Formés par l’assemblage de protons, neutrons et électrons",
                             color: "bg-green-900/40 border-green-400" 
                           },
                           { 
                             level: "Échelle nucléaire", 
                             scale: "10⁻¹⁵ m", 
                             desc: "Cœur des atomes révélé par observation : protons et neutrons", 
-                            connection: "→ Masse et charge électrique définies par les quarks",
+                            connection: "→ Constitués de protons et de neutrons eux-mêmes composés de quarks",
                             color: "bg-yellow-900/40 border-yellow-400" 
                           },
                           { 
                             level: "Échelle des particules fondamentales", 
                             scale: "10⁻¹⁸ m", 
                             desc: "Constituants ultimes révélés par mesure : quarks, leptons, bosons", 
-                            connection: "→ Existence même permise par la géométrie de l'espace-temps",
+                            connection: "→ Révélées comme briques ultimes",
                             color: "bg-orange-900/40 border-orange-400" 
                           },
                           { 
