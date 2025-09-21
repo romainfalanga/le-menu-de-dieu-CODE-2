@@ -163,7 +163,7 @@ export const Navigation: React.FC = () => {
   
   // Phrases qui changent toutes les 3 secondes
   const phrases = [
-    "Si dieu a un menu, c'est lui",
+    "Si dieu a un menu, c'est celui-ci",
     "L'univers est un jeu : amuse-toi"
   ];
   
