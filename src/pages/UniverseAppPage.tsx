@@ -245,28 +245,6 @@ export const UniverseAppPage: React.FC = () => {
         connectionHorizontal: "les 0 et 1 sont les briques minimales de l'information dans notre cascade, comme les particules fondamentales sont les entités élémentaires de notre réalité, mais tous deux sont le résultat de modifications divines depuis l'échelle de Planck."
       }
     }
-    {
-      id: 4,
-      icon: <Binary className="w-8 h-8 sm:w-12 sm:h-12" />,
-      title: "Échelle des Bits Binaires",
-      scale: "10⁻¹⁸ m",
-      color: "from-red-500 to-pink-500",
-      bgGradient: "from-red-900/30 via-pink-900/20 to-red-800/30",
-      content: {
-        application: "Bits binaires, une mer de 0 et 1, sans signification isolée mais base de toute information.",
-        universe: "Particules fondamentales composées de 0 et 1 : le miroir où la volonté divine (depuis 10⁻³⁵ m) se traduit en code binaire de la réalité.",
-        universeExamples: "Quarks et leptons encodés en 0 et 1, bosons comme instructions binaires, chaque particule étant une séquence de bits modifiable par Dieu",
-        applicationConnections: {
-          above: "les 0 et 1 forment les instructions processeur et exécutent le code C/C++.",
-          below: "les 0 et 1 sont le niveau le plus profond accessible dans notre cascade, mais ils sont modifiables depuis la dimension divine."
-        },
-        universeConnections: {
-          above: "les 0 et 1 forment les particules fondamentales qui constituent les nucléons.",
-          below: "les 0 et 1 sont modifiés par la volonté divine depuis l'échelle de Planck (10⁻³⁵ m)."
-        },
-        connectionHorizontal: "les 0 et 1 sont les briques minimales de l'information dans notre cascade, comme les particules fondamentales sont les entités élémentaires de notre réalité, mais tous deux sont le résultat de modifications divines depuis l'échelle de Planck."
-      }
-    }
   ];
 
   // Fonctions de navigation
@@ -525,7 +503,7 @@ export const UniverseAppPage: React.FC = () => {
                       className="group relative bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 hover:from-yellow-700 hover:via-orange-700 hover:to-red-700 text-white rounded-full px-8 py-4 sm:px-12 sm:py-6 shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 border-4 border-yellow-400/50 hover:border-yellow-300/70 overflow-hidden"
                     >
                       {/* Effet de lueur divine */}
-                {currentSection < 4 && currentSection !== -1 && (
+                      <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/30 via-orange-400/30 to-red-400/30 rounded-full blur-xl animate-pulse opacity-70 group-hover:opacity-100 transition-all duration-500"></div>
                       
                       {/* Particules divines */}
                       <div className="absolute inset-0 overflow-hidden rounded-full">
@@ -559,27 +537,41 @@ export const UniverseAppPage: React.FC = () => {
                     </Link>
                   </div>
                 )}
-    if (currentSection === 4) {
+
+                {/* Bouton Rétrécir pour les pages d'échelles */}
+                {currentSection < 4 && currentSection !== -1 && (
+                  <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
+                    <button
+                      onClick={goToLowerScale}
+                      className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full w-20 h-20 sm:w-24 sm:h-24 shadow-2xl transition-all duration-500 transform hover:scale-90 active:scale-95 border-2 border-white/20"
+                    >
+                      <div className="flex items-center justify-center h-full transition-all duration-500 group-hover:scale-90">
+                        <span className="text-xs sm:text-sm font-bold transition-all duration-500 group-hover:text-xs sm:group-hover:text-sm group-hover:font-extrabold text-center leading-tight">Rétrécir</span>
+                      </div>
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           )}
-    } else if (currentSection < 4) {
+        </div>
 
         {/* Indicateurs de navigation */}
         {currentSection !== -1 && (
           <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
-          <div className="flex flex-col space-y-2">
-            {sections.slice(1).map((section, index) => ( // Affiche toutes les sections sauf l'intro
-              <button
-                key={section.id}
-                onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                  index === currentSection
-                    ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
+            <div className="flex flex-col space-y-2">
+              {sections.slice(1).map((section, index) => ( // Affiche toutes les sections sauf l'intro
+                <button
+                  key={section.id}
+                  onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                    index === currentSection
+                      ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         )}
 
