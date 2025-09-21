@@ -545,7 +545,6 @@ export const UniverseAppPage: React.FC = () => {
                   </div>
                 )}
 
-               {/* Bouton Rétrécir pour toutes les échelles sauf la dernière et l'intro */}
             </div>
           )}
         </div>
