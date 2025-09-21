@@ -725,7 +725,7 @@ export const Navigation: React.FC = () => {
                 
                 {/* Contenu */}
                 <div className="relative z-10">
-                  <h3 className={`text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500 text-center whitespace-nowrap`}>
+                  <h3 className={`text-xl sm:text-2xl lg:text-2xl xl:text-3xl font-bold ${item.textColor} group-hover:text-white transition-colors duration-300 sm:duration-500 text-center whitespace-nowrap`}>
                     {item.title}
                   </h3>
                 </div>
