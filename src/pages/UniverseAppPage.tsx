@@ -346,6 +346,68 @@ export const UniverseAppPage: React.FC = () => {
                   </div>
                 </div>
 
+                {/* Cascade des échelles - Section ajoutée */}
+                <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/40 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-emerald-400/40 shadow-2xl mb-3 sm:mb-4">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <Layers className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 text-emerald-400" />
+                    <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-emerald-300">
+                      La Cascade des Échelles : Du Visible à l'Invisible
+                    </h2>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <div className="space-y-3">
+                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
+                        🌌 Cascade Universelle (Physique)
+                      </h3>
+                      
+                      <div className="space-y-2 sm:space-y-3">
+                        {[
+                          { level: "Macroscopique", desc: "Ce que nous voyons : humains, objets, monde visible", color: "bg-purple-900/40 border-purple-400" },
+                          { level: "Moléculaire", desc: "Assemblages d'atomes : ADN, protéines, matériaux", color: "bg-blue-900/40 border-blue-400" },
+                          { level: "Atomique", desc: "Briques de la matière : hydrogène, carbone, fer", color: "bg-green-900/40 border-green-400" },
+                          { level: "Nucléaire", desc: "Cœur des atomes : protons et neutrons", color: "bg-yellow-900/40 border-yellow-400" },
+                          { level: "Particules", desc: "Constituants ultimes : quarks, leptons, bosons", color: "bg-orange-900/40 border-orange-400" },
+                          { level: "Planck", desc: "Granularité ultime de l'espace-temps", color: "bg-red-900/40 border-red-400" }
+                        ].map((item, index) => (
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
+                            <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
+                        💻 Cascade Informatique (Logicielle)
+                      </h3>
+                      
+                      <div className="space-y-2 sm:space-y-3">
+                        {[
+                          { level: "Interface", desc: "Ce que nous voyons : pages web, applications", color: "bg-purple-900/40 border-purple-400" },
+                          { level: "React", desc: "Composants réutilisables : boutons, formulaires", color: "bg-blue-900/40 border-blue-400" },
+                          { level: "JavaScript", desc: "Langage universel : fonctions, variables, logique", color: "bg-green-900/40 border-green-400" },
+                          { level: "C/C++", desc: "Fondations système : moteurs d'exécution", color: "bg-yellow-900/40 border-yellow-400" },
+                          { level: "Instructions", desc: "Ordres processeur : ADD, MOV, JMP", color: "bg-orange-900/40 border-orange-400" },
+                          { level: "Binaire", desc: "Mer de 0 et 1 : base de toute information", color: "bg-red-900/40 border-red-400" }
+                        ].map((item, index) => (
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
+                            <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-4 sm:mt-6 bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border-l-4 border-cyan-400">
+                    <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
+                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> Votre écran affiche une interface, compilée depuis React, écrit en JavaScript, exécuté par du C/C++, traduit en instructions processeur, converties en 0 et 1. De même, votre corps est fait de molécules, constituées d'atomes, formés de nucléons, composés de particules, reposant sur l'échelle de Planck.
+                    </p>
+                  </div>
+                </div>
+
                 {/* Call to action */}
                 <div className="flex flex-col items-center mb-2 sm:mb-3">
                   <p className="text-base sm:text-lg text-cyan-300 font-bold mb-3 sm:mb-4">
