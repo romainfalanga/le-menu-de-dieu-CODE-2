@@ -309,6 +309,31 @@ export const Navigation: React.FC = () => {
     }
   ];
 
+  const additionalNavigationItems = [
+    {
+      path: '/hierarchical-examples',
+      title: 'Décomposition d\'une Entité',
+      shortTitle: 'Décomposition d\'une Entité',
+      gradient: 'from-emerald-500/20 to-teal-500/20',
+      hoverGradient: 'hover:from-emerald-500/10 hover:to-teal-500/10',
+      textColor: 'text-emerald-300',
+      hoverTextColor: 'hover:text-emerald-300',
+      borderColor: 'border-emerald-400/30',
+      hoverBorderColor: 'hover:border-emerald-400/20',
+      shadowColor: 'shadow-emerald-500/25',
+      hoverShadowColor: 'hover:shadow-emerald-500/20',
+      glowFrom: 'from-emerald-400/10',
+      glowTo: 'to-teal-400/10',
+      hoverGlowFrom: 'from-emerald-400/5',
+      hoverGlowTo: 'to-teal-400/5',
+      dotColor: 'bg-emerald-400',
+      dotColor2: 'bg-teal-400',
+      icon: '🔬'
+    }
+  ];
+
+  const allNavigationItems = [...navigationItems, ...additionalNavigationItems];
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -646,7 +671,7 @@ export const Navigation: React.FC = () => {
           
           {/* Bouton de fermeture X en haut à droite du contenu */}
           <div className="flex flex-col sm:flex-row sm:justify-center gap-6 sm:gap-8 max-w-5xl w-full flex-shrink-0">
-            {navigationItems.map((item, index) => (
+            {allNavigationItems.map((item, index) => (
               <Link
                 key={item.path}
                 to={item.path}
