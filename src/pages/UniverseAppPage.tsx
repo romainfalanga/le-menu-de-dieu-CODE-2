@@ -355,7 +355,8 @@ export const UniverseAppPage: React.FC = () => {
                     </h2>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                  {/* Première partie : Échelles "classiques" observables */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
                         🌌 Cascade Universelle (Physique)
@@ -376,34 +377,6 @@ export const UniverseAppPage: React.FC = () => {
                             desc: "Assemblages d'atomes : ADN, protéines, matériaux", 
                             connection: "→ Propriétés émergentes par liaison d'atomes spécifiques",
                             color: "bg-blue-900/40 border-blue-400" 
-                          },
-                          { 
-                            level: "Échelle atomique", 
-                            scale: "10⁻¹⁰ m", 
-                            desc: "Briques de la matière : hydrogène, carbone, fer", 
-                            connection: "→ Stabilité et identité chimique données par le noyau",
-                            color: "bg-green-900/40 border-green-400" 
-                          },
-                          { 
-                            level: "Échelle nucléaire", 
-                            scale: "10⁻¹⁵ m", 
-                            desc: "Cœur des atomes : protons et neutrons", 
-                            connection: "→ Masse et charge électrique définies par les quarks",
-                            color: "bg-yellow-900/40 border-yellow-400" 
-                          },
-                          { 
-                            level: "Échelle des particules fondamentales", 
-                            scale: "10⁻¹⁸ m", 
-                            desc: "Constituants ultimes : quarks, leptons, bosons", 
-                            connection: "→ Existence même permise par la géométrie de l'espace-temps",
-                            color: "bg-orange-900/40 border-orange-400" 
-                          },
-                          { 
-                            level: "Échelle de Planck", 
-                            scale: "10⁻³⁵ m", 
-                            desc: "Granularité ultime de l'espace-temps", 
-                            connection: null,
-                            color: "bg-red-900/40 border-red-400" 
                           }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
@@ -440,28 +413,128 @@ export const UniverseAppPage: React.FC = () => {
                             desc: "Composants réutilisables : boutons, formulaires", 
                             connection: "→ Logique et structure définies par le code JavaScript",
                             color: "bg-blue-900/40 border-blue-400" 
+                          }
+                        ].map((item, index) => (
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
+                            <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                            {item.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {item.connection}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Paragraphe de transition : Superposition Quantique */}
+                  <div className="bg-gradient-to-r from-indigo-900/60 to-purple-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-indigo-400/50 shadow-2xl mb-6">
+                    <div className="flex items-center mb-3 sm:mb-4">
+                      <Atom className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 text-indigo-400" />
+                      <h3 className="text-base sm:text-lg lg:text-xl font-bold text-indigo-300">
+                        🌀 Transition vers la Superposition Quantique
+                      </h3>
+                    </div>
+                    <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
+                      <p>
+                        <strong className="text-indigo-300">À partir de ce point, tout change :</strong> nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
+                      </p>
+                      <p>
+                        <strong className="text-cyan-300">Dans l'univers :</strong> Un atome existe dans une superposition de tous ses états possibles tant qu'on ne "mesure" pas ses composants nucléaires et particulaires. Sa façon d'exister n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'on regarde sous le capot.
+                      </p>
+                      <p>
+                        <strong className="text-green-300">Dans l'application :</strong> Un composant React existe dans une superposition de toutes ses implémentations possibles tant qu'on n'inspecte pas son code JavaScript et C++. Son comportement exact n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'on ouvre le code source.
+                      </p>
+                      <p className="font-semibold text-pink-300 bg-pink-900/20 p-2 sm:p-3 rounded-lg border border-pink-400/30">
+                        💫 <strong>L'acte d'observation/inspection</strong> "effondre" la superposition et révèle l'état ou l'implémentation concrète.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Deuxième partie : Échelles en "superposition quantique" */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                    <div className="space-y-3">
+                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
+                        🌌 Cascade Universelle (Physique) - Suite
+                      </h3>
+                      
+                      <div className="space-y-2 sm:space-y-3">
+                        {[
+                          { 
+                            level: "Échelle atomique", 
+                            scale: "10⁻¹⁰ m", 
+                            desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer", 
+                            connection: "→ Stabilité et identité chimique données par le noyau",
+                            color: "bg-green-900/40 border-green-400" 
                           },
                           { 
+                            level: "Échelle nucléaire", 
+                            scale: "10⁻¹⁵ m", 
+                            desc: "Cœur des atomes révélé par observation : protons et neutrons", 
+                            connection: "→ Masse et charge électrique définies par les quarks",
+                            color: "bg-yellow-900/40 border-yellow-400" 
+                          },
+                          { 
+                            level: "Échelle des particules fondamentales", 
+                            scale: "10⁻¹⁸ m", 
+                            desc: "Constituants ultimes révélés par mesure : quarks, leptons, bosons", 
+                            connection: "→ Existence même permise par la géométrie de l'espace-temps",
+                            color: "bg-orange-900/40 border-orange-400" 
+                          },
+                          { 
+                            level: "Échelle de Planck", 
+                            scale: "10⁻³⁵ m", 
+                            desc: "Granularité ultime de l'espace-temps - pure information quantique", 
+                            connection: null,
+                            color: "bg-red-900/40 border-red-400" 
+                          }
+                        ].map((item, index) => (
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">
+                              {item.level}
+                              <span className="text-cyan-300 font-mono ml-2">{item.scale}</span>
+                            </div>
+                            <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                            {item.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {item.connection}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="space-y-3">
+                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
+                        💻 Cascade Informatique (Logicielle) - Suite
+                      </h3>
+                      
+                      <div className="space-y-2 sm:space-y-3">
+                        {[
+                          { 
                             level: "JavaScript", 
-                            desc: "Langage universel : fonctions, variables, logique", 
+                            desc: "Langage en superposition de code : fonctions, variables, logique", 
                             connection: "→ Exécution assurée par les moteurs écrits en C/C++",
                             color: "bg-green-900/40 border-green-400" 
                           },
                           { 
                             level: "C/C++", 
-                            desc: "Fondations système : moteurs d'exécution", 
+                            desc: "Fondations système révélées par inspection : moteurs d'exécution", 
                             connection: "→ Compilation vers des instructions processeur spécifiques",
                             color: "bg-yellow-900/40 border-yellow-400" 
                           },
                           { 
                             level: "Instructions", 
-                            desc: "Ordres processeur : ADD, MOV, JMP", 
+                            desc: "Ordres processeur révélés par décompilation : ADD, MOV, JMP", 
                             connection: "→ Traduction directe en séquences de 0 et 1",
                             color: "bg-orange-900/40 border-orange-400" 
                           },
                           { 
                             level: "Binaire", 
-                            desc: "Mer de 0 et 1 : base de toute information", 
+                            desc: "Mer de 0 et 1 - pure information quantique : base de toute réalité", 
                             connection: null,
                             color: "bg-red-900/40 border-red-400" 
                           }
@@ -482,7 +555,7 @@ export const UniverseAppPage: React.FC = () => {
                   
                   <div className="mt-4 sm:mt-6 bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border-l-4 border-cyan-400">
                     <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
-                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> Votre écran affiche une interface, compilée depuis React, écrit en JavaScript, exécuté par du C/C++, traduit en instructions processeur, converties en 0 et 1. De même, votre corps est fait de molécules, constituées d'atomes, formés de nucléons, composés de particules, reposant sur l\'échelle de Planck.
+                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> Votre écran affiche une interface, compilée depuis React, écrit en JavaScript, exécuté par du C/C++, traduit en instructions processeur, converties en 0 et 1. De même, votre corps est fait de molécules, constituées d'atomes, formés de nucléons, composés de particules, reposant sur l'échelle de Planck. <strong className="text-purple-300">Mais à partir de l'échelle atomique, tout existe en superposition quantique jusqu'à ce qu'on "regarde sous le capot".</strong>
                     </p>
                   </div>
                 </div>
