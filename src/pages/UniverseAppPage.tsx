@@ -482,7 +482,7 @@ export const UniverseAppPage: React.FC = () => {
                 </div>
 
                 {/* Bouton Rétrécir pour les pages d'échelles */}
-                {currentSection < 4 && currentSection !== -1 && (
+                {currentSection < 3 && currentSection !== -1 && (
                   <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
                     <button
                       onClick={goToLowerScale}
@@ -496,7 +496,7 @@ export const UniverseAppPage: React.FC = () => {
                 )}
 
                 {/* Bouton spécial "Dimension de Dieu" pour l'échelle des Bits Binaires */}
-                {currentSection === 4 && (
+                {currentSection === 3 && (
                   <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
                     <Link
                       to="/dimension-de-dieu"
