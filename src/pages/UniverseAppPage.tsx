@@ -370,13 +370,6 @@ export const UniverseAppPage: React.FC = () => {
                             desc: "Ce que nous voyons : humains, objets, monde visible", 
                             connection: "→ Formé par l'assemblage de milliards de molécules organisées",
                             color: "bg-purple-900/40 border-purple-400" 
-                          },
-                          { 
-                            level: "Échelle moléculaire", 
-                            scale: "10⁻⁹ à 10⁻⁶ m", 
-                            desc: "Assemblages d'atomes : ADN, protéines, matériaux", 
-                            connection: "→ Propriétés émergentes par liaison d'atomes spécifiques",
-                            color: "bg-blue-900/40 border-blue-400" 
                           }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
@@ -517,6 +510,12 @@ export const UniverseAppPage: React.FC = () => {
                       
                       <div className="space-y-2 sm:space-y-3">
                         {[
+                          { 
+                            level: "Composants React", 
+                            desc: "Composants réutilisables qui définissent logique et apparence. Leur agencement est une probabilité jusqu'à l'observation, comme une superposition quantique.", 
+                            connection: "→ Logique et structure définies par le code JavaScript",
+                            color: "bg-blue-900/40 border-blue-400" 
+                          },
                           { 
                             level: "JavaScript", 
                             desc: "Langage en superposition de code : fonctions, variables, logique", 
@@ -797,19 +796,19 @@ export const UniverseAppPage: React.FC = () => {
         {/* Indicateurs de navigation */}
         {currentSection !== -1 && (
           <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
-          <div className="flex flex-col space-y-2">
-            {sections.slice(1).map((section, index) => (
-              <button
-                key={section.id}
-                onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                  index === currentSection
-                    ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
+            <div className="flex flex-col space-y-2">
+              {sections.slice(1).map((section, index) => (
+                <button
+                  key={section.id}
+                  onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                    index === currentSection
+                      ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         )}
 
