@@ -128,7 +128,6 @@ export const UniverseAppPage: React.FC = () => {
   });
   const location = useLocation();
 
-
   const sections = [
     {
       id: -1,
@@ -140,7 +139,7 @@ export const UniverseAppPage: React.FC = () => {
       content: {
         info: "Imaginons que l'univers fonctionne comme une application informatique.",
         universe: "Chaque couche correspond à un langage ou à un niveau d'abstraction, qui encapsule le précédent et prépare le suivant.",
-        connectionHorizontal: "Ce que nous voyons à l'échelle humaine — le monde macroscopique — est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à l'échelle de Planck."
+        connectionHorizontal: "Ce que nous voyons à l'échelle humaine — le monde macroscopique — est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à l'échelle de Planck. Ces 0 et 1 sont des instructions éphémères qui sculptent la réalité à chaque instant, mais l'objet créé à l'échelle de l'interface utilisateur, lui, persiste."
       }
     },
     {
@@ -151,18 +150,9 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-900/30 via-cyan-900/20 to-blue-800/30",
       content: {
-        application: "Interface utilisateur (UI), rendu final affiché à l'écran.",
-        universe: "Monde macroscopique, réalité visible à l'échelle humaine.",
-        universeExamples: "êtres humains, animaux, arbres, montagnes, océans, objets du quotidien",
-        applicationConnections: {
-          above: null,
-          below: "l'UI est générée par les composants React."
-        },
-        universeConnections: {
-          above: null,
-          below: "le monde macroscopique est formé de molécules."
-        },
-        connectionHorizontal: "l'UI est la traduction lisible d'un code invisible, tout comme le monde macroscopique est l'expression visible de structures moléculaires cachées."
+        application: "L'UI d'une application : boutons, images, textes visibles à l'écran.",
+        universe: "Ce que nous percevons directement avec nos sens : êtres humains, animaux, montagnes, arbres, objets du quotidien.",
+        connectionHorizontal: "Le macroscopique est le rendu final. Nous voyons l'interface, mais pas son code."
       }
     },
     {
@@ -173,18 +163,9 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-green-500 to-emerald-500",
       bgGradient: "from-green-900/30 via-emerald-900/20 to-green-800/30",
       content: {
-        application: "Composants React, briques réutilisables qui définissent logique et apparence. Chaque composant est écrit en JavaScript.",
-        universe: "Molécules, assemblages d'atomes qui portent des propriétés fonctionnelles (ADN, protéines, matériaux).",
-        universeExamples: "eau (H₂O), dioxygène (O₂), dioxyde de carbone (CO₂), ADN, protéines, lipides, plastiques, métaux",
-        applicationConnections: {
-          above: "les composants React construisent l'interface utilisateur.",
-          below: "les composants React sont écrits en JavaScript."
-        },
-        universeConnections: {
-          above: "les molécules forment le monde macroscopique.",
-          below: "les molécules sont constituées d'atomes."
-        },
-        connectionHorizontal: "les composants React encapsulent du code pour donner un rôle précis, comme les molécules encapsulent des atomes pour leur donner des propriétés nouvelles."
+        application: "Les composants React organisés : la structure logique qui assemble plusieurs briques de code pour créer une unité fonctionnelle (ex. une carte avec bouton + texte + image).",
+        universe: "Les molécules, agencements d'atomes (H₂O, O₂, ADN, protéines, plastiques).",
+        connectionHorizontal: "Les molécules (comme React) sont des assemblages. On en voit les effets (la matière, l'UI), mais pas la logique profonde qui les compose."
       }
     },
     {
@@ -195,18 +176,9 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-yellow-500 to-orange-500",
       bgGradient: "from-yellow-900/30 via-orange-900/20 to-yellow-800/30",
       content: {
-        application: "JavaScript, langage universel et flexible, base de React.",
-        universe: "Atomes, briques fondamentales de la matière (électrons + noyau).",
-        universeExamples: "hydrogène (H), oxygène (O), carbone (C), fer (Fe), uranium (U)",
-        applicationConnections: {
-          above: "JavaScript est utilisé pour écrire des composants React.",
-          below: "JavaScript est exécuté par des moteurs en C/C++."
-        },
-        universeConnections: {
-          above: "les atomes se combinent pour former des molécules.",
-          below: "les atomes sont constitués de nucléons."
-        },
-        connectionHorizontal: "JavaScript est une syntaxe universelle qui permet d'assembler du code, comme les atomes offrent une grammaire universelle pour assembler la matière."
+        application: "Le JavaScript, code flexible qui peut être écrit de mille manières différentes pour produire le même composant React.",
+        universe: "Les atomes (hydrogène, oxygène, carbone…), briques de base de la matière.",
+        connectionHorizontal: "Comme les atomes, le JavaScript existe en superposition de possibilités. Tant qu'on ne lit pas le fichier (tant qu'on n'observe pas), toutes les versions coexistent. Observer, c'est effondrer la superposition : une seule version est choisie. 👉 C'est ici que la mécanique quantique agit réellement."
       }
     },
     {
@@ -217,18 +189,9 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-purple-500 to-violet-500",
       bgGradient: "from-purple-900/30 via-violet-900/20 to-purple-800/30",
       content: {
-        application: "C et C++, langages systèmes robustes, fondations des moteurs d'exécution.",
-        universe: "Nucléons (protons et neutrons), structures qui stabilisent les atomes.",
-        universeExamples: "protons et neutrons dans les noyaux atomiques (hydrogène, hélium, carbone…)",
-        applicationConnections: {
-          above: "C/C++ fait tourner les moteurs JavaScript.",
-          below: "C/C++ est compilé en instructions processeur."
-        },
-        universeConnections: {
-          above: "les nucléons forment les noyaux atomiques.",
-          below: "les nucléons sont constitués de quarks liés par des gluons."
-        },
-        connectionHorizontal: "C/C++ fournit une ossature stable pour exécuter les langages supérieurs, comme les nucléons fournissent une stabilité structurelle aux atomes."
+        application: "Les langages systèmes C et C++, socle stable sur lequel tournent les moteurs JavaScript.",
+        universe: "Les nucléons (protons et neutrons), qui donnent la stabilité aux atomes.",
+        connectionHorizontal: "Les protons/neutrons sont des briques fixes et invariantes, comme le C/C++ est une base rigide pour exécuter le code."
       }
     },
     {
@@ -239,18 +202,9 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-red-500 to-pink-500",
       bgGradient: "from-red-900/30 via-pink-900/20 to-red-800/30",
       content: {
-        application: "Instructions processeur (assembleur, opcodes : ADD, MOV, JMP), ordres élémentaires traduits en binaire.",
-        universe: "Particules fondamentales : fermions (quarks et leptons) = la matière, bosons (photon, gluon, W/Z, Higgs) = les forces.",
-        universeExamples: "Quarks (up, down, charm, strange, top, bottom), Leptons (électron, neutrinos, muons, taus), Bosons (photon, gluon, W, Z, Higgs)",
-        applicationConnections: {
-          above: "les instructions exécutent le code C/C++.",
-          below: "les instructions sont traduites en 0 et 1."
-        },
-        universeConnections: {
-          above: "les particules fondamentales forment les nucléons.",
-          below: "les particules reposent sur l'échelle de Planck."
-        },
-        connectionHorizontal: "les instructions sont les ordres élémentaires de l'application, comme les particules sont les entités élémentaires de la matière et des forces."
+        application: "Les instructions processeur (assembleur, opcodes), les ordres élémentaires exécutés par la machine.",
+        universe: "Les particules fondamentales (quarks, leptons, bosons) décrites par le Modèle Standard.",
+        connectionHorizontal: "Quarks et bosons sont les ordres élémentaires de l'univers, comme les opcodes sont ceux de l'informatique."
       }
     },
     {
@@ -261,18 +215,9 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-gray-600 to-slate-600",
       bgGradient: "from-gray-900/30 via-slate-900/20 to-gray-800/30",
       content: {
-        application: "Bits binaires, une mer de 0 et 1, sans signification isolée mais base de toute information.",
-        universe: "Échelle de Planck, granularité ultime de l'espace-temps.",
-        universeExamples: "granularité minimale de l'espace-temps (quanta hypothétiques), niveau où les lois de la relativité et de la mécanique quantique cessent de s'appliquer séparément",
-        applicationConnections: {
-          above: "les 0 et 1 composent les instructions processeur.",
-          below: null
-        },
-        universeConnections: {
-          above: "l'échelle de Planck donne naissance aux particules fondamentales.",
-          below: null
-        },
-        connectionHorizontal: "les 0 et 1 sont les briques minimales de l'information, comme l'échelle de Planck est la brique minimale de la réalité physique."
+        application: "Les bits binaires, 0 et 1, substrat ultime de toute information.",
+        universe: "L'échelle hypothétique où l'espace-temps devient discret, où la gravité quantique s'impose.",
+        connectionHorizontal: "Les 0 et 1 sont les briques minimales de l'information, le substrat ultime de toute possibilité. Une séquence spécifique de ces bits agit comme une instruction éphémère qui, une fois compilée pour manifester un élément à l'échelle macroscopique, disparaît pour redevenir un potentiel pur. L'échelle de Planck est ce niveau fondamental où la réalité est constamment sculptée par ces instructions transitoires."
       }
     }
   ];
@@ -304,7 +249,6 @@ export const UniverseAppPage: React.FC = () => {
         {/* Chiffres binaires téléportants pour la dernière section */}
         {currentSection === 5 && <TeleportingBinaryDigits />}
         
-        {/* Bouton échelle supérieure (4 flèches vers l'extérieur) */}
         {/* Section actuelle */}
         <div className="flex items-start justify-center pt-2">
           {currentSection === -1 ? (
@@ -323,19 +267,19 @@ export const UniverseAppPage: React.FC = () => {
                 <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20">
                     <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-                      Imaginons que l'univers fonctionne comme une application informatique.
+                      {currentSectionData.content.info}
                     </p>
                   </div>
                   
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20">
                     <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-                      Chaque couche correspond à un langage ou à un niveau d'abstraction, qui encapsule le précédent et prépare le suivant.
+                      {currentSectionData.content.universe}
                     </p>
                   </div>
                   
                   <div className="bg-gradient-to-r from-yellow-900/30 to-amber-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-yellow-400/30">
                     <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed font-medium">
-                      Ce que nous voyons à l'échelle humaine : "le monde macroscopique" est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à l'échelle de Planck.
+                      {currentSectionData.content.connectionHorizontal}
                     </p>
                   </div>
                   
@@ -409,90 +353,24 @@ export const UniverseAppPage: React.FC = () => {
                   <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/40 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-purple-400/40 shadow-2xl">
                     <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 border border-purple-300/30">
                       <h3 className="text-base sm:text-lg font-bold text-purple-200 text-center">
-                        Univers : {currentSectionData.content.universe.split(',')[0]}
+                        Univers
                       </h3>
                     </div>
                     <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
                       {currentSectionData.content.universe}
                     </p>
-                    
-                    {/* Exemples univers */}
-                    {currentSectionData.content.universeExamples && (
-                      <div className="bg-purple-800/30 backdrop-blur-sm rounded-md p-1.5 sm:p-2 border border-purple-300/30 mb-2 sm:mb-3">
-                        <h4 className="font-bold text-purple-200 mb-1 text-xs">
-                          🌌 Exemples dans l'univers
-                        </h4>
-                        <p className="text-gray-300 text-xs leading-relaxed italic">
-                          {currentSectionData.content.universeExamples}
-                        </p>
-                      </div>
-                    )}
-                    
-                    {/* Connexions univers */}
-                    <div className="space-y-1 sm:space-y-2">
-                      {currentSectionData.content.universeConnections?.above && (
-                        <div className="bg-green-900/30 backdrop-blur-sm rounded-md p-1.5 sm:p-2 border border-green-400/30">
-                          <h4 className="font-bold text-green-300 mb-1 flex items-center text-xs">
-                            <ChevronUp className="w-3 h-3 mr-1" />
-                            Au-dessus
-                          </h4>
-                          <p className="text-gray-200 text-xs leading-relaxed">
-                            {currentSectionData.content.universeConnections.above}
-                          </p>
-                        </div>
-                      )}
-                      
-                      {currentSectionData.content.universeConnections?.below && (
-                        <div className="bg-orange-900/30 backdrop-blur-sm rounded-md p-1.5 sm:p-2 border border-orange-400/30">
-                          <h4 className="font-bold text-orange-300 mb-1 flex items-center text-xs">
-                            <ChevronDown className="w-3 h-3 mr-1" />
-                            En dessous
-                          </h4>
-                          <p className="text-gray-200 text-xs leading-relaxed">
-                            {currentSectionData.content.universeConnections.below}
-                          </p>
-                        </div>
-                      )}
-                    </div>
                   </div>
 
                   {/* Section Informatique */}
                   <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/40 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-blue-400/40 shadow-2xl">
                     <div className="bg-blue-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 border border-blue-300/30">
                       <h3 className="text-base sm:text-lg font-bold text-blue-200 text-center">
-                        Application : {currentSectionData.content.application.split(',')[0]}
+                        Application
                       </h3>
                     </div>
                     <p className="text-gray-200 text-xs sm:text-sm leading-relaxed mb-2 sm:mb-3">
                       {currentSectionData.content.application}
                     </p>
-                    
-                    {/* Connexions application */}
-                    <div className="space-y-1 sm:space-y-2">
-                      {currentSectionData.content.applicationConnections?.above && (
-                        <div className="bg-green-900/30 backdrop-blur-sm rounded-md p-1.5 sm:p-2 border border-green-400/30">
-                          <h4 className="font-bold text-green-300 mb-1 flex items-center text-xs">
-                            <ChevronUp className="w-3 h-3 mr-1" />
-                            Au-dessus
-                          </h4>
-                          <p className="text-gray-200 text-xs leading-relaxed">
-                            {currentSectionData.content.applicationConnections.above}
-                          </p>
-                        </div>
-                      )}
-                      
-                      {currentSectionData.content.applicationConnections?.below && (
-                        <div className="bg-orange-900/30 backdrop-blur-sm rounded-md p-1.5 sm:p-2 border border-orange-400/30">
-                          <h4 className="font-bold text-orange-300 mb-1 flex items-center text-xs">
-                            <ChevronDown className="w-3 h-3 mr-1" />
-                            En dessous
-                          </h4>
-                          <p className="text-gray-200 text-xs leading-relaxed">
-                            {currentSectionData.content.applicationConnections.below}
-                          </p>
-                        </div>
-                      )}
-                    </div>
                   </div>
                 </div>
 
