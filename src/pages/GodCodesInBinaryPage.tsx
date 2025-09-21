@@ -226,7 +226,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
         </header>
 
         {/* Simulation de codage divin */}
-        <div className="max-w-xl mx-auto mb-8 lg:mb-12 h-[329px] lg:h-[424px] overflow-visible">
+        <div className="max-w-xl mx-auto mb-8 lg:mb-12">
           <GodCodingSimulation />
         </div>
 
