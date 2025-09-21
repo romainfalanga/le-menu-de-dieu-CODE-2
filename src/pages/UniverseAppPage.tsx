@@ -359,7 +359,7 @@ export const UniverseAppPage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        🌌 Cascade Universelle (Physique)
+                        Cascade Universelle (Physique)
                       </h3>
                       
                       <div className="space-y-2 sm:space-y-3">
@@ -397,7 +397,7 @@ export const UniverseAppPage: React.FC = () => {
                     
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        💻 Cascade Informatique (Logicielle)
+                        Cascade Informatique (Logicielle)
                       </h3>
                       
                       <div className="space-y-2 sm:space-y-3">
@@ -434,7 +434,7 @@ export const UniverseAppPage: React.FC = () => {
                     <div className="flex items-center mb-3 sm:mb-4">
                       <Atom className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 text-indigo-400" />
                       <h3 className="text-base sm:text-lg lg:text-xl font-bold text-indigo-300">
-                        🌀 Transition vers la Superposition Quantique
+                        Transition vers la Superposition Quantique
                       </h3>
                     </div>
                     <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
@@ -456,7 +456,7 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        🌌 Cascade Universelle (Physique) - Suite
+                        Cascade Universelle (Physique) - Suite
                       </h3>
                       
                       <div className="space-y-2 sm:space-y-3">
@@ -508,7 +508,7 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                     
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        💻 Cascade Informatique (Logicielle) - Suite
+                        Cascade Informatique (Logicielle) - Suite
                       </h3>
                       
                       <div className="space-y-2 sm:space-y-3">
