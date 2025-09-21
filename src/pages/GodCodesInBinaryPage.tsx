@@ -83,6 +83,7 @@ const GodCodingSimulation: React.FC = () => {
   const [currentCode, setCurrentCode] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [currentCreationPhrase, setCurrentCreationPhrase] = useState('');
   
   // Génération de séquences binaires aléatoires de 15 rangées de 40 chiffres
   const binarySequences = React.useMemo(() => {
@@ -95,7 +96,24 @@ const GodCodingSimulation: React.FC = () => {
     });
   }, []);
   
+  // Phrases de création correspondant à chaque séquence binaire
+  const creationPhrases = React.useMemo(() => [
+    "Création d'une voiture",
+    "Création d'un briquet",
+    "Création d'un arbre",
+    "Création d'une montagne",
+    "Création d'un océan",
+    "Création d'une étoile",
+    "Création d'un être humain",
+    "Création d'une galaxie"
+  ], []);
+  
   const [sequenceIndex, setSequenceIndex] = useState(0);
+  
+  // Initialiser la première phrase de création
+  React.useEffect(() => {
+    setCurrentCreationPhrase(creationPhrases[0]);
+  }, [creationPhrases]);
   
   useEffect(() => {
     const currentSequence = binarySequences[sequenceIndex];
@@ -136,9 +154,11 @@ const GodCodingSimulation: React.FC = () => {
     if (isDeleting && currentCode.length === 0) {
       // Suppression terminée, passer à la séquence suivante
       setIsDeleting(false);
-      setSequenceIndex(prev => (prev + 1) % binarySequences.length);
+      const nextIndex = (sequenceIndex + 1) % binarySequences.length;
+      setSequenceIndex(nextIndex);
+      setCurrentCreationPhrase(creationPhrases[nextIndex]);
     }
-  }, [isTyping, isDeleting, currentCode, sequenceIndex, binarySequences]);
+  }, [isTyping, isDeleting, currentCode, sequenceIndex, binarySequences, creationPhrases]);
 
   return (
     <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-yellow-400/50 shadow-2xl w-fit mx-auto">
@@ -147,6 +167,15 @@ const GodCodingSimulation: React.FC = () => {
         <h3 className="text-lg sm:text-xl font-bold text-yellow-300">
           Dieu code en temps réel...
         </h3>
+      </div>
+      
+      {/* Phrase de création actuelle */}
+      <div className="mb-4 text-center">
+        <div className="bg-gradient-to-r from-yellow-900/40 to-orange-900/30 backdrop-blur-sm rounded-lg px-4 py-2 border border-yellow-400/30">
+          <p className="text-sm sm:text-base font-semibold text-yellow-200">
+            ✨ {currentCreationPhrase}
+          </p>
+        </div>
       </div>
       
       <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 w-fit">
