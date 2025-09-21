@@ -113,7 +113,7 @@ export const HierarchicalExamplesPage: React.FC = () => {
           <div className="text-sm sm:text-base lg:text-lg text-gray-200 space-y-3 sm:space-y-4 leading-relaxed">
             <p>
               Cette page illustre un concept fondamental : <strong className="text-cyan-300">chaque échelle est une décomposition de la précédente</strong>. 
-              Nous prenons un seul objet - un être humain - et nous "zoomons" dedans à travers les différentes couches de réalité.
+              Nous prenons un seul objet - un être humain - et nous "zoomons\" dedans à travers les différentes couches de réalité.
             </p>
             
             <div className="bg-gradient-to-r from-emerald-900/40 to-teal-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-emerald-400">
@@ -146,7 +146,7 @@ export const HierarchicalExamplesPage: React.FC = () => {
             Cette décomposition révèle que <strong className="text-yellow-300">tout dans l'univers</strong> peut être vu comme 
             une <strong className="text-cyan-300">architecture logicielle complexe</strong>. Chaque niveau d'abstraction cache 
             la complexité du niveau inférieur, tout en fournissant les fondations du niveau supérieur. 
-            Un être humain n'est finalement qu'une <strong className="text-purple-300">interface utilisateur très sophistiquée</strong> 
+            Un être humain n'est finalement qu\'une <strong className="text-purple-300">interface utilisateur très sophistiquée</strong> 
             d'un programme écrit en binaire quantique.
           </p>
         </div>
