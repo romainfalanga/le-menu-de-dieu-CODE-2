@@ -411,7 +411,7 @@ export const UniverseAppPage: React.FC = () => {
                             desc: "Composants réutilisables qui définissent logique et apparence. Leur agencement est une probabilité jusqu'à l'observation, comme une superposition quantique.", 
                             connection: "→ Logique et structure définies par le code JavaScript",
                             color: "bg-blue-900/40 border-blue-400" 
-                          }
+                          },
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
