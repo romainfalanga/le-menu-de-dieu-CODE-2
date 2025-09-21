@@ -658,6 +658,3 @@ export const GodCodesInBinaryPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
-};
