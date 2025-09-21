@@ -118,15 +118,16 @@ const TeleportingBinaryDigits: React.FC = () => {
 };
 
 export const UniverseAppPage: React.FC = () => {
-  const [currentSection, setCurrentSection] = useState(-1); // -1 pour la page d'intro
+  const [currentSection, setCurrentSection] = useState(() => {
+    // Initialise directement avec la section cible si elle existe
+    const state = window.location.state || (window.history.state && window.history.state.usr);
+    if (state && state.targetSection === 5) {
+      return 5;
+    }
+    return -1; // -1 pour la page d'intro par défaut
+  });
   const location = useLocation();
 
-  // Gestion de la navigation directe vers l'échelle de Planck
-  useEffect(() => {
-    if (location.state && (location.state as any).targetSection === 5) {
-      setCurrentSection(5);
-    }
-  }, [location]);
 
   const sections = [
     {
