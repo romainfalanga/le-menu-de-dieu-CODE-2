@@ -520,16 +520,21 @@ export const GodCodesInBinaryPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Binaire", desc: "Dieu modifie des trillions de trillions de bits coordonnés", color: "bg-red-900/40 border-red-400" },
-                    { level: "Instructions", desc: "Des milliards de milliards d'opcodes processeur changent", color: "bg-orange-900/40 border-orange-400" },
-                    { level: "C/C++", desc: "Des centaines de millions de fonctions système modifiées", color: "bg-yellow-900/40 border-yellow-400" },
-                    { level: "Java Script", desc: "Des dizaines de millions de scripts/fonctions changent de comportement", color: "bg-green-900/40 border-green-400" },
-                    { level: "React", desc: "Des milliers de composants de la réalité se comportent différemment", color: "bg-blue-900/40 border-blue-400" },
-                    { level: "Interface", desc: "Un téléphone fonctionnel apparaît dans la réalité", color: "bg-purple-900/40 border-purple-400" }
+                    { level: "Binaire", desc: "Dieu manipule les 0 et 1, le code source fondamental qui définit chaque instruction et chaque bit de matière.", connection: "→ Compilation vers des instructions processeur spécifiques", color: "bg-red-900/40 border-red-400" },
+                    { level: "C/C++", desc: "Les modifications binaires se manifestent en opérations de bas niveau, orchestrant les fondations du système.", connection: "→ Exécution assurée par les moteurs écrits en C/C++", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "JavaScript", desc: "Le langage universel prend forme, définissant la logique et le comportement des éléments à un niveau plus abstrait.", connection: "→ Logique et structure définies par le code JavaScript", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "Composants React", desc: "Les composants de la réalité s'assemblent, créant des structures et des fonctionnalités complexes.", connection: "→ Génération de l'HTML/CSS", color: "bg-green-900/40 border-green-400" },
+                    { level: "HTML/CSS", desc: "La structure et l'apparence du téléphone sont définies, décrivant sa forme et ses propriétés visuelles.", connection: "→ Rendu de l'interface utilisateur finale", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Interface utilisateur", desc: "Le téléphone apparaît, une interface utilisateur fonctionnelle et tangible dans la réalité.", connection: null, color: "bg-purple-900/40 border-purple-400" }
                   ].map((item, index) => (
                     <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color} min-h-[80px] flex flex-col justify-center`}>
                       <div className="font-bold text-white text-sm">{item.level}</div>
                       <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                      {item.connection && (
+                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                          {item.connection}
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
