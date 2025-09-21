@@ -244,7 +244,7 @@ export const UniverseAppPage: React.FC = () => {
         universeExamples: "Quarks (up, down, charm, strange, top, bottom), Leptons (électron, neutrinos, muons, taus), Bosons (photon, gluon, W, Z, Higgs)",
         applicationConnections: {
           above: "C/C++ fait tourner les moteurs JavaScript.",
-          below: "C/C++ est compilé en instructions processeur."
+          below: "C/C++ est compilé en 0 et 1."
         },
         universeConnections: {
           above: "les particules fondamentales forment les nucléons.",
@@ -261,18 +261,18 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-gray-600 to-slate-600",
       bgGradient: "from-gray-900/30 via-slate-900/20 to-gray-800/30",
       content: {
-        application: "Instructions processeur (assembleur, opcodes : ADD, MOV, JMP), ordres élémentaires traduits en binaire.",
+        application: "0 et 1 (Binaire), les informations élémentaires de la réalité.",
         universe: "Échelle de Planck, granularité ultime de l'espace-temps.",
         universeExamples: "granularité minimale de l'espace-temps (quanta hypothétiques), niveau où les lois de la relativité et de la mécanique quantique cessent de s'appliquer séparément",
         applicationConnections: {
-          above: "les instructions exécutent le code C/C++.",
-          below: "les instructions sont traduites en 0 et 1."
+          above: "les 0 et 1 sont le résultat de la compilation du code C/C++.",
+          below: null
         },
         universeConnections: {
           above: "l'échelle de Planck donne naissance aux particules fondamentales.",
           below: null
         },
-        connectionHorizontal: "les instructions sont les ordres élémentaires de l'application, comme l'échelle de Planck contient les informations élémentaires de la réalité physique."
+        connectionHorizontal: "les 0 et 1 sont les informations élémentaires de l'application, comme l'échelle de Planck contient les informations élémentaires de la réalité physique."
       }
     }
   ];
