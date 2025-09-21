@@ -498,14 +498,14 @@ export const GodCodesInBinaryPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Planck", desc: "Dieu modifie des trillions de trillions de bits quantiques (pour former les matériaux)", color: "bg-red-900/40 border-red-400" },
-                    { level: "Particules", desc: "Des milliards de milliards de fermions et bosons s'organisent (électrons, quarks pour silicium, métaux)", color: "bg-orange-900/40 border-orange-400" },
-                    { level: "Nucléons", desc: "Des milliards de milliards de protons et neutrons se combinent (pour les noyaux des atomes)", color: "bg-yellow-900/40 border-yellow-400" },
-                    { level: "Atomes", desc: "Des centaines de milliards d'atomes acquièrent de nouvelles propriétés (silicium, cuivre, or, oxygène, carbone)", color: "bg-green-900/40 border-green-400" },
-                    { level: "Molécules", desc: "Des dizaines de milliards de molécules interagissent différemment (polymères, cristaux liquides, semi-conducteurs)", color: "bg-blue-900/40 border-blue-400" },
-                    { level: "Macroscopique", desc: "Un téléphone complet apparaît dans la réalité (écran, batterie, circuits, coque)", color: "bg-purple-900/40 border-purple-400" }
+                    { level: "Planck", desc: "Dieu modifie des trillions de trillions de bits quantiques", color: "bg-red-900/40 border-red-400" },
+                    { level: "Particules", desc: "Des milliards de milliards de fermions et bosons s'organisent", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "Nucléons", desc: "Des milliards de milliards de protons et neutrons se combinent", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "Atomes", desc: "Des centaines de milliards d'atomes acquièrent de nouvelles propriétés", color: "bg-green-900/40 border-green-400" },
+                    { level: "Molécules", desc: "Des dizaines de milliards de molécules interagissent différemment", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Macroscopique", desc: "Un téléphone complet apparaît dans la réalité", color: "bg-purple-900/40 border-purple-400" }
                   ].map((item, index) => (
-                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color}`}>
+                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color} min-h-[80px] flex flex-col justify-center`}>
                       <div className="font-bold text-white text-sm">{item.level}</div>
                       <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
                     </div>
@@ -527,7 +527,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
                     { level: "React", desc: "Des milliers de composants de la réalité se comportent différemment", color: "bg-blue-900/40 border-blue-400" },
                     { level: "Interface", desc: "Un téléphone fonctionnel apparaît dans la réalité", color: "bg-purple-900/40 border-purple-400" }
                   ].map((item, index) => (
-                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color}`}>
+                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color} min-h-[80px] flex flex-col justify-center`}>
                       <div className="font-bold text-white text-sm">{item.level}</div>
                       <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
                     </div>
