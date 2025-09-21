@@ -156,7 +156,7 @@ export const UniverseAppPage: React.FC = () => {
         universeExamples: "êtres humains, animaux, arbres, montagnes, océans, objets du quotidien",
         applicationConnections: {
           above: null,
-          below: "l'UI est générée par les composants React."
+          below: "l'UI est générée par du HTML/CSS."
         },
         universeConnections: {
           above: null,
