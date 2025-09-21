@@ -405,18 +405,12 @@ export const UniverseAppPage: React.FC = () => {
                           { 
                             level: "Interface utilisateur", 
                             desc: "Ce que nous voyons : humains, objets, monde visible", 
-                            connection: "→ Rendu généré par le DOM (HTML/CSS)",
+                            connection: "→ Rendu généré par la compilation des composants React",
                             color: "bg-purple-900/40 border-purple-400" 
                           },
                           { 
-                            level: "HTML/CSS (DOM)", 
-                            desc: "Structure et style de la page web, interprétés par le navigateur", 
-                            connection: "→ Produit par les Composants React",
-                            color: "bg-teal-900/40 border-teal-400" 
-                          },
-                          { 
-                            level: "Composants React", 
-                            desc: "Composants réutilisables qui définissent logique et apparence. Leur agencement est une probabilité jusqu'à l'observation, comme une superposition quantique.", 
+                            level: "React", 
+                            desc: "Composants réutilisables : boutons, formulaires", 
                             connection: "→ Logique et structure définies par le code JavaScript",
                             color: "bg-blue-900/40 border-blue-400" 
                           }
@@ -530,9 +524,15 @@ export const UniverseAppPage: React.FC = () => {
                             color: "bg-yellow-900/40 border-yellow-400" 
                           },
                           { 
-                            level: "Code Machine (Instructions Binaires)", 
-                            desc: "Ordres élémentaires traduits en 0 et 1, base de toute information et exécution matérielle.", 
-                            connection: "→ Base de toute information et exécution matérielle.",
+                            level: "Instructions", 
+                            desc: "Ordres processeur révélés par décompilation : ADD, MOV, JMP", 
+                            connection: "→ Traduction directe en séquences de 0 et 1",
+                            color: "bg-orange-900/40 border-orange-400" 
+                          },
+                          { 
+                            level: "Binaire", 
+                            desc: "Mer de 0 et 1 - pure information quantique : base de toute réalité", 
+                            connection: null,
                             color: "bg-red-900/40 border-red-400" 
                           }
                         ].map((item, index) => (
