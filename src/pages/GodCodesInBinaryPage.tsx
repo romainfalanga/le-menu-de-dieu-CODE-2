@@ -354,7 +354,7 @@ const GodCodingSimulation: React.FC = () => {
       // Taper caractère par caractère
       const typeTimer = setTimeout(() => {
         setCurrentCode(prev => prev + currentSequence[prev.length]);
-      }, 2000.26); // Ralenti de 2 secondes pour chaque caractère
+      }, 0.26); // Ultra rapide pour écrire 600 caractères en ~0.16 secondes (5x plus rapide)
       return () => clearTimeout(typeTimer);
     }
     
@@ -371,7 +371,7 @@ const GodCodingSimulation: React.FC = () => {
       // Supprimer caractère par caractère
       const deleteTimer = setTimeout(() => {
         setCurrentCode(prev => prev.slice(0, -1));
-      }, 2000.8); // Ralenti de 2 secondes pour chaque caractère supprimé
+      }, 0.8); // Suppression très rapide
       return () => clearTimeout(deleteTimer);
     }
     
