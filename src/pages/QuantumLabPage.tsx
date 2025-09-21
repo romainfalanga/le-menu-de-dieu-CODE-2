@@ -296,8 +296,10 @@ const ScaleBlock: React.FC<{ scale: ScaleData; isExpanded: boolean; onToggle: ()
             <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg opacity-50 cursor-not-allowed">
               🔬 Observer
             </button>
+            <button
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg"
               onClick={handleCombine}
+            >
               ⚗️ Combiner
             </button>
             <button className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg opacity-50 cursor-not-allowed">
