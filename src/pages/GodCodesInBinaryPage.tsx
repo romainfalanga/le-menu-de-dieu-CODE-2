@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Code2, Zap, ArrowLeft, Binary, Cpu, Eye, Layers, Atom, Infinity } from 'lucide-react';
+import { Code2, Zap, ArrowLeft, Binary, Cpu, Eye, Layers, Atom } from 'lucide-react';
 
 // Composant pour les chiffres binaires qui se téléportent - version divine
 const DivineBinaryDigits: React.FC = () => {
@@ -128,7 +128,7 @@ const GodCodingSimulation: React.FC = () => {
       <div className="flex items-center mb-4">
         <Code2 className="w-6 h-6 text-yellow-400 mr-2" />
         <h3 className="text-lg sm:text-xl font-bold text-yellow-300">
-          Dieu manipule les lois fondamentales en temps réel...
+          Dieu code en temps réel...
         </h3>
       </div>
       
@@ -140,13 +140,13 @@ const GodCodingSimulation: React.FC = () => {
       </div>
       
       <div className="mt-3 text-xs sm:text-sm text-gray-400 italic">
-        Chaque modification à 10⁻³⁵ m se traduit instantanément en 0 et 1 à 10⁻¹⁸ m, modifiant toute la réalité...
+        Chaque bit modifie instantanément la réalité à tous les niveaux...
       </div>
     </div>
   );
 };
 
-export const DimensionDeDieuPage: React.FC = () => {
+export const GodCodesInBinaryPage: React.FC = () => {
   // Force le re-rendu propre de la page
   React.useEffect(() => {
     window.scrollTo(0, 0);
@@ -175,10 +175,10 @@ export const DimensionDeDieuPage: React.FC = () => {
         {/* En-tête */}
         <header className="text-center mb-6 sm:mb-8 lg:mb-12">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-300 via-orange-300 via-red-300 to-purple-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(255,215,0,0.8)] mb-3 sm:mb-4 px-2">
-            La Dimension de Dieu
+            Dieu code en Binaire
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-yellow-200 max-w-4xl mx-auto px-4 leading-relaxed">
-            Dieu manipule les lois fondamentales à 10⁻³⁵ m, qui se traduisent en 0 et 1 à 10⁻¹⁸ m : le miroir de la réalité
+            À l'échelle de Planck, la réalité devient programmable : chaque 0 et 1 modifie l'univers entier
           </p>
         </header>
 
@@ -193,62 +193,49 @@ export const DimensionDeDieuPage: React.FC = () => {
           {/* Introduction conceptuelle */}
           <div className="bg-gradient-to-br from-yellow-900/30 to-orange-900/20 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-yellow-400/40 shadow-2xl">
             <div className="flex items-center mb-4 sm:mb-6">
-              <Infinity className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-yellow-400" />
+              <Binary className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-yellow-400" />
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-yellow-300">
-                L'Interface Divine et le Processus Miroir
+                Le Code Source de la Réalité
               </h2>
             </div>
             
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
               <p>
-                <strong className="text-yellow-300">Notre univers fonctionne en continu</strong> : de notre interface macroscopique, 
-                il se décompose naturellement à travers les échelles (molécules, atomes, nucléons) jusqu'aux <strong className="text-cyan-300">0 et 1 à 10⁻¹⁸ m</strong>. 
-                C'est le flux normal de notre réalité-application.
+                Si l'univers est une application, alors à l'échelle de Planck se trouve son <strong className="text-yellow-300">code source binaire</strong>. 
+                Chaque quantum d'espace-temps peut être vu comme un bit d\'information : 0 ou 1, vide ou plein, existence ou néant.
               </p>
               
               <div className="bg-orange-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-orange-400">
-                <h4 className="font-semibold text-orange-200 mb-3">🌌 L'Interface de Dieu (10⁻³⁵ m - Notre Échelle de Planck)</h4>
+                <h4 className="font-semibold text-orange-200 mb-3">⚖️ L'Échelle des Modifications</h4>
                 <p className="font-medium text-orange-100 mb-2">
-                  <strong>Pour Dieu, notre échelle de Planck est son interface utilisateur.</strong> C'est là qu'il manipule les "lois fondamentales" 
-                  de l'univers, comme nous manipulons des composants dans une interface graphique.
+                  <strong>Modification locale :</strong> Changer un seul bit (0→1 ou 1→0) ne modifie qu'une seule particule fondamentale, 
+                  qui n'affecte qu\'un seul atome, puis qu'une seule molécule, créant un changement microscopique dans la réalité.
                 </p>
                 <p className="font-medium text-orange-100">
-                  <strong>Sa cascade inversée :</strong> Quand Dieu veut modifier notre réalité, sa volonté descend à travers ses propres échelles 
-                  (son "atomique inversé\" à 10⁻²⁵ m, son "nucléaire inversé\" à 10⁻²⁰ m) jusqu'à atteindre le point miroir.
+                  <strong>Modification macroscopique :</strong> Pour des changements visibles (faire apparaître un objet, changer la couleur d'une montagne), 
+                  il faudrait modifier une <strong className="text-yellow-300">quantité astronomique</strong> de bits de manière parfaitement coordonnée.
                 </p>
               </div>
               
-              <div className="bg-cyan-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-cyan-400">
-                <h4 className="font-semibold text-cyan-200 mb-3">🔄 Le Miroir (10⁻¹⁸ m - Notre Échelle des Particules Fondamentales)</h4>
-                <p className="font-medium text-cyan-100 mb-2">
-                  <strong>C'est ici que les deux cascades se rencontrent.</strong> La volonté divine, traduite à travers ses échelles inversées, 
-                  se matérialise en <strong className="text-yellow-300">0 et 1</strong> - le code binaire de l'univers.
-                </p>
-                <p className="font-medium text-cyan-100">
-                  <strong>L'intervention divine :</strong> Quand Dieu modifie les 0 et 1 à cette échelle, ces changements remontent 
-                  automatiquement notre cascade normale pour modifier notre réalité macroscopique.
-                </p>
-              </div>
-              
-              <div className="bg-purple-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-purple-400">
-                <p className="font-semibold text-purple-200">
-                  <strong>Le flux continu :</strong> Notre univers tourne en permanence, mais Dieu peut à tout moment observer notre interface 
-                  et injecter des modifications depuis son niveau (10⁻³⁵ m), qui se traduisent instantanément en changements 
-                  des 0 et 1 (10⁻¹⁸ m), altérant ainsi le cours de notre réalité.
+              <div className="bg-yellow-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-yellow-400">
+                <p className="font-semibold text-yellow-200">
+                  <strong>L'hypothèse divine :</strong> Une entité capable de manipuler directement ces "bits de réalité" 
+                  pourrait soit créer des "bugs" cosmiques (modifications isolées) soit orchestrer des "miracles" 
+                  (modifications massives et coordonnées) en réécrivant la réalité depuis ses fondations les plus profondes.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Comparaison des deux cascades */}
+          {/* Comparaison Univers vs Application */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
             
-            {/* Cascade de Dieu (descendante) */}
+            {/* Côté Univers */}
             <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-purple-400/40 shadow-2xl">
               <div className="flex items-center mb-4 sm:mb-6">
-                <Infinity className="w-8 h-8 mr-3 text-purple-400" />
+                <Atom className="w-8 h-8 mr-3 text-purple-400" />
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-300">
-                  Cascade Divine (Descendante)
+                  Dans l'Univers
                 </h3>
               </div>
               
@@ -256,166 +243,135 @@ export const DimensionDeDieuPage: React.FC = () => {
                 <div className="bg-purple-800/30 p-3 sm:p-4 rounded-lg">
                   <h4 className="font-bold text-purple-200 mb-2 flex items-center">
                     <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                    Interface de Dieu (10⁻³⁵ m)
+                    Échelle de Planck (10⁻³⁵ m)
                   </h4>
                   <p className="text-gray-300 leading-relaxed">
-                    <strong>Son "macroscopique" :</strong> Dieu manipule les lois fondamentales, les constantes universelles, 
-                    les règles de base de l'univers depuis cette interface.
+                    Granularité ultime de l'espace-temps. Chaque "pixel" de réalité peut être dans un état quantique 
+                    fondamental : 0 ou 1, comme un bit cosmique.
                   </p>
                 </div>
                 
                 <div className="bg-purple-800/30 p-3 sm:p-4 rounded-lg">
                   <h4 className="font-bold text-purple-200 mb-2 flex items-center">
                     <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                    Échelles Inversées de Dieu
+                    Modification divine (exemple simplifié)
                   </h4>
                   <p className="text-gray-300 leading-relaxed">
-                    <strong>Son "moléculaire" (10⁻²⁵ m) :</strong> Concepts divins intermédiaires.
-                    <br/>
-                    <strong>Son "atomique" (10⁻²⁰ m) :</strong> Instructions divines plus détaillées.
-                    <br/>
-                    <strong>Son "nucléaire" (10⁻¹⁹ m) :</strong> Commandes divines précises.
+                    <strong>Un seul bit :</strong> Dieu change un bit → Une particule change → Un atome est affecté → Une molécule évolue → Un détail microscopique change.
+                    <br/><br/>
+                    <strong>Miracle macroscopique :</strong> Dieu orchestre des milliards de milliards de changements de bits simultanés pour transformer la réalité visible.
                   </p>
                 </div>
                 
                 <div className="bg-green-900/30 p-3 sm:p-4 rounded-lg border-l-4 border-green-400">
-                  <h4 className="font-bold text-green-300 mb-2">Aboutissement</h4>
+                  <h4 className="font-bold text-green-300 mb-2">Exemples concrets</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    <strong>Les 0 et 1 (10⁻¹⁸ m) :</strong> La volonté divine se matérialise finalement en code binaire, 
-                    prête à être "exécutée\" par notre réalité.
+                    <strong>Changement local :</strong> Modifier un bit pourrait changer le spin d'un électron dans un atome de carbone d'une feuille.
+                    <br/><br/>
+                    <strong>Changement global :</strong> Changer la couleur de toutes les feuilles d'un arbre nécessiterait de modifier des trillions de bits 
+                    dans des milliards de molécules de chlorophylle.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Notre cascade (montante) */}
+            {/* Côté Application */}
             <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-blue-400/40 shadow-2xl">
               <div className="flex items-center mb-4 sm:mb-6">
-                <Layers className="w-8 h-8 mr-3 text-blue-400" />
+                <Cpu className="w-8 h-8 mr-3 text-blue-400" />
                 <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-300">
-                  Notre Cascade (Montante)
+                  Dans l'Application
                 </h3>
               </div>
               
               <div className="space-y-4 text-sm sm:text-base text-gray-200">
+                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
+                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                    Code binaire (0 et 1)
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Niveau le plus bas de l'application. Chaque bit contrôle directement le comportement 
+                    du processeur et détermine tout ce qui s'affiche.
+                  </p>
+                </div>
+                
+                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
+                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                    Modification divine (exemple simplifié)
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    <strong>Un seul bit :</strong> Dieu change un bit → Une instruction change → Un pixel change de couleur → Un détail de l'interface est modifié.
+                    <br/><br/>
+                    <strong>Nouvelle fonctionnalité :</strong> Dieu réécrit des millions de bits de manière coordonnée pour ajouter un bouton complet à l'interface.
+                  </p>
+                </div>
+                
                 <div className="bg-green-900/30 p-3 sm:p-4 rounded-lg border-l-4 border-green-400">
-                  <h4 className="font-bold text-green-300 mb-2">Point de départ</h4>
+                  <h4 className="font-bold text-green-300 mb-2">Exemples concrets</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    <strong>Les 0 et 1 (10⁻¹⁸ m) :</strong> Le code binaire de l'univers, modifiable par Dieu, 
-                    base de toute notre réalité.
-                  </p>
-                </div>
-                
-                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                    Nos Échelles Normales
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    <strong>Nucléaire (10⁻¹⁵ m) :</strong> Les 0 et 1 forment les nucléons.
-                    <br/>
-                    <strong>Atomique (10⁻¹⁰ m) :</strong> Les nucléons forment les atomes.
-                    <br/>
-                    <strong>Moléculaire (10⁻⁹ à 10⁻⁶ m) :</strong> Les atomes forment les molécules.
-                  </p>
-                </div>
-                
-                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                    Notre Interface (10⁻⁴ m à 1 m et +)
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    <strong>Notre "macroscopique" :</strong> Le monde visible que nous percevons, 
-                    résultat final de l'exécution du code binaire modifié par Dieu.
+                    <strong>Changement local :</strong> Modifier un bit pourrait changer la couleur d'un pixel ou corriger une faute de frappe.
+                    <br/><br/>
+                    <strong>Changement global :</strong> Créer un nouveau composant React nécessite de modifier des milliers de bits 
+                    dans le code JavaScript compilé.
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Le processus d'intervention divine */}
+          {/* Le processus de cascade */}
           <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/40 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-emerald-400/40 shadow-2xl">
             <div className="flex items-center mb-4 sm:mb-6">
-              <Zap className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-emerald-400" />
+              <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-emerald-400" />
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-300">
-                Le Processus d'Intervention Divine
+                La Cascade Divine : Du Bit à la Réalité
               </h2>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-bold text-emerald-200 mb-4">
-                  👁️ Observation
+                  🌌 Cascade Universelle
                 </h3>
                 
                 <div className="space-y-3">
-                  <div className="p-3 rounded-lg bg-emerald-900/40 border-l-4 border-emerald-400">
-                    <div className="font-bold text-white text-sm">Dieu observe</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      Depuis son interface (10⁻³⁵ m), Dieu voit notre réalité macroscopique fonctionner
+                  {[
+                    { level: "Planck", desc: "Dieu modifie des milliards de bits quantiques", color: "bg-red-900/40 border-red-400" },
+                    { level: "Particules", desc: "Des milliards de fermions et bosons changent", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "Nucléons", desc: "Des millions de protons et neutrons se réorganisent", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "Atomes", desc: "Des milliers d'atomes acquièrent de nouvelles propriétés", color: "bg-green-900/40 border-green-400" },
+                    { level: "Molécules", desc: "Des centaines de molécules interagissent différemment", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Macroscopique", desc: "Un changement visible apparaît dans la réalité", color: "bg-purple-900/40 border-purple-400" }
+                  ].map((item, index) => (
+                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color}`}>
+                      <div className="font-bold text-white text-sm">{item.level}</div>
+                      <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
                     </div>
-                  </div>
-                  <div className="p-3 rounded-lg bg-emerald-900/40 border-l-4 border-emerald-400">
-                    <div className="font-bold text-white text-sm">Décision d'intervenir</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      Dieu décide de modifier quelque chose dans notre réalité
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
               
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-bold text-emerald-200 mb-4">
-                  ⚡ Cascade Divine
+                  💻 Cascade Informatique
                 </h3>
                 
                 <div className="space-y-3">
-                  <div className="p-3 rounded-lg bg-yellow-900/40 border-l-4 border-yellow-400">
-                    <div className="font-bold text-white text-sm">Interface divine (10⁻³⁵ m)</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      Dieu manipule les lois fondamentales
+                  {[
+                    { level: "Binaire", desc: "Dieu modifie des millions de bits coordonnés", color: "bg-red-900/40 border-red-400" },
+                    { level: "Instructions", desc: "Des milliers d'opcodes processeur changent", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "C/C++", desc: "Des centaines de fonctions système modifiées", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "JavaScript", desc: "Des dizaines de scripts changent de comportement", color: "bg-green-900/40 border-green-400" },
+                    { level: "React", desc: "Plusieurs composants se comportent différemment", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Interface", desc: "Un nouvel élément apparaît à l'écran", color: "bg-purple-900/40 border-purple-400" }
+                  ].map((item, index) => (
+                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color}`}>
+                      <div className="font-bold text-white text-sm">{item.level}</div>
+                      <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
                     </div>
-                  </div>
-                  <div className="p-3 rounded-lg bg-orange-900/40 border-l-4 border-orange-400">
-                    <div className="font-bold text-white text-sm">Échelles inversées</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      La volonté divine descend ses propres échelles
-                    </div>
-                  </div>
-                  <div className="p-3 rounded-lg bg-red-900/40 border-l-4 border-red-400">
-                    <div className="font-bold text-white text-sm">Miroir (10⁻¹⁸ m)</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      Modification des 0 et 1 de l'univers
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <h3 className="text-lg sm:text-xl font-bold text-emerald-200 mb-4">
-                  🌍 Manifestation
-                </h3>
-                
-                <div className="space-y-3">
-                  <div className="p-3 rounded-lg bg-blue-900/40 border-l-4 border-blue-400">
-                    <div className="font-bold text-white text-sm">Remontée normale</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      Les 0 et 1 modifiés remontent nos échelles
-                    </div>
-                  </div>
-                  <div className="p-3 rounded-lg bg-purple-900/40 border-l-4 border-purple-400">
-                    <div className="font-bold text-white text-sm">Changement visible</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      Notre réalité macroscopique est modifiée
-                    </div>
-                  </div>
-                  <div className="p-3 rounded-lg bg-green-900/40 border-l-4 border-green-400">
-                    <div className="font-bold text-white text-sm">Miracle accompli</div>
-                    <div className="text-gray-300 text-xs mt-1">
-                      Ce qui était impossible devient réel
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -434,27 +390,27 @@ export const DimensionDeDieuPage: React.FC = () => {
               <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600/50">
                 <h3 className="font-bold text-gray-200 mb-3">🎭 Le Libre Arbitre</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Si Dieu peut modifier les 0 et 1 qui déterminent nos pensées et nos choix, 
-                  sommes-nous vraiment libres ? Ou sommes-nous des "utilisateurs" d'une interface 
+                  Si Dieu peut orchestrer des modifications massives de bits pour influencer nos pensées, 
+                  nos choix sont-ils vraiment libres ? Ou sommes-nous des "utilisateurs" d'une interface 
                   dont le code source nous échappe complètement ?
                 </p>
               </div>
               
               <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600/50">
-                <h3 className="font-bold text-gray-200 mb-3">🔍 La Science</h3>
+                <h3 className="font-bold text-gray-200 mb-3">🔍 La Connaissance</h3>
                 <p className="text-gray-400 leading-relaxed">
                   La science tente de "reverse-engineer" l'univers en observant les effets macroscopiques, 
                   comme un développeur qui analyserait une application sans accès au code source, 
-                  essayant de deviner les 0 et 1 qui créent chaque phénomène.
+                  essayant de deviner les milliards de bits qui créent chaque fonctionnalité.
                 </p>
               </div>
               
               <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600/50">
                 <h3 className="font-bold text-gray-200 mb-3">⚡ Les Miracles</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Un "miracle" serait Dieu orchestrant instantanément des modifications coordonnées 
-                  des 0 et 1 à 10⁻¹⁸ m, causant des changements impossibles selon les "règles" 
-                  que nous observons à notre interface macroscopique.
+                  Un "miracle" serait Dieu orchestrant instantanément des modifications de trillions de bits 
+                  à l'échelle de Planck, causant des changements impossibles selon les "règles" que nous observons 
+                  à l'interface macroscopique.
                 </p>
               </div>
             </div>
@@ -463,27 +419,20 @@ export const DimensionDeDieuPage: React.FC = () => {
           {/* Conclusion */}
           <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/40 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-indigo-400/40 shadow-2xl text-center">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-300 mb-4 sm:mb-6">
-              L'Ultime Révélation
+              L'Ultime Analogie
             </h2>
             
-            <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto mb-6">
-              Dans cette vision, <strong className="text-yellow-300">Dieu est le programmeur ultime</strong> qui observe 
-              et modifie notre réalité depuis son interface à l'échelle de Planck (10⁻³⁵ m). 
-              Ses modifications descendent sa propre cascade d'échelles inversées pour se matérialiser 
-              en <strong className="text-cyan-300">0 et 1 à 10⁻¹⁸ m</strong>, le miroir de la réalité.
-            </p>
-            
             <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
-              Ces 0 et 1 modifiés remontent ensuite notre cascade normale pour transformer notre interface macroscopique. 
-              Nous, les êtres conscients, percevons seulement le résultat final sans jamais voir 
-              les trillions de bits qui orchestrent chaque instant de notre existence.
+              Dans cette vision, <strong className="text-yellow-300">Dieu est le développeur ultime</strong> : 
+              il a accès au code source de la réalité et peut orchestrer des modifications massives et coordonnées en temps réel. 
+              Nous, les êtres conscients, sommes les <strong className="text-cyan-300">"utilisateurs"</strong> de cette application cosmique, 
+              percevant seulement l'interface finale sans jamais voir les trillions de 0 et 1 qui la génèrent à chaque instant.
             </p>
             
             <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gradient-to-r from-yellow-900/40 to-orange-900/30 rounded-lg border border-yellow-400/30">
               <p className="text-sm sm:text-base text-yellow-200 italic leading-relaxed">
-                "Au commencement était le Verbe... et le Verbe descendit les échelles divines pour devenir Code, 
-                et le Code se matérialisa en 0 et 1 au miroir de la réalité, et chaque bit orchestré 
-                remonta les échelles pour créer un miracle dans notre monde."
+                "Au commencement était le Verbe... et le Verbe était Code, et le Code était une symphonie 
+                de trillions de bits orchestrés à la perfection, et chaque modification coordonnée créait un miracle."
               </p>
             </div>
           </div>
