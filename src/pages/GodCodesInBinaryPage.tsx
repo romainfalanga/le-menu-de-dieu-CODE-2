@@ -387,7 +387,7 @@ const GodCodingSimulation: React.FC = () => {
   }, [isTyping, isDeleting, currentCode, sequenceIndex, binarySequences, creationPhrases]);
 
   return (
-    <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-yellow-400/50 shadow-2xl w-fit min-w-[415px] sm:min-w-[486px] mx-auto h-[438px] sm:h-[504px]">
+    <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-yellow-400/50 shadow-2xl w-fit min-w-[346px] sm:min-w-[405px] mx-auto h-[438px] sm:h-[504px]">
       <div className="flex items-center mb-4">
         <Code2 className="w-6 h-6 text-yellow-400 mr-2" />
         <h3 className="text-lg sm:text-xl font-bold text-yellow-300">
