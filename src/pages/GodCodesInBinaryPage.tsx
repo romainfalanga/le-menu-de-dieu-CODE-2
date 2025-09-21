@@ -117,7 +117,7 @@ const GodCodingSimulation: React.FC = () => {
       const pauseTimer = setTimeout(() => {
         setIsTyping(false);
         setIsDeleting(true);
-      }, 800);
+      }, 50); // Suppression presque instantanée (0.05 secondes)
       return () => clearTimeout(pauseTimer);
     }
     
