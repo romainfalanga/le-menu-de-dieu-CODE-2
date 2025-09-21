@@ -133,8 +133,6 @@ const GodCodingSimulation: React.FC = () => {
       // Suppression terminée, passer à la séquence suivante
       setIsDeleting(false);
       setSequenceIndex(prev => (prev + 1) % binarySequences.length);
-    }, 200);
-  }, [isTyping, isDeleting, currentCode, sequenceIndex, binarySequences]);
   
   return (
     <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-yellow-400/50 shadow-2xl">
