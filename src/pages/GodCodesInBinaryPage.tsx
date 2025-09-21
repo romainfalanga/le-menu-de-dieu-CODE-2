@@ -524,8 +524,8 @@ export const GodCodesInBinaryPage: React.FC = () => {
                     { level: "C/C++", desc: "Les modifications binaires se manifestent en opérations de bas niveau, orchestrant les fondations du système.", color: "bg-orange-900/40 border-orange-400" },
                     { level: "JavaScript", desc: "Le langage universel prend forme, définissant la logique et le comportement des éléments à un niveau plus abstrait.", color: "bg-yellow-900/40 border-yellow-400" },
                     { level: "Composants React", desc: "Les composants de la réalité s'assemblent, créant des structures et des fonctionnalités complexes.", color: "bg-green-900/40 border-green-400" },
-                    { level: "HTML/CSS", desc: "La structure et l'apparence du téléphone sont définies, décrivant sa forme et ses propriétés visuelles.", color: "bg-blue-900/40 border-blue-400" },
-                    { level: "Interface utilisateur", desc: "Le téléphone apparaît, une interface utilisateur fonctionnelle et tangible dans la réalité.", connection: null, color: "bg-purple-900/40 border-purple-400" }
+                    { level: "HTML/CSS", desc: "Le code HTML/CSS est généré à partir des composants React, définissant la structure et l'apparence visuelle du téléphone.", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Interface utilisateur", desc: "Le téléphone apparaît, fonctionnelle et tangible, c'est le rendu final et interactif du code HTML/CSS.", connection: null, color: "bg-purple-900/40 border-purple-400" }
                   ].map((item, index) => (
                     <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color} min-h-[80px] flex flex-col justify-center`}>
                       <div className="font-bold text-white text-sm">{item.level}</div>
