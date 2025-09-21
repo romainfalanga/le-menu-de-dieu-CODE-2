@@ -387,7 +387,7 @@ const GodCodingSimulation: React.FC = () => {
   }, [isTyping, isDeleting, currentCode, sequenceIndex, binarySequences, creationPhrases]);
 
   return (
-    <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-yellow-400/50 shadow-2xl w-[600px] sm:w-[700px] mx-auto h-[438px] sm:h-[504px]">
+    <div className="bg-black/80 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-yellow-400/50 shadow-2xl w-fit mx-auto h-[438px] sm:h-[504px]">
       <div className="flex items-center mb-4">
         <Code2 className="w-6 h-6 text-yellow-400 mr-2" />
         <h3 className="text-lg sm:text-xl font-bold text-yellow-300">
@@ -404,7 +404,7 @@ const GodCodingSimulation: React.FC = () => {
         </div>
       </div>
       
-      <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 w-full h-[280px] sm:h-[340px] overflow-hidden">
+      <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 w-fit h-[280px] sm:h-[340px]">
         <pre className="text-xs sm:text-sm whitespace-pre leading-tight overflow-x-auto">
           {currentCode}
           {isTyping && <span className="animate-pulse text-green-300">|</span>}
