@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Code, Layers, Zap, Atom, Cpu, Binary, ChevronDown, ChevronUp, ArrowDown, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Composant pour les chiffres binaires qui se téléportent
@@ -119,6 +119,7 @@ const TeleportingBinaryDigits: React.FC = () => {
 
 export const UniverseAppPage: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(-1); // -1 pour la page d'intro
+  const navigate = useNavigate();
 
   const sections = [
     {
@@ -129,9 +130,9 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-cyan-500 to-purple-500",
       bgGradient: "from-slate-900 via-purple-900 to-indigo-900",
       content: {
-        info: "Imaginons que l'univers fonctionne comme une application informatique.",
+        info: "Imaginons que l'univers fonctionne comme une application informatique dont le code est manipulé par Dieu depuis sa propre dimension.",
         universe: "Chaque couche correspond à un langage ou à un niveau d'abstraction, qui encapsule le précédent et prépare le suivant.",
-        connectionHorizontal: "Ce que nous voyons à l'échelle humaine — le monde macroscopique — est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à l'échelle de Planck."
+        connectionHorizontal: "Ce que nous voyons à l'échelle humaine — le monde macroscopique — est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à 10⁻¹⁸ m, eux-mêmes modifiables par Dieu depuis son interface à 10⁻³⁵ m."
       }
     },
     {
@@ -224,46 +225,24 @@ export const UniverseAppPage: React.FC = () => {
     },
     {
       id: 4,
-      icon: <Cpu className="w-8 h-8 sm:w-12 sm:h-12" />,
-      title: "Échelle des particules fondamentales",
+      icon: <Binary className="w-8 h-8 sm:w-12 sm:h-12" />,
+      title: "Échelle des Bits Binaires",
       scale: "10⁻¹⁸ m",
       color: "from-red-500 to-pink-500",
       bgGradient: "from-red-900/30 via-pink-900/20 to-red-800/30",
       content: {
-        application: "Instructions processeur (assembleur, opcodes : ADD, MOV, JMP), ordres élémentaires traduits en binaire.",
-        universe: "Particules fondamentales : fermions (quarks et leptons) = la matière, bosons (photon, gluon, W/Z, Higgs) = les forces.",
-        universeExamples: "Quarks (up, down, charm, strange, top, bottom), Leptons (électron, neutrinos, muons, taus), Bosons (photon, gluon, W, Z, Higgs)",
-        applicationConnections: {
-          above: "les instructions exécutent le code C/C++.",
-          below: "les instructions sont traduites en 0 et 1."
-        },
-        universeConnections: {
-          above: "les particules fondamentales forment les nucléons.",
-          below: "les particules reposent sur l'échelle de Planck."
-        },
-        connectionHorizontal: "les instructions sont les ordres élémentaires de l'application, comme les particules sont les entités élémentaires de la matière et des forces."
-      }
-    },
-    {
-      id: 5,
-      icon: <Binary className="w-8 h-8 sm:w-12 sm:h-12" />,
-      title: "Échelle de Planck",
-      scale: "10⁻³⁵ m",
-      color: "from-gray-600 to-slate-600",
-      bgGradient: "from-gray-900/30 via-slate-900/20 to-gray-800/30",
-      content: {
         application: "Bits binaires, une mer de 0 et 1, sans signification isolée mais base de toute information.",
-        universe: "Échelle de Planck, granularité ultime de l'espace-temps.",
-        universeExamples: "granularité minimale de l'espace-temps (quanta hypothétiques), niveau où les lois de la relativité et de la mécanique quantique cessent de s'appliquer séparément",
+        universe: "Particules fondamentales composées de 0 et 1 : le miroir où la volonté divine (depuis 10⁻³⁵ m) se traduit en code binaire de la réalité.",
+        universeExamples: "Quarks et leptons encodés en 0 et 1, bosons comme instructions binaires, chaque particule étant une séquence de bits modifiable par Dieu",
         applicationConnections: {
-          above: "les 0 et 1 composent les instructions processeur.",
-          below: null
+          above: "les 0 et 1 forment les instructions processeur et exécutent le code C/C++.",
+          below: "les 0 et 1 sont le niveau le plus profond accessible dans notre cascade, mais ils sont modifiables depuis la dimension divine."
         },
         universeConnections: {
-          above: "l'échelle de Planck donne naissance aux particules fondamentales.",
-          below: null
+          above: "les 0 et 1 forment les particules fondamentales qui constituent les nucléons.",
+          below: "les 0 et 1 sont modifiés par la volonté divine depuis l'échelle de Planck (10⁻³⁵ m)."
         },
-        connectionHorizontal: "les 0 et 1 sont les briques minimales de l'information, comme l'échelle de Planck est la brique minimale de la réalité physique."
+        connectionHorizontal: "les 0 et 1 sont les briques minimales de l'information dans notre cascade, comme les particules fondamentales sont les entités élémentaires de notre réalité, mais tous deux sont le résultat de modifications divines depuis l'échelle de Planck."
       }
     }
   ];
@@ -276,7 +255,10 @@ export const UniverseAppPage: React.FC = () => {
   };
 
   const goToLowerScale = () => {
-    if (currentSection < sections.length - 2) { // -2 car on a ajouté l'intro
+    if (currentSection === 4) {
+      // Redirection vers la dimension de Dieu
+      navigate('/dimension-de-dieu');
+    } else if (currentSection < 3) { // Maintenant on s'arrête à l'index 3 (section id: 4)
       setCurrentSection(prev => prev + 1);
     }
   };
@@ -351,7 +333,7 @@ export const UniverseAppPage: React.FC = () => {
                 </div>
 
                 {/* Bouton Explorer pour l'introduction */}
-                {currentSection < sections.length - 2 && (
+                {currentSection < 4 && (
                   <div className="flex justify-center mt-2 sm:mt-3">
                     <button
                       onClick={goToLowerScale}
@@ -500,7 +482,7 @@ export const UniverseAppPage: React.FC = () => {
                 </div>
 
                 {/* Bouton Rétrécir pour les pages d'échelles */}
-                {currentSection < sections.length - 2 && currentSection !== 5 && (
+                {currentSection < 4 && currentSection !== -1 && (
                   <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
                     <button
                       onClick={goToLowerScale}
@@ -513,11 +495,11 @@ export const UniverseAppPage: React.FC = () => {
                   </div>
                 )}
 
-                {/* Bouton spécial "Dieu code en Binaire" pour l'échelle de Planck */}
-                {currentSection === 5 && (
+                {/* Bouton spécial "Dimension de Dieu" pour l'échelle des Bits Binaires */}
+                {currentSection === 4 && (
                   <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
                     <Link
-                      to="/god-binary"
+                      to="/dimension-de-dieu"
                       className="group relative bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 hover:from-yellow-700 hover:via-orange-700 hover:to-red-700 text-white rounded-full px-8 py-4 sm:px-12 sm:py-6 shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 border-4 border-yellow-400/50 hover:border-yellow-300/70 overflow-hidden"
                     >
                       {/* Effet de lueur divine */}
@@ -544,9 +526,9 @@ export const UniverseAppPage: React.FC = () => {
                       
                       {/* Contenu du bouton */}
                       <div className="relative z-10 flex items-center justify-center">
-                        <Binary className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 group-hover:animate-pulse" />
+                        <Zap className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 group-hover:animate-pulse" />
                         <span className="text-base sm:text-lg lg:text-xl font-bold whitespace-nowrap group-hover:text-yellow-100 transition-colors duration-300">
-                          Dieu code en Binaire
+                          Entrer dans la Dimension de Dieu
                         </span>
                       </div>
                       
@@ -564,7 +546,7 @@ export const UniverseAppPage: React.FC = () => {
         {currentSection !== -1 && (
           <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
           <div className="flex flex-col space-y-2">
-            {sections.slice(1).map((section, index) => (
+            {sections.slice(1, -1).map((section, index) => ( // Exclut la dernière section (Planck) des indicateurs
               <button
                 key={section.id}
                 onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
