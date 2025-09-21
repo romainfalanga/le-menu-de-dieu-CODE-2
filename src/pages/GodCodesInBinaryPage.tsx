@@ -84,10 +84,14 @@ const GodCodingSimulation: React.FC = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  // Génération de séquences binaires aléatoires de 10 chiffres
+  // Génération de séquences binaires aléatoires de 50 rangées de 30 chiffres
   const binarySequences = React.useMemo(() => {
     return Array.from({ length: 8 }, () => {
-      return Array.from({ length: 10 }, () => Math.random() > 0.5 ? '1' : '0').join('');
+      // Génère 50 rangées de 30 chiffres binaires chacune
+      const rows = Array.from({ length: 50 }, () => {
+        return Array.from({ length: 30 }, () => Math.random() > 0.5 ? '1' : '0').join('');
+      });
+      return rows.join('\n');
     });
   }, []);
   
@@ -108,7 +112,7 @@ const GodCodingSimulation: React.FC = () => {
       // Taper caractère par caractère
       const typeTimer = setTimeout(() => {
         setCurrentCode(prev => prev + currentSequence[prev.length]);
-      }, 50);
+      }, 1.3); // Très rapide pour écrire 1500 caractères en ~2 secondes
       return () => clearTimeout(typeTimer);
     }
     
@@ -117,7 +121,7 @@ const GodCodingSimulation: React.FC = () => {
       const pauseTimer = setTimeout(() => {
         setIsTyping(false);
         setIsDeleting(true);
-      }, 50); // Suppression presque instantanée (0.05 secondes)
+      }, 50); // Suppression presque instantanée
       return () => clearTimeout(pauseTimer);
     }
     
@@ -125,7 +129,7 @@ const GodCodingSimulation: React.FC = () => {
       // Supprimer caractère par caractère
       const deleteTimer = setTimeout(() => {
         setCurrentCode(prev => prev.slice(0, -1));
-      }, 30);
+      }, 0.8); // Suppression très rapide
       return () => clearTimeout(deleteTimer);
     }
     
@@ -145,11 +149,11 @@ const GodCodingSimulation: React.FC = () => {
         </h3>
       </div>
       
-      <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 min-h-[60px] flex items-center">
-        <span className="text-sm sm:text-base">
+      <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 h-[300px] overflow-y-auto">
+        <pre className="text-xs sm:text-sm whitespace-pre-wrap leading-tight">
           {currentCode}
           {isTyping && <span className="animate-pulse text-green-300">|</span>}
-        </span>
+        </pre>
       </div>
     </div>
   );
