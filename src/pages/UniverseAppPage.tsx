@@ -372,12 +372,6 @@ export const UniverseAppPage: React.FC = () => {
                             color: "bg-purple-900/40 border-purple-400" 
                           },
                           { 
-                            level: "Échelle moléculaire", 
-                            scale: "10⁻⁹ à 10⁻⁶ m", 
-                            desc: "Assemblages d'atomes : ADN, protéines, matériaux", 
-                            connection: "→ Propriétés émergentes par liaison d'atomes spécifiques",
-                            color: "bg-blue-900/40 border-blue-400" 
-                          }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">
@@ -517,6 +511,12 @@ export const UniverseAppPage: React.FC = () => {
                       
                       <div className="space-y-2 sm:space-y-3">
                         {[
+                          { 
+                            level: "Composants React", 
+                            desc: "Composants réutilisables qui définissent logique et apparence. Leur agencement est une probabilité jusqu'à l'observation, comme une superposition quantique.", 
+                            connection: "→ Logique et structure définies par le code JavaScript",
+                            color: "bg-blue-900/40 border-blue-400" 
+                          },
                           { 
                             level: "JavaScript", 
                             desc: "Langage en superposition de code : fonctions, variables, logique", 
