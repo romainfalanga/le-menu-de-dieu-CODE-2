@@ -112,7 +112,7 @@ const GodCodingSimulation: React.FC = () => {
       // Taper caractère par caractère
       const typeTimer = setTimeout(() => {
         setCurrentCode(prev => prev + currentSequence[prev.length]);
-      }, 1.3); // Très rapide pour écrire 600 caractères en ~0.8 secondes
+      }, 0.26); // Ultra rapide pour écrire 600 caractères en ~0.16 secondes (5x plus rapide)
       return () => clearTimeout(typeTimer);
     }
     
