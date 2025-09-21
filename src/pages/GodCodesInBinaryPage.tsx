@@ -67,9 +67,8 @@ const DivineBinaryDigits: React.FC = () => {
             left: `${digit.left}%`,
             opacity: digit.visible ? digit.opacity : 0,
             color: digit.color,
-            textShadow: `0 0 15px ${digit.color}`,
-            transform: 'translate(-50%, -50%)',
-            willChange: 'transform, opacity'
+            textShadow: `0 0 10px ${digit.color}, 0 0 20px ${digit.color}, 0 0 30px ${digit.color}`,
+            transform: 'translate(-50%, -50%)'
           }}
         >
           {digit.value}
