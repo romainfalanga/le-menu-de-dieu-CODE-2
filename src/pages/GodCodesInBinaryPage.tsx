@@ -363,7 +363,7 @@ const GodCodingSimulation: React.FC = () => {
       const pauseTimer = setTimeout(() => {
         setIsTyping(false);
         setIsDeleting(true);
-      }, 3000); // Attendre 3 secondes avant de commencer la suppression
+      }, 2000); // Attendre 2 secondes avant de commencer la suppression
       return () => clearTimeout(pauseTimer);
     }
     
@@ -371,7 +371,7 @@ const GodCodingSimulation: React.FC = () => {
       // Supprimer caractère par caractère
       const deleteTimer = setTimeout(() => {
         setCurrentCode(prev => prev.slice(0, -1));
-      }, 2); // Vitesse doublée (4 / 2 = 2)
+      }, 1); // Vitesse doublée encore (2 / 2 = 1)
       return () => clearTimeout(deleteTimer);
     }
     
