@@ -562,7 +562,7 @@ export const UniverseAppPage: React.FC = () => {
                       <div className="relative z-10 flex items-center justify-center">
                         <Binary className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 group-hover:animate-pulse drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" />
                         <span className="text-base sm:text-lg lg:text-xl font-black whitespace-nowrap group-hover:text-yellow-100 transition-colors duration-500 drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]">
-                          Dieu code en Binaire
+                          Bonus
                         </span>
                       </div>
                       
