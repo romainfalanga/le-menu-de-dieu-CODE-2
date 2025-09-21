@@ -513,7 +513,7 @@ export const Navigation: React.FC = () => {
 
       {/* Menu Étendu - S'étend vers le bas depuis la barre de navigation */}
       <div 
-        className={`fixed top-0 left-0 right-0 bg-gradient-to-br from-slate-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-2xl border-b-2 border-cyan-400/40 shadow-2xl transition-all duration-700 ease-in-out z-[99999] ${
+        className={`fixed top-0 left-0 right-0 bg-gradient-to-br from-slate-900/98 via-blue-900/98 to-purple-900/98 backdrop-blur-2xl border-b-2 border-cyan-400/40 shadow-2xl transition-all duration-700 ease-in-out z-[99999] overflow-hidden ${
           isMobileMenuOpen 
             ? 'h-screen opacity-100 visible overflow-y-auto pointer-events-auto' 
             : 'h-0 opacity-0 invisible overflow-hidden pointer-events-none'
