@@ -409,7 +409,7 @@ export const UniverseAppPage: React.FC = () => {
                             color: "bg-purple-900/40 border-purple-400" 
                           },
                           { 
-                            level: "HTML/CSS (DOM)", 
+                            level: "HTML/CSS", 
                             desc: "L'HTML et le CSS décrive la réalité et son fonctionnement", 
                             connection: "→ L'HTML et le CSS sont généré par les composants Reacts",
                             color: "bg-blue-900/40 border-blue-400" 
