@@ -214,7 +214,7 @@ export const DimensionDeDieuPage: React.FC = () => {
                 </p>
                 <p className="font-medium text-orange-100">
                   <strong>Sa cascade inversée :</strong> Quand Dieu veut modifier notre réalité, sa volonté descend à travers ses propres échelles 
-                  (son "atomique inversé" à 10⁻²⁵ m, son "nucléaire inversé" à 10⁻²⁰ m) jusqu'à atteindre le point miroir.
+                  (son "atomique inversé\" à 10⁻²⁵ m, son "nucléaire inversé\" à 10⁻²⁰ m) jusqu'à atteindre le point miroir.
                 </p>
               </div>
               
@@ -282,7 +282,7 @@ export const DimensionDeDieuPage: React.FC = () => {
                   <h4 className="font-bold text-green-300 mb-2">Aboutissement</h4>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     <strong>Les 0 et 1 (10⁻¹⁸ m) :</strong> La volonté divine se matérialise finalement en code binaire, 
-                    prête à être "exécutée" par notre réalité.
+                    prête à être "exécutée\" par notre réalité.
                   </p>
                 </div>
               </div>
