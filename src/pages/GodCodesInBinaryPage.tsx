@@ -179,7 +179,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
             Dieu code en Binaire
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-yellow-200 max-w-4xl mx-auto px-4 leading-relaxed">
-            À l'échelle de Planck, la réalité devient programmable : chaque 0 et 1 modifie l'univers entier
+            À l'échelle de Planck, la réalité devient programmable en Binaire
           </p>
         </header>
 
