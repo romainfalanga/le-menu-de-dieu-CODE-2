@@ -370,13 +370,6 @@ export const UniverseAppPage: React.FC = () => {
                             desc: "Ce que nous voyons : humains, objets, monde visible", 
                             connection: "→ Formé par l'assemblage de milliards de molécules organisées",
                             color: "bg-purple-900/40 border-purple-400" 
-                          },
-                          { 
-                            level: "Échelle moléculaire", 
-                            scale: "10⁻⁹ à 10⁻⁶ m", 
-                            desc: "Assemblages d'atomes qui portent des propriétés fonctionnelles (ADN, protéines, matériaux)", 
-                            connection: "→ Formées par l'assemblage d'atomes",
-                            color: "bg-green-900/40 border-green-400" 
                           }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
