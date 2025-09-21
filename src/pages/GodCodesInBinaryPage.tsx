@@ -87,9 +87,9 @@ const GodCodingSimulation: React.FC = () => {
   // Génération de séquences binaires aléatoires de 50 rangées de 30 chiffres
   const binarySequences = React.useMemo(() => {
     return Array.from({ length: 8 }, () => {
-      // Génère 15 rangées de 50 chiffres binaires chacune
+      // Génère 15 rangées de 40 chiffres binaires chacune
       const rows = Array.from({ length: 15 }, () => {
-        return Array.from({ length: 50 }, () => Math.random() > 0.5 ? '1' : '0').join('');
+        return Array.from({ length: 40 }, () => Math.random() > 0.5 ? '1' : '0').join('');
       });
       return rows.join('\n');
     });
