@@ -225,24 +225,24 @@ export const UniverseAppPage: React.FC = () => {
     },
     {
       id: 4,
-      icon: <Binary className="w-8 h-8 sm:w-12 sm:h-12" />,
-      title: "Échelle des Bits Binaires",
+      icon: <Atom className="w-8 h-8 sm:w-12 sm:h-12" />,
+      title: "Échelle des Particules Fondamentales",
       scale: "10⁻¹⁸ m",
-      color: "from-red-500 to-pink-500",
-      bgGradient: "from-red-900/30 via-pink-900/20 to-red-800/30",
+      color: "from-red-500 to-orange-500",
+      bgGradient: "from-red-900/30 via-orange-900/20 to-red-800/30",
       content: {
-        application: "Bits binaires, une mer de 0 et 1, sans signification isolée mais base de toute information.",
-        universe: "Particules fondamentales composées de 0 et 1 : le miroir où la volonté divine (depuis 10⁻³⁵ m) se traduit en code binaire de la réalité.",
-        universeExamples: "Quarks et leptons encodés en 0 et 1, bosons comme instructions binaires, chaque particule étant une séquence de bits modifiable par Dieu",
+        application: "Instructions processeur, commandes binaires élémentaires (0 et 1) qui contrôlent directement le matériel.",
+        universe: "Particules fondamentales (quarks, leptons, bosons) : les briques élémentaires de la matière, chacune constituée de séquences de 0 et 1.",
+        universeExamples: "quarks (up, down, charm, strange, top, bottom), leptons (électron, muon, tau, neutrinos), bosons (photon, gluons, bosons W/Z, Higgs)",
         applicationConnections: {
-          above: "les 0 et 1 forment les instructions processeur et exécutent le code C/C++.",
-          below: "les 0 et 1 sont le niveau le plus profond accessible dans notre cascade, mais ils sont modifiables depuis la dimension divine."
+          above: "les instructions processeur exécutent le code C/C++.",
+          below: "les instructions processeur sont constituées de 0 et 1 modifiables par Dieu depuis 10⁻³⁵ m."
         },
         universeConnections: {
-          above: "les 0 et 1 forment les particules fondamentales qui constituent les nucléons.",
-          below: "les 0 et 1 sont modifiés par la volonté divine depuis l'échelle de Planck (10⁻³⁵ m)."
+          above: "les particules fondamentales constituent les nucléons.",
+          below: "les particules fondamentales sont constituées de 0 et 1 modifiables par Dieu depuis l'échelle de Planck (10⁻³⁵ m)."
         },
-        connectionHorizontal: "les 0 et 1 sont les briques minimales de l'information dans notre cascade, comme les particules fondamentales sont les entités élémentaires de notre réalité, mais tous deux sont le résultat de modifications divines depuis l'échelle de Planck."
+        connectionHorizontal: "les instructions processeur (0 et 1) sont les commandes élémentaires qui contrôlent le matériel, comme les particules fondamentales sont les entités élémentaires qui constituent la matière, toutes deux étant modifiables par Dieu depuis l'échelle de Planck."
       }
     }
   ];
@@ -503,7 +503,7 @@ export const UniverseAppPage: React.FC = () => {
                       className="group relative bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 hover:from-yellow-700 hover:via-orange-700 hover:to-red-700 text-white rounded-full px-8 py-4 sm:px-12 sm:py-6 shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 border-4 border-yellow-400/50 hover:border-yellow-300/70 overflow-hidden"
                     >
                       {/* Effet de lueur divine */}
-                      <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/30 via-orange-400/30 to-red-400/30 rounded-full blur-xl animate-pulse opacity-70 group-hover:opacity-100 transition-all duration-500"></div>
+                      <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/30 via-orange-400/30 to-red-400/30 rounded-full blur-xl animate-pulse opacity-60 group-hover:opacity-100 transition-all duration-500"></div>
                       
                       {/* Particules divines */}
                       <div className="absolute inset-0 overflow-hidden rounded-full">
@@ -545,19 +545,19 @@ export const UniverseAppPage: React.FC = () => {
         {/* Indicateurs de navigation */}
         {currentSection !== -1 && (
           <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
-            <div className="flex flex-col space-y-2">
-              {sections.slice(1).map((section, index) => ( // Affiche toutes les sections sauf l'intro
-                <button
-                  key={section.id}
-                  onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                    index === currentSection
-                      ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
-                      : 'bg-white/30 hover:bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
+          <div className="flex flex-col space-y-2">
+            {sections.slice(1).map((section, index) => ( // Affiche toutes les sections sauf l'intro
+              <button
+                key={section.id}
+                onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
+                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                  index === currentSection
+                    ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
+                    : 'bg-white/30 hover:bg-white/50'
+                }`}
+              />
+            ))}
+          </div>
           </div>
         )}
 
