@@ -482,7 +482,7 @@ export const UniverseAppPage: React.FC = () => {
                 </div>
 
                 {/* Bouton Rétrécir pour les pages d'échelles */}
-                {currentSection < 3 && currentSection !== -1 && (
+                {currentSection < 4 && currentSection !== -1 && (
                   <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
                     <button
                       onClick={goToLowerScale}
@@ -535,20 +535,6 @@ export const UniverseAppPage: React.FC = () => {
                       {/* Bordure lumineuse animée */}
                       <div className="absolute -inset-2 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full opacity-30 blur-lg animate-pulse group-hover:opacity-60 group-hover:blur-xl transition-all duration-500"></div>
                     </Link>
-                  </div>
-                )}
-
-                {/* Bouton Rétrécir pour les pages d'échelles */}
-                {currentSection < 4 && currentSection !== -1 && (
-                  <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
-                    <button
-                      onClick={goToLowerScale}
-                      className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full w-20 h-20 sm:w-24 sm:h-24 shadow-2xl transition-all duration-500 transform hover:scale-90 active:scale-95 border-2 border-white/20"
-                    >
-                      <div className="flex items-center justify-center h-full transition-all duration-500 group-hover:scale-90">
-                        <span className="text-xs sm:text-sm font-bold transition-all duration-500 group-hover:text-xs sm:group-hover:text-sm group-hover:font-extrabold text-center leading-tight">Rétrécir</span>
-                      </div>
-                    </button>
                   </div>
                 )}
               </div>
