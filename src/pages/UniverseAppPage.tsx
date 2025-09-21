@@ -386,14 +386,9 @@ export const UniverseAppPage: React.FC = () => {
                   )}
                   
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 inline-block border border-white/20">
-                    <div className="flex items-center justify-center space-x-2 sm:space-x-3 text-xs sm:text-sm lg:text-base font-bold">
+                    <div className="text-xs sm:text-sm lg:text-base font-bold text-center">
                       <span className="text-white">{currentSectionData.title}</span>
-                      <div className="flex items-center space-x-1">
-                        <div className="w-2 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
-                        <div className="w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
-                        <div className="w-2 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-                      </div>
-                      <span className="text-cyan-300 font-mono">{currentSectionData.scale}</span>
+                      <span className="text-cyan-300 font-mono ml-2">{currentSectionData.scale}</span>
                     </div>
                   </div>
                 </div>
