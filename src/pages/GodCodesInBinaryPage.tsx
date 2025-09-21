@@ -404,7 +404,7 @@ const GodCodingSimulation: React.FC = () => {
         </div>
       </div>
       
-      <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 w-full h-[280px] sm:h-[340px]">
+      <div className="bg-gray-900 rounded-lg p-4 font-mono text-green-400 w-full h-[280px] sm:h-[340px] overflow-hidden">
         <pre className="text-xs sm:text-sm whitespace-pre leading-tight overflow-x-auto">
           {currentCode}
           {isTyping && <span className="animate-pulse text-green-300">|</span>}
