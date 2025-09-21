@@ -121,6 +121,8 @@ export const UniverseAppPage: React.FC = () => {
   const [currentSection, setCurrentSection] = useState(-1); // -1 pour la page d'intro
   const navigate = useNavigate();
 
+  // Debug: affichage de la section actuelle
+  console.log('Current Section ID:', currentSection);
   const sections = [
     {
       id: -1,
@@ -267,6 +269,11 @@ export const UniverseAppPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
+      {/* Debug display - affichage temporaire de la section actuelle */}
+      <div className="fixed top-0 left-0 bg-black text-white p-2 z-[99999] text-sm">
+        Current Section: {currentSection} | Title: {currentSection === -1 ? 'Introduction' : currentSectionData?.title || 'Unknown'}
+      </div>
+      
       <div 
         className="min-h-screen overflow-hidden relative"
       >
@@ -538,19 +545,7 @@ export const UniverseAppPage: React.FC = () => {
                   </div>
                 )}
 
-                {currentSection < 4 && currentSection !== -1 && (
-                  <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
-                    <button
-                      onClick={goToLowerScale}
-                      className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full w-20 h-20 sm:w-24 sm:h-24 shadow-2xl transition-all duration-500 transform hover:scale-90 active:scale-95 border-2 border-white/20"
-                    >
-                      <div className="flex items-center justify-center h-full transition-all duration-500 group-hover:scale-90">
-                        <span className="text-xs sm:text-sm font-bold transition-all duration-500 group-hover:text-xs sm:group-hover:text-sm group-hover:font-extrabold text-center leading-tight">Rétrécir</span>
-                      </div>
-                    </button>
-                  </div>
-                )}
-              </div>
+               {/* Bouton Rétrécir pour toutes les échelles sauf la dernière et l'intro */}
             </div>
           )}
         </div>
