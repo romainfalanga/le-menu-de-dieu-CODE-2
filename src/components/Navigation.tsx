@@ -163,8 +163,8 @@ export const Navigation: React.FC = () => {
   
   // Phrases qui changent toutes les 3 secondes
   const phrases = [
-    "Si Dieu avait un menu pour créer l'univers, il ressemblait à ça",
-    "L'univers est un jeu, alors amuse-toi"
+    "Si dieu a un menu, c'est lui",
+    "L'univers est un jeu : amuse-toi"
   ];
   
   // Fermer le menu lors du changement de route avec un délai pour éviter les conflits
