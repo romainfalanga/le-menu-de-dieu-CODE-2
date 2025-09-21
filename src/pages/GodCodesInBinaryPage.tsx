@@ -339,10 +339,9 @@ const GodCodingSimulation: React.FC = () => {
   
   const [sequenceIndex, setSequenceIndex] = useState(0);
   
-  // Initialiser la première phrase de création
-  React.useEffect(() => {
-    setCurrentCreationPhrase(creationPhrases[0]);
-  }, [creationPhrases]);
+  // Initialiser avec un index aléatoire et la phrase correspondante
+  const [sequenceIndex, setSequenceIndex] = useState(() => Math.floor(Math.random() * creationPhrases.length));
+  const [currentCreationPhrase, setCurrentCreationPhrase] = useState(() => creationPhrases[Math.floor(Math.random() * creationPhrases.length)]);
   
   useEffect(() => {
     const currentSequence = binarySequences[sequenceIndex];
