@@ -86,27 +86,256 @@ const GodCodingSimulation: React.FC = () => {
   const [currentCreationPhrase, setCurrentCreationPhrase] = useState('');
   
   // Génération de séquences binaires aléatoires de 15 rangées de 40 chiffres
+  // Liste étendue de 200+ objets de création (du briquet à l'humain)
+  const creationPhrases = React.useMemo(() => [
+    // Objets du quotidien
+    "Création d'un briquet",
+    "Création d'une clé USB",
+    "Création d'un smartphone",
+    "Création d'une souris d'ordinateur",
+    "Création d'un livre",
+    "Création d'une tasse",
+    "Création d'un stylo",
+    "Création d'une montre",
+    "Création d'un portefeuille",
+    "Création d'une paire de lunettes",
+    "Création d'un casque audio",
+    "Création d'une calculatrice",
+    "Création d'un appareil photo",
+    "Création d'une lampe de poche",
+    "Création d'un carnet",
+    "Création d'une bouteille d'eau",
+    "Création d'un parapluie",
+    "Création d'une chaussure",
+    "Création d'un sac à main",
+    "Création d'un chapeau",
+    "Création d'une ceinture",
+    "Création d'un t-shirt",
+    "Création d'un jean",
+    "Création d'une veste",
+    "Création d'un pull",
+    "Création d'une écharpe",
+    "Création d'une paire de gants",
+    "Création d'une chaussette",
+    "Création d'un sous-vêtement",
+    
+    // Outils et instruments
+    "Création d'un marteau",
+    "Création d'un tournevis",
+    "Création d'une clé anglaise",
+    "Création d'une pince",
+    "Création d'un couteau",
+    "Création d'une fourchette",
+    "Création d'une cuillère",
+    "Création d'une assiette",
+    "Création d'un verre",
+    "Création d'une casserole",
+    "Création d'une poêle",
+    "Création d'un ouvre-boîte",
+    "Création d'un tire-bouchon",
+    "Création d'une spatule",
+    "Création d'un fouet",
+    "Création d'un rouleau à pâtisserie",
+    "Création d'une balance de cuisine",
+    "Création d'un thermomètre",
+    "Création d'une règle",
+    "Création d'un compas",
+    "Création d'une équerre",
+    "Création d'un rapporteur",
+    "Création d'une loupe",
+    "Création d'un microscope",
+    "Création d'un télescope",
+    "Création d'une boussole",
+    "Création d'un niveau à bulle",
+    "Création d'un mètre ruban",
+    
+    // Électronique et technologie
+    "Création d'un ordinateur portable",
+    "Création d'une tablette",
+    "Création d'un clavier",
+    "Création d'un écran",
+    "Création d'une imprimante",
+    "Création d'un scanner",
+    "Création d'un routeur wifi",
+    "Création d'un disque dur",
+    "Création d'une carte mémoire",
+    "Création d'un câble USB",
+    "Création d'un chargeur",
+    "Création d'une batterie",
+    "Création d'un haut-parleur",
+    "Création d'un microphone",
+    "Création d'une webcam",
+    "Création d'une télécommande",
+    "Création d'un réveil",
+    "Création d'une radio",
+    "Création d'un lecteur MP3",
+    "Création d'un GPS",
+    
+    // Objets de sport et loisirs
+    "Création d'un ballon de football",
+    "Création d'un ballon de basket",
+    "Création d'une raquette de tennis",
+    "Création d'une raquette de badminton",
+    "Création d'un club de golf",
+    "Création d'une batte de baseball",
+    "Création d'un casque de vélo",
+    "Création d'une planche à roulettes",
+    "Création d'une trottinette",
+    "Création d'un frisbee",
+    "Création d'un yo-yo",
+    "Création d'un rubik's cube",
+    "Création d'un jeu de cartes",
+    "Création d'un dé",
+    "Création d'un puzzle",
+    "Création d'une figurine",
+    "Création d'une poupée",
+    "Création d'un ours en peluche",
+    "Création d'un ballon gonflable",
+    "Création d'une balle anti-stress",
+    
+    // Objets de beauté et hygiène
+    "Création d'une brosse à dents",
+    "Création d'un tube de dentifrice",
+    "Création d'un savon",
+    "Création d'un shampoing",
+    "Création d'un peigne",
+    "Création d'une brosse à cheveux",
+    "Création d'un miroir",
+    "Création d'un rasoir",
+    "Création d'une crème hydratante",
+    "Création d'un parfum",
+    "Création d'un rouge à lèvres",
+    "Création d'un mascara",
+    "Création d'un vernis à ongles",
+    "Création d'une lime à ongles",
+    "Création d'un coupe-ongles",
+    "Création d'une pince à épiler",
+    "Création d'un sèche-cheveux",
+    "Création d'un fer à lisser",
+    "Création d'une serviette",
+    "Création d'un gant de toilette",
+    
+    // Objets de bureau et écriture
+    "Création d'un crayon",
+    "Création d'un feutre",
+    "Création d'un surligneur",
+    "Création d'une gomme",
+    "Création d'un taille-crayon",
+    "Création d'une agrafeuse",
+    "Création d'un perforateur",
+    "Création d'un classeur",
+    "Création d'un cahier",
+    "Création d'un bloc-notes",
+    "Création d'une enveloppe",
+    "Création d'un timbre",
+    "Création d'une étiquette",
+    "Création d'un post-it",
+    "Création d'un trombone",
+    "Création d'une punaise",
+    "Création d'un élastique",
+    "Création d'un scotch",
+    "Création d'une colle",
+    "Création d'une paire de ciseaux",
+    
+    // Objets de maison
+    "Création d'une ampoule",
+    "Création d'un interrupteur",
+    "Création d'une prise électrique",
+    "Création d'un cadre photo",
+    "Création d'un vase",
+    "Création d'une bougie",
+    "Création d'un coussin",
+    "Création d'une couverture",
+    "Création d'un oreiller",
+    "Création d'un drap",
+    "Création d'une housse de couette",
+    "Création d'un rideau",
+    "Création d'un store",
+    "Création d'un tapis",
+    "Création d'une carpette",
+    "Création d'un paillasson",
+    "Création d'un balai",
+    "Création d'une serpillière",
+    "Création d'un aspirateur",
+    "Création d'un fer à repasser",
+    
+    // Objets de jardinage
+    "Création d'un arrosoir",
+    "Création d'une pelle",
+    "Création d'un râteau",
+    "Création d'une bêche",
+    "Création d'un sécateur",
+    "Création d'un tuyau d'arrosage",
+    "Création d'un pot de fleur",
+    "Création d'une jardinière",
+    "Création d'un engrais",
+    "Création d'une graine",
+    "Création d'un bulbe",
+    "Création d'une plante",
+    "Création d'une fleur",
+    "Création d'un arbre",
+    "Création d'un arbuste",
+    "Création d'une herbe",
+    "Création d'une feuille",
+    "Création d'une branche",
+    "Création d'un fruit",
+    "Création d'un légume",
+    
+    // Véhicules et transport
+    "Création d'une voiture",
+    "Création d'une moto",
+    "Création d'un vélo",
+    "Création d'un scooter",
+    "Création d'un skateboard",
+    "Création d'une trottinette électrique",
+    "Création d'un hoverboard",
+    "Création d'un casque de moto",
+    "Création d'un rétroviseur",
+    "Création d'un pneu",
+    "Création d'une roue",
+    "Création d'un volant",
+    "Création d'un siège auto",
+    "Création d'une ceinture de sécurité",
+    "Création d'un klaxon",
+    "Création d'un phare",
+    "Création d'un clignotant",
+    "Création d'un essuie-glace",
+    "Création d'un pare-brise",
+    "Création d'un rétroviseur",
+    
+    // Êtres vivants (taille appropriée)
+    "Création d'un être humain",
+    "Création d'un chat",
+    "Création d'un chien",
+    "Création d'un lapin",
+    "Création d'un hamster",
+    "Création d'une souris",
+    "Création d'un rat",
+    "Création d'un oiseau",
+    "Création d'un poisson",
+    "Création d'une tortue",
+    "Création d'un serpent",
+    "Création d'un lézard",
+    "Création d'une grenouille",
+    "Création d'un papillon",
+    "Création d'une abeille",
+    "Création d'une fourmi",
+    "Création d'une araignée",
+    "Création d'un escargot",
+    "Création d'un ver de terre",
+    "Création d'une coccinelle"
+  ], []);
+  
+  // Génération de séquences binaires aléatoires de 15 rangées de 40 chiffres
   const binarySequences = React.useMemo(() => {
-    return Array.from({ length: 8 }, () => {
+    return Array.from({ length: creationPhrases.length }, () => {
       // Génère 15 rangées de 40 chiffres binaires chacune
       const rows = Array.from({ length: 15 }, () => {
         return Array.from({ length: 40 }, () => Math.random() > 0.5 ? '1' : '0').join('');
       });
       return rows.join('\n');
     });
-  }, []);
-  
-  // Phrases de création correspondant à chaque séquence binaire
-  const creationPhrases = React.useMemo(() => [
-    "Création d'une voiture",
-    "Création d'un briquet",
-    "Création d'un arbre",
-    "Création d'une montagne",
-    "Création d'un océan",
-    "Création d'une étoile",
-    "Création d'un être humain",
-    "Création d'une galaxie"
-  ], []);
+  }, [creationPhrases.length]);
   
   const [sequenceIndex, setSequenceIndex] = useState(0);
   
@@ -154,7 +383,8 @@ const GodCodingSimulation: React.FC = () => {
     if (isDeleting && currentCode.length === 0) {
       // Suppression terminée, passer à la séquence suivante
       setIsDeleting(false);
-      const nextIndex = (sequenceIndex + 1) % binarySequences.length;
+      // Sélection aléatoire d'un nouvel objet à créer
+      const nextIndex = Math.floor(Math.random() * creationPhrases.length);
       setSequenceIndex(nextIndex);
       setCurrentCreationPhrase(creationPhrases[nextIndex]);
     }
