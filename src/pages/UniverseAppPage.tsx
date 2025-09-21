@@ -514,7 +514,7 @@ export const UniverseAppPage: React.FC = () => {
                             desc: "Composants réutilisables qui définissent logique et apparence. Leur agencement est une probabilité jusqu'à l'observation, comme une superposition quantique.", 
                             connection: "→ Logique et structure définies par le code JavaScript",
                             color: "bg-blue-900/40 border-blue-400" 
-                          }
+                          },
                           { 
                             level: "JavaScript", 
                             desc: "Langage en superposition de code : fonctions, variables, logique", 
