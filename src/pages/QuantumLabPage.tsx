@@ -124,6 +124,64 @@ const ScaleBlock: React.FC<{ scale: ScaleData; isExpanded: boolean; onToggle: ()
   isExpanded, 
   onToggle 
 }) => {
+  const [selectedBricks, setSelectedBricks] = useState<string[]>([]);
+  const [combinationResult, setCombinationResult] = useState<string>('');
+  const [showResult, setShowResult] = useState<boolean>(false);
+
+  const toggleBrickSelection = (brick: string) => {
+    setSelectedBricks(prev => {
+      if (prev.includes(brick)) {
+        return prev.filter(b => b !== brick);
+      } else {
+        return [...prev, brick];
+      }
+    });
+  };
+
+  const handleCombine = () => {
+    if (selectedBricks.length === 0) {
+      alert('Sélectionnez d\'abord des briques en cliquant dessus !');
+      return;
+    }
+
+    // Logique de combinaison simple basée sur les briques sélectionnées
+    let result = '';
+    
+    if (scale.id === 2) { // Échelle moléculaire
+      if (selectedBricks.includes('H₂O') && selectedBricks.includes('CO₂')) {
+        result = 'Vous avez combiné H₂O et CO₂ pour créer un environnement propice à la photosynthèse !';
+      } else if (selectedBricks.includes('ADN') && selectedBricks.includes('protéines')) {
+        result = 'Vous avez combiné ADN et protéines pour créer un système de réplication cellulaire !';
+      }
+    } else if (scale.id === 3) { // Échelle atomique
+      if (selectedBricks.includes('H') && selectedBricks.includes('O')) {
+        result = 'Vous avez combiné H et O pour former H₂O (eau) !';
+      } else if (selectedBricks.includes('C') && selectedBricks.includes('O')) {
+        result = 'Vous avez combiné C et O pour former CO₂ (dioxyde de carbone) !';
+      }
+    } else if (scale.id === 4) { // Échelle nucléaire
+      if (selectedBricks.includes('protons (uud)') && selectedBricks.includes('neutrons (udd)')) {
+        result = 'Vous avez combiné protons et neutrons pour créer un noyau atomique stable !';
+      }
+    }
+    
+    // Résultat générique si aucune combinaison spécifique n'est trouvée
+    if (!result) {
+      const bricksList = selectedBricks.join(' + ');
+      const randomCombination = scale.combinations[Math.floor(Math.random() * scale.combinations.length)];
+      result = `Vous avez combiné ${bricksList}. Exemple de résultat possible : ${randomCombination}`;
+    }
+    
+    setCombinationResult(result);
+    setShowResult(true);
+    
+    // Masquer le résultat après 4 secondes
+    setTimeout(() => {
+      setShowResult(false);
+      setSelectedBricks([]); // Reset des sélections
+    }, 4000);
+  };
+
   return (
     <div className={`bg-gradient-to-br ${scale.bgGradient} backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-white/20 shadow-2xl transition-all duration-500 hover:shadow-3xl hover:border-white/30`}>
       {/* En-tête de l'échelle */}
@@ -157,23 +215,46 @@ const ScaleBlock: React.FC<{ scale: ScaleData; isExpanded: boolean; onToggle: ()
       {/* Contenu détaillé (collapsible) */}
       {isExpanded && (
         <div className="space-y-4 sm:space-y-6 animate-fadeIn">
+          {/* Résultat de combinaison */}
+          {showResult && (
+            <div className="bg-gradient-to-r from-green-900/60 to-emerald-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-5 border-2 border-green-400 animate-pulse">
+              <h3 className="text-lg sm:text-xl font-bold text-green-200 mb-3 flex items-center">
+                ✨ Résultat de la combinaison
+              </h3>
+              <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                {combinationResult}
+              </p>
+            </div>
+          )}
+
           {/* Briques disponibles */}
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-5 border border-white/20">
             <h3 className="text-lg sm:text-xl font-bold text-white mb-3 flex items-center">
-              🧱 Briques disponibles
+              🧱 Briques disponibles {selectedBricks.length > 0 && <span className="text-cyan-300 text-sm ml-2">({selectedBricks.length} sélectionnée{selectedBricks.length > 1 ? 's' : ''})</span>}
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
               {scale.bricks.map((brick, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/30 hover:border-white/50 transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95"
+                  onClick={() => toggleBrickSelection(brick)}
+                  className={`bg-gradient-to-r backdrop-blur-sm rounded-lg px-3 py-2 border transition-all duration-300 cursor-pointer hover:scale-105 active:scale-95 ${
+                    selectedBricks.includes(brick)
+                      ? 'from-cyan-500/40 to-blue-500/30 border-cyan-400 shadow-lg shadow-cyan-500/25'
+                      : 'from-white/20 to-white/10 border-white/30 hover:border-white/50'
+                  }`}
                 >
                   <span className="text-sm sm:text-base text-gray-200 font-medium">
                     {brick}
                   </span>
+                  {selectedBricks.includes(brick) && (
+                    <span className="text-cyan-300 text-xs ml-1">✓</span>
+                  )}
                 </div>
               ))}
             </div>
+            <p className="text-xs text-gray-400 mt-3 italic">
+              💡 Cliquez sur les briques pour les sélectionner, puis utilisez le bouton "Combiner" !
+            </p>
           </div>
 
           {/* Composition */}
@@ -193,6 +274,9 @@ const ScaleBlock: React.FC<{ scale: ScaleData; isExpanded: boolean; onToggle: ()
               <ChevronUp className="w-5 h-5 mr-2" />
               Combinaisons possibles
             </h3>
+            <p className="text-xs text-green-300 mb-3 italic">
+              📋 Exemples de combinaisons - utilisez le bouton "Combiner" pour expérimenter !
+            </p>
             <div className="space-y-2 sm:space-y-3">
               {scale.combinations.map((combination, index) => (
                 <div
@@ -212,12 +296,20 @@ const ScaleBlock: React.FC<{ scale: ScaleData; isExpanded: boolean; onToggle: ()
             <button className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg opacity-50 cursor-not-allowed">
               🔬 Observer
             </button>
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg opacity-50 cursor-not-allowed">
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg"
+              onClick={handleCombine}
               ⚗️ Combiner
             </button>
             <button className="bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg opacity-50 cursor-not-allowed">
               🎲 Expérimenter
             </button>
+          </div>
+          
+          {/* Note sur les fonctionnalités futures */}
+          <div className="bg-gray-900/30 backdrop-blur-sm rounded-lg p-3 border border-gray-500/30">
+            <p className="text-xs text-gray-400 text-center italic">
+              🚧 Fonctionnalités "Observer" et "Expérimenter" à venir dans les prochaines versions
+            </p>
           </div>
         </div>
       )}
@@ -272,7 +364,7 @@ export const QuantumLabPage: React.FC = () => {
             </h1>
           </div>
           <p className="text-base sm:text-lg lg:text-xl text-purple-200 max-w-4xl mx-auto px-4 leading-relaxed">
-            Explorez les 6 échelles de l'univers comme un véritable jeu de construction cosmique
+            Explorez les 6 échelles de l'univers comme un véritable jeu de construction cosmique - Cliquez, sélectionnez et combinez !
           </p>
           
           {/* Contrôles globaux */}
@@ -331,7 +423,7 @@ export const QuantumLabPage: React.FC = () => {
               Le Laboratoire Quantique est un espace expérimental où vous pouvez explorer les règles de l'univers comme si elles étaient des briques de code.
             </p>
             <div className="mt-6 text-sm text-gray-400 italic">
-              🚧 Fonctionnalités à venir : Observer, Combiner, Expérimenter
+              🎮 Fonctionnalité "Combiner" maintenant active ! 🚧 Fonctionnalités à venir : Observer, Expérimenter
             </div>
           </div>
         </div>
