@@ -406,7 +406,7 @@ export const UniverseAppPage: React.FC = () => {
                   
                   <div className="mt-4 sm:mt-6 bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border-l-4 border-cyan-400">
                     <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
-                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> Votre écran affiche une interface, compilée depuis React, écrit en JavaScript, exécuté par du C/C++, traduit en instructions processeur, converties en 0 et 1. De même, votre corps est fait de molécules, constituées d'atomes, formés de nucléons, composés de particules, reposant sur l'échelle de Planck.
+                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> Votre écran affiche une interface, compilée depuis React, écrit en JavaScript, exécuté par du C/C++, traduit en instructions processeur, converties en 0 et 1. De même, votre corps est fait de molécules, constituées d'atomes, formés de nucléons, composés de particules, reposant sur l\'échelle de Planck.
                     </p>
                   </div>
                 </div>
