@@ -173,18 +173,18 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-green-500 to-emerald-500",
       bgGradient: "from-green-900/30 via-emerald-900/20 to-green-800/30",
       content: {
-        application: "Composants React, briques réutilisables qui définissent logique et apparence. Chaque composant est écrit en JavaScript.",
+        application: "HTML/CSS (DOM), le langage qui décrit la réalité et son fonctionnement.",
         universe: "Molécules, assemblages d'atomes qui portent des propriétés fonctionnelles (ADN, protéines, matériaux).",
         universeExamples: "eau (H₂O), dioxygène (O₂), dioxyde de carbone (CO₂), ADN, protéines, lipides, plastiques, métaux",
         applicationConnections: {
-          above: "les composants React construisent l'interface utilisateur.",
-          below: "les composants React sont écrits en JavaScript."
+          above: "l'HTML/CSS construit l'interface utilisateur.",
+          below: "l'HTML/CSS est généré par les composants React."
         },
         universeConnections: {
           above: "les molécules forment le monde macroscopique.",
           below: "les molécules sont constituées d'atomes."
         },
-        connectionHorizontal: "les composants React encapsulent du code pour donner un rôle précis, comme les molécules encapsulent des atomes pour leur donner des propriétés nouvelles."
+        connectionHorizontal: "l'HTML/CSS structure et stylise le contenu pour créer une interface, comme les molécules organisent les atomes pour créer des propriétés fonctionnelles."
       }
     },
     {
@@ -195,18 +195,18 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-yellow-500 to-orange-500",
       bgGradient: "from-yellow-900/30 via-orange-900/20 to-yellow-800/30",
       content: {
-        application: "JavaScript, langage universel et flexible, base de React.",
+        application: "Composants React, briques réutilisables qui définissent logique et apparence.",
         universe: "Atomes, briques fondamentales de la matière (électrons + noyau).",
         universeExamples: "hydrogène (H), oxygène (O), carbone (C), fer (Fe), uranium (U)",
         applicationConnections: {
-          above: "JavaScript est utilisé pour écrire des composants React.",
-          below: "JavaScript est exécuté par des moteurs en C/C++."
+          above: "les composants React génèrent l'HTML/CSS.",
+          below: "les composants React sont écrits en JavaScript."
         },
         universeConnections: {
           above: "les atomes se combinent pour former des molécules.",
           below: "les atomes sont constitués de nucléons."
         },
-        connectionHorizontal: "JavaScript est une syntaxe universelle qui permet d'assembler du code, comme les atomes offrent une grammaire universelle pour assembler la matière."
+        connectionHorizontal: "les composants React sont des briques réutilisables qui s'assemblent pour créer des interfaces, comme les atomes sont des briques fondamentales qui s'assemblent pour créer la matière."
       }
     },
     {
@@ -217,18 +217,18 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-purple-500 to-violet-500",
       bgGradient: "from-purple-900/30 via-violet-900/20 to-purple-800/30",
       content: {
-        application: "C et C++, langages systèmes robustes, fondations des moteurs d'exécution.",
+        application: "JavaScript, langage universel et flexible, base de React.",
         universe: "Nucléons (protons et neutrons), structures qui stabilisent les atomes.",
         universeExamples: "protons et neutrons dans les noyaux atomiques (hydrogène, hélium, carbone…)",
         applicationConnections: {
-          above: "C/C++ fait tourner les moteurs JavaScript.",
-          below: "C/C++ est compilé en instructions processeur."
+          above: "JavaScript est utilisé pour écrire des composants React.",
+          below: "JavaScript est exécuté par des moteurs en C/C++."
         },
         universeConnections: {
           above: "les nucléons forment les noyaux atomiques.",
           below: "les nucléons sont constitués de quarks liés par des gluons."
         },
-        connectionHorizontal: "C/C++ fournit une ossature stable pour exécuter les langages supérieurs, comme les nucléons fournissent une stabilité structurelle aux atomes."
+        connectionHorizontal: "JavaScript est une syntaxe universelle qui permet d'assembler du code, comme les nucléons offrent une structure stable pour assembler les atomes."
       }
     },
     {
@@ -239,18 +239,18 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-red-500 to-pink-500",
       bgGradient: "from-red-900/30 via-pink-900/20 to-red-800/30",
       content: {
-        application: "Instructions processeur (assembleur, opcodes : ADD, MOV, JMP), ordres élémentaires traduits en binaire.",
+        application: "C et C++, langages systèmes robustes, fondations des moteurs d'exécution.",
         universe: "Particules fondamentales : fermions (quarks et leptons) = la matière, bosons (photon, gluon, W/Z, Higgs) = les forces.",
         universeExamples: "Quarks (up, down, charm, strange, top, bottom), Leptons (électron, neutrinos, muons, taus), Bosons (photon, gluon, W, Z, Higgs)",
         applicationConnections: {
-          above: "les instructions exécutent le code C/C++.",
-          below: "les instructions sont traduites en 0 et 1."
+          above: "C/C++ fait tourner les moteurs JavaScript.",
+          below: "C/C++ est compilé en instructions processeur."
         },
         universeConnections: {
           above: "les particules fondamentales forment les nucléons.",
           below: "les particules reposent sur l'échelle de Planck."
         },
-        connectionHorizontal: "les instructions sont les ordres élémentaires de l'application, comme les particules sont les entités élémentaires de la matière et des forces."
+        connectionHorizontal: "C/C++ fournit une ossature stable pour exécuter les langages supérieurs, comme les particules fondamentales fournissent les composants élémentaires de la matière et des forces."
       }
     },
     {
@@ -261,18 +261,18 @@ export const UniverseAppPage: React.FC = () => {
       color: "from-gray-600 to-slate-600",
       bgGradient: "from-gray-900/30 via-slate-900/20 to-gray-800/30",
       content: {
-        application: "Bits binaires, une mer de 0 et 1, sans signification isolée mais base de toute information.",
+        application: "Instructions processeur (assembleur, opcodes : ADD, MOV, JMP), ordres élémentaires traduits en binaire.",
         universe: "Échelle de Planck, granularité ultime de l'espace-temps.",
         universeExamples: "granularité minimale de l'espace-temps (quanta hypothétiques), niveau où les lois de la relativité et de la mécanique quantique cessent de s'appliquer séparément",
         applicationConnections: {
-          above: "les 0 et 1 composent les instructions processeur.",
-          below: null
+          above: "les instructions exécutent le code C/C++.",
+          below: "les instructions sont traduites en 0 et 1."
         },
         universeConnections: {
           above: "l'échelle de Planck donne naissance aux particules fondamentales.",
           below: null
         },
-        connectionHorizontal: "les 0 et 1 sont les briques minimales de l'information, comme l'échelle de Planck est la brique minimale de la réalité physique."
+        connectionHorizontal: "les instructions sont les ordres élémentaires de l'application, comme l'échelle de Planck contient les informations élémentaires de la réalité physique."
       }
     }
   ];
