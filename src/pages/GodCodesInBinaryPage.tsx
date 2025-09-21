@@ -520,7 +520,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Binaire", desc: "Dieu modifie des trillions de trillions de bits coordonnés (pour le système d'exploitation et les applications)", color: "bg-red-900/40 border-red-400" },
+                    { level: "Binaire", desc: "Dieu modifie des trillions de trillions de bits coordonnés", color: "bg-red-900/40 border-red-400" },
                     { level: "Instructions", desc: "Des milliards de milliards d'opcodes processeur changent", color: "bg-orange-900/40 border-orange-400" },
                     { level: "C/C++", desc: "Des centaines de millions de fonctions système modifiées", color: "bg-yellow-900/40 border-yellow-400" },
                     { level: "Java Script", desc: "Des dizaines de millions de scripts/fonctions changent de comportement", color: "bg-green-900/40 border-green-400" },
