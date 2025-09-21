@@ -263,7 +263,7 @@ export const UniverseAppPage: React.FC = () => {
       content: {
         application: "0 et 1 (Binaire), les informations élémentaires de la réalité.",
         universe: "Échelle de Planck, granularité ultime de l'espace-temps.",
-        universeExamples: "granularité minimale de l'espace-temps (quanta hypothétiques), niveau où les lois de la relativité et de la mécanique quantique cessent de s'appliquer séparément",
+        universeExamples: null,
         applicationConnections: {
           above: "les 0 et 1 sont le résultat de la compilation du code C/C++.",
           below: null
