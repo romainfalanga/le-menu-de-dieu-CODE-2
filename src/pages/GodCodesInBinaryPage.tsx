@@ -205,6 +205,8 @@ export const GodCodesInBinaryPage: React.FC = () => {
               <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium">
                 <strong className="text-cyan-300">Rappel de l'analogie :</strong> Dans "L'univers est une application", nous avons vu que chaque composant de notre interface utilisateur (le monde macroscopique) est fait d'une cascade descendante vers toutes les couches inférieures, jusqu'aux bits binaires à l'échelle de Planck. Cette interface tourne en continu et chaque modification engendre une cascade descendante qui influence toutes les couches inférieures.
                 <br /><br />
+                Chaque couche supérieure est la manifestation compilée des couches inférieures, et descendre d'échelle, c'est littéralement 'regarder sous le capot de l'échelle supérieur'.
+                <br /><br />
                 <strong className="text-yellow-300">Mais ici, nous découvrons que ça marche aussi dans l'autre sens !</strong> Au lieu de subir les modifications qui descendent de l'interface, nous allons voir comment on pourrait modifier l'interface utilisateur en agissant directement sur le code source : les 0 et 1 à l'échelle de Planck. Si une entité divine avait accès à ce niveau fondamental, elle pourrait réécrire la réalité bit par bit.
               </p>
             </div>
