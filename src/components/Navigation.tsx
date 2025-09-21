@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X, Zap, Microscope } from 'lucide-react';
 
 // Composant pour les chiffres binaires qui se téléportent
 const TeleportingBinaryDigits: React.FC = () => {
@@ -306,6 +306,26 @@ export const Navigation: React.FC = () => {
       dotColor: 'bg-purple-400',
       dotColor2: 'bg-pink-400',
       icon: '🕳️'
+    },
+    {
+      path: '/quantum-lab',
+      title: 'Laboratoire Quantique',
+      shortTitle: 'Laboratoire Quantique',
+      gradient: 'from-teal-500/20 to-cyan-500/20',
+      hoverGradient: 'hover:from-teal-500/10 hover:to-cyan-500/10',
+      textColor: 'text-teal-300',
+      hoverTextColor: 'hover:text-teal-300',
+      borderColor: 'border-teal-400/30',
+      hoverBorderColor: 'hover:border-teal-400/20',
+      shadowColor: 'shadow-teal-500/25',
+      hoverShadowColor: 'hover:shadow-teal-500/20',
+      glowFrom: 'from-teal-400/10',
+      glowTo: 'to-cyan-400/10',
+      hoverGlowFrom: 'from-teal-400/5',
+      hoverGlowTo: 'to-cyan-400/5',
+      dotColor: 'bg-teal-400',
+      dotColor2: 'bg-cyan-400',
+      icon: '🔬'
     }
   ];
 
