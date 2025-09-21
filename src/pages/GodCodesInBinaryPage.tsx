@@ -12,7 +12,7 @@ const DivineBinaryDigits: React.FC = () => {
         top: Math.random() * 90 + 5,
         left: Math.random() * 90 + 5,
         opacity: Math.random() * 0.4 + 0.2,
-        size: ['text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl'][Math.floor(Math.random() * 5)],
+        size: 'text-xl',
         visible: true,
         nextChangeTime: Date.now() + Math.random() * 100 + 50, // Plus rapide pour l'effet divin
         color: ['#FFD700', '#FFA500', '#FF6347', '#00CED1', '#9370DB'][Math.floor(Math.random() * 5)]
@@ -39,7 +39,7 @@ const DivineBinaryDigits: React.FC = () => {
                 top: Math.random() * 90 + 5,
                 left: Math.random() * 90 + 5,
                 opacity: Math.random() * 0.4 + 0.2,
-                size: ['text-sm', 'text-base', 'text-lg', 'text-xl', 'text-2xl'][Math.floor(Math.random() * 5)],
+                size: 'text-xl',
                 visible: true,
                 nextChangeTime: now + Math.random() * 100 + 50,
                 color: ['#FFD700', '#FFA500', '#FF6347', '#00CED1', '#9370DB'][Math.floor(Math.random() * 5)]
@@ -67,8 +67,9 @@ const DivineBinaryDigits: React.FC = () => {
             left: `${digit.left}%`,
             opacity: digit.visible ? digit.opacity : 0,
             color: digit.color,
-            textShadow: `0 0 10px ${digit.color}, 0 0 20px ${digit.color}, 0 0 30px ${digit.color}`,
-            transform: 'translate(-50%, -50%)'
+            textShadow: `0 0 15px ${digit.color}`,
+            transform: 'translate(-50%, -50%)',
+            willChange: 'transform, opacity'
           }}
         >
           {digit.value}
