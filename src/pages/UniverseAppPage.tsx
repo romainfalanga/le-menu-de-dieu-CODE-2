@@ -403,8 +403,8 @@ export const UniverseAppPage: React.FC = () => {
                       <div className="space-y-2 sm:space-y-3">
                         {[
                           { 
-                            level: "Interface", 
-                            desc: "Ce que nous voyons : pages web, applications", 
+                            level: "Interface utilisateur", 
+                            desc: "Ce que nous voyons : humains, objets, monde visible", 
                             connection: "→ Rendu généré par la compilation des composants React",
                             color: "bg-purple-900/40 border-purple-400" 
                           },
