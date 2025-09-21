@@ -1,128 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Layers, Code, Atom, Binary, Cpu, Zap, Plus, Minus, RotateCcw, AlertTriangle } from 'lucide-react';
-
-// Définitions des entités macroscopiques disponibles
-const ENTITY_DEFINITIONS = [
-  {
-    name: "Être Humain",
-    macroDescription: "Un être humain adulte de 70kg, organisme complexe avec conscience et capacités cognitives avancées.",
-    baseValues: {
-      quantumBits: 7000000000000000000000000000, // 7 × 10^27
-      upQuarks: 2800000000000000000000000000,
-      downQuarks: 2800000000000000000000000000,
-      electrons: 1400000000000000000000000000,
-      protonCount: 1866666666666666666666666666,
-      neutronCount: 1866666666666666666666666666,
-      carbonAtoms: 336000000000000000000000000,
-      hydrogenAtoms: 1176000000000000000000000000,
-      oxygenAtoms: 298666666666666666666666666,
-      nitrogenAtoms: 56000000000000000000000000,
-      proteinCount: 1866666666666666666666,
-      dnaIntegrity: 95,
-      lipidBalance: 85
-    }
-  },
-  {
-    name: "Chêne Centenaire",
-    macroDescription: "Un chêne de 100 ans, 25 mètres de haut, organisme végétal complexe avec système racinaire étendu.",
-    baseValues: {
-      quantumBits: 15000000000000000000000000000, // Plus de matière qu'un humain
-      upQuarks: 6000000000000000000000000000,
-      downQuarks: 6000000000000000000000000000,
-      electrons: 3000000000000000000000000000,
-      protonCount: 4000000000000000000000000000,
-      neutronCount: 4000000000000000000000000000,
-      carbonAtoms: 1200000000000000000000000000, // Beaucoup de carbone (cellulose)
-      hydrogenAtoms: 2000000000000000000000000000,
-      oxygenAtoms: 640000000000000000000000000,
-      nitrogenAtoms: 160000000000000000000000000,
-      proteinCount: 4000000000000000000000, // Moins de protéines qu'un humain
-      dnaIntegrity: 88,
-      lipidBalance: 45 // Moins de lipides
-    }
-  },
-  {
-    name: "Rocher de Granit",
-    macroDescription: "Un rocher de granit de 500kg, formation minérale cristalline composée de quartz, feldspath et mica.",
-    baseValues: {
-      quantumBits: 25000000000000000000000000000, // Très dense
-      upQuarks: 10000000000000000000000000000,
-      downQuarks: 10000000000000000000000000000,
-      electrons: 5000000000000000000000000000,
-      protonCount: 6666666666666666666666666666,
-      neutronCount: 6666666666666666666666666666,
-      carbonAtoms: 66666666666666666666666666, // Très peu de carbone
-      hydrogenAtoms: 133333333333333333333333333, // Très peu d'hydrogène
-      oxygenAtoms: 3200000000000000000000000000, // Beaucoup d'oxygène (silicates)
-      nitrogenAtoms: 13333333333333333333333333, // Presque pas d'azote
-      proteinCount: 0, // Pas de protéines
-      dnaIntegrity: 0, // Pas d'ADN
-      lipidBalance: 0 // Pas de lipides
-    }
-  },
-  {
-    name: "Goutte d'Eau",
-    macroDescription: "Une goutte d'eau pure de 0.05ml, molécules H₂O en mouvement brownien constant.",
-    baseValues: {
-      quantumBits: 1670000000000000000000, // Très petit
-      upQuarks: 668000000000000000000,
-      downQuarks: 668000000000000000000,
-      electrons: 334000000000000000000,
-      protonCount: 445333333333333333333,
-      neutronCount: 445333333333333333333,
-      carbonAtoms: 0, // Pas de carbone
-      hydrogenAtoms: 334000000000000000000, // Beaucoup d'hydrogène
-      oxygenAtoms: 167000000000000000000, // Beaucoup d'oxygène
-      nitrogenAtoms: 0, // Pas d'azote
-      proteinCount: 0,
-      dnaIntegrity: 0,
-      lipidBalance: 0
-    }
-  },
-  {
-    name: "Grain de Sable",
-    macroDescription: "Un grain de sable de quartz de 0.5mm, particule minérale érodée par les éléments.",
-    baseValues: {
-      quantumBits: 50000000000000000000000, // Très petit mais dense
-      upQuarks: 20000000000000000000000,
-      downQuarks: 20000000000000000000000,
-      electrons: 10000000000000000000000,
-      protonCount: 13333333333333333333333,
-      neutronCount: 13333333333333333333333,
-      carbonAtoms: 133333333333333333333, // Très peu
-      hydrogenAtoms: 266666666666666666666, // Très peu
-      oxygenAtoms: 6400000000000000000000, // Beaucoup (SiO₂)
-      nitrogenAtoms: 26666666666666666666, // Presque rien
-      proteinCount: 0,
-      dnaIntegrity: 0,
-      lipidBalance: 0
-    }
-  },
-  {
-    name: "Étoile Naine",
-    macroDescription: "Une étoile naine rouge de 0.3 masse solaire, fusion nucléaire d'hydrogène en hélium dans son cœur.",
-    baseValues: {
-      quantumBits: 400000000000000000000000000000000000000000000000000000000, // Astronomique
-      upQuarks: 160000000000000000000000000000000000000000000000000000000,
-      downQuarks: 160000000000000000000000000000000000000000000000000000000,
-      electrons: 80000000000000000000000000000000000000000000000000000000,
-      protonCount: 106666666666666666666666666666666666666666666666666666666,
-      neutronCount: 106666666666666666666666666666666666666666666666666666666,
-      carbonAtoms: 1066666666666666666666666666666666666666666666666666666, // Très peu (jeune étoile)
-      hydrogenAtoms: 85333333333333333333333333333333333333333333333333333333, // Énormément
-      oxygenAtoms: 1706666666666666666666666666666666666666666666666666666,
-      nitrogenAtoms: 213333333333333333333333333333333333333333333333333333,
-      proteinCount: 0, // Pas de vie
-      dnaIntegrity: 0,
-      lipidBalance: 0
-    }
-  }
-];
+import { ArrowLeft, Layers, Code, Atom, Binary, Cpu, Zap, Plus, Minus, RotateCcw } from 'lucide-react';
 
 // Types pour notre système hiérarchique
-interface EntityState {
-  macroDescription: string;
+interface HumanState {
+  // Échelle macroscopique
+  age: number;
+  height: number;
+  weight: number;
+  isAlive: boolean;
   
   // Échelle moléculaire (calculé depuis atomique)
   proteinCount: number;
@@ -148,118 +34,167 @@ interface EntityState {
   quantumBits: number;
 }
 
+// État initial d'un être humain "standard"
+const initialHumanState: HumanState = {
+  age: 25,
+  height: 175,
+  weight: 70,
+  isAlive: true,
+  proteinCount: 0,
+  dnaIntegrity: 0,
+  lipidBalance: 0,
+  carbonAtoms: 0,
+  hydrogenAtoms: 0,
+  oxygenAtoms: 0,
+  nitrogenAtoms: 0,
+  protonCount: 0,
+  neutronCount: 0,
+  upQuarks: 0,
+  downQuarks: 0,
+  electrons: 0,
+  quantumBits: 7000000000000000000000000000 // 7 × 10^27 bits quantiques approximatifs
+};
+
+// Fonctions de calcul pour la propagation vers le haut
+const calculateFromQuantumBits = (bits: number): Partial<HumanState> => {
+  const upQuarks = Math.floor(bits * 0.4);
+  const downQuarks = Math.floor(bits * 0.4);
+  const electrons = Math.floor(bits * 0.2);
+  
+  return { upQuarks, downQuarks, electrons };
+};
+
+const calculateFromParticles = (upQuarks: number, downQuarks: number, electrons: number): Partial<HumanState> => {
+  const protonCount = Math.floor((upQuarks * 2 + downQuarks) / 3);
+  const neutronCount = Math.floor((upQuarks + downQuarks * 2) / 3);
+  
+  return { protonCount, neutronCount };
+};
+
+const calculateFromNucleons = (protons: number, neutrons: number): Partial<HumanState> => {
+  const carbonAtoms = Math.floor(protons * 0.18); // ~18% de carbone dans le corps humain
+  const hydrogenAtoms = Math.floor(protons * 0.63); // ~63% d'hydrogène
+  const oxygenAtoms = Math.floor(protons * 0.16); // ~16% d'oxygène
+  const nitrogenAtoms = Math.floor(protons * 0.03); // ~3% d'azote
+  
+  return { carbonAtoms, hydrogenAtoms, oxygenAtoms, nitrogenAtoms };
+};
+
+const calculateFromAtoms = (carbon: number, hydrogen: number, oxygen: number, nitrogen: number): Partial<HumanState> => {
+  const totalAtoms = carbon + hydrogen + oxygen + nitrogen;
+  const proteinCount = Math.floor(totalAtoms / 1000000); // Approximation
+  const dnaIntegrity = Math.min(100, Math.floor((carbon + nitrogen) / 10000));
+  const lipidBalance = Math.min(100, Math.floor((carbon + hydrogen) / 15000));
+  
+  return { proteinCount, dnaIntegrity, lipidBalance };
+};
+
+const calculateFromMolecules = (proteins: number, dnaIntegrity: number, lipids: number): Partial<HumanState> => {
+  const totalMolecularHealth = (proteins + dnaIntegrity + lipids) / 3;
+  const age = Math.max(1, Math.min(100, Math.floor(25 + (100 - totalMolecularHealth) * 0.5)));
+  const height = Math.max(50, Math.min(220, Math.floor(175 + (totalMolecularHealth - 50) * 0.3)));
+  const weight = Math.max(30, Math.min(150, Math.floor(70 + (totalMolecularHealth - 50) * 0.2)));
+  const isAlive = totalMolecularHealth > 10;
+  
+  return { age, height, weight, isAlive };
+};
+
+// Fonctions de calcul pour la propagation vers le bas (inverse)
+const calculateDownFromMacro = (age: number, height: number, weight: number, isAlive: boolean): Partial<HumanState> => {
+  if (!isAlive) {
+    return {
+      proteinCount: 0,
+      dnaIntegrity: 0,
+      lipidBalance: 0
+    };
+  }
+  
+  const healthFactor = Math.max(0, 100 - age * 0.8);
+  const sizeFactor = (height + weight) / 4;
+  
+  return {
+    proteinCount: Math.floor(healthFactor * sizeFactor * 100),
+    dnaIntegrity: Math.floor(healthFactor),
+    lipidBalance: Math.floor(healthFactor * 0.8)
+  };
+};
+
 export const HierarchicalExamplesPage: React.FC = () => {
-  const [selectedEntityName, setSelectedEntityName] = useState<string>(ENTITY_DEFINITIONS[0].name);
-  const [currentScaleValues, setCurrentScaleValues] = useState<EntityState>(() => ({
-    macroDescription: ENTITY_DEFINITIONS[0].macroDescription,
-    ...ENTITY_DEFINITIONS[0].baseValues
-  }));
-  const [lastModifiedScale, setLastModifiedScale] = useState<'entity' | 'planck'>('entity');
+  const [humanState, setHumanState] = useState<HumanState>(initialHumanState);
+  const [lastModifiedScale, setLastModifiedScale] = useState<string>('');
 
   // Force le re-rendu propre de la page
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    // Calcul initial de tous les niveaux
+    recalculateAllLevels(initialHumanState, 'planck');
   }, []);
 
-  // Effet pour la sélection d'entité
-  useEffect(() => {
-    if (lastModifiedScale === 'entity') {
-      const selectedEntity = ENTITY_DEFINITIONS.find(e => e.name === selectedEntityName);
-      if (selectedEntity) {
-        setCurrentScaleValues({
-          macroDescription: selectedEntity.macroDescription,
-          ...selectedEntity.baseValues
-        });
-      }
+  // Fonction pour recalculer tous les niveaux selon la direction
+  const recalculateAllLevels = (currentState: HumanState, modifiedScale: string) => {
+    let newState = { ...currentState };
+    
+    if (modifiedScale === 'planck') {
+      // Propagation vers le haut depuis Planck
+      const particleData = calculateFromQuantumBits(newState.quantumBits);
+      newState = { ...newState, ...particleData };
+      
+      const nucleonData = calculateFromParticles(newState.upQuarks, newState.downQuarks, newState.electrons);
+      newState = { ...newState, ...nucleonData };
+      
+      const atomData = calculateFromNucleons(newState.protonCount, newState.neutronCount);
+      newState = { ...newState, ...atomData };
+      
+      const moleculeData = calculateFromAtoms(newState.carbonAtoms, newState.hydrogenAtoms, newState.oxygenAtoms, newState.nitrogenAtoms);
+      newState = { ...newState, ...moleculeData };
+      
+      const macroData = calculateFromMolecules(newState.proteinCount, newState.dnaIntegrity, newState.lipidBalance);
+      newState = { ...newState, ...macroData };
+    } else if (modifiedScale === 'macro') {
+      // Propagation vers le bas depuis Macro
+      const moleculeData = calculateDownFromMacro(newState.age, newState.height, newState.weight, newState.isAlive);
+      newState = { ...newState, ...moleculeData };
+      
+      // Puis continuer la cascade vers le bas...
+      const totalMolecules = newState.proteinCount + newState.dnaIntegrity + newState.lipidBalance;
+      newState.carbonAtoms = Math.floor(totalMolecules * 1000);
+      newState.hydrogenAtoms = Math.floor(totalMolecules * 3000);
+      newState.oxygenAtoms = Math.floor(totalMolecules * 800);
+      newState.nitrogenAtoms = Math.floor(totalMolecules * 200);
+      
+      const totalAtoms = newState.carbonAtoms + newState.hydrogenAtoms + newState.oxygenAtoms + newState.nitrogenAtoms;
+      newState.protonCount = Math.floor(totalAtoms * 6); // Moyenne approximative
+      newState.neutronCount = Math.floor(totalAtoms * 6);
+      
+      const totalNucleons = newState.protonCount + newState.neutronCount;
+      newState.upQuarks = Math.floor(totalNucleons * 2);
+      newState.downQuarks = Math.floor(totalNucleons * 1);
+      newState.electrons = Math.floor(newState.protonCount);
+      
+      const totalParticles = newState.upQuarks + newState.downQuarks + newState.electrons;
+      newState.quantumBits = totalParticles * 1000000; // Approximation
     }
-  }, [selectedEntityName, lastModifiedScale]);
+    
+    setHumanState(newState);
+    setLastModifiedScale(modifiedScale);
+  };
 
-  // Fonctions de propagation simplifiées (analogiques, non physiquement exactes)
-  const recalculateScales = (modifiedScale: 'entity' | 'planck', newValue: any) => {
-    if (modifiedScale === 'entity') {
-      setSelectedEntityName(newValue);
-      setLastModifiedScale('entity');
-    } else if (modifiedScale === 'planck') {
-      setLastModifiedScale('planck');
-      
-      // Propagation simplifiée de Planck vers le haut
-      const quantumBits = newValue;
-      
-      // Particules (approximation analogique)
-      const upQuarks = Math.floor(quantumBits * 0.4);
-      const downQuarks = Math.floor(quantumBits * 0.4);
-      const electrons = Math.floor(quantumBits * 0.2);
-      
-      // Nucléons (approximation analogique)
-      const totalParticles = upQuarks + downQuarks + electrons;
-      const protonCount = Math.floor(totalParticles * 0.267); // ~26.7%
-      const neutronCount = Math.floor(totalParticles * 0.267);
-      
-      // Atomes (approximation analogique basée sur la composition moyenne)
-      const totalNucleons = protonCount + neutronCount;
-      const carbonAtoms = Math.floor(totalNucleons * 0.05); // ~5%
-      const hydrogenAtoms = Math.floor(totalNucleons * 0.6); // ~60%
-      const oxygenAtoms = Math.floor(totalNucleons * 0.3); // ~30%
-      const nitrogenAtoms = Math.floor(totalNucleons * 0.05); // ~5%
-      
-      // Molécules (approximation analogique)
-      const totalAtoms = carbonAtoms + hydrogenAtoms + oxygenAtoms + nitrogenAtoms;
-      const proteinCount = Math.floor(totalAtoms / 1000000000); // Très approximatif
-      const dnaIntegrity = Math.min(100, Math.floor((carbonAtoms + nitrogenAtoms) / (totalAtoms / 100)));
-      const lipidBalance = Math.min(100, Math.floor((carbonAtoms + hydrogenAtoms) / (totalAtoms / 100 * 1.5)));
-      
-      // Description macroscopique générée
-      const complexity = Math.floor(Math.log10(quantumBits));
-      let macroDescription = "";
-      
-      if (complexity < 22) {
-        macroDescription = "Entité subatomique : particule élémentaire ou petit agrégat quantique.";
-      } else if (complexity < 25) {
-        macroDescription = "Entité microscopique : molécule simple ou petit cristal.";
-      } else if (complexity < 28) {
-        macroDescription = "Entité macroscopique : objet de taille humaine, complexité modérée.";
-      } else if (complexity < 35) {
-        macroDescription = "Entité massive : structure géologique ou biologique de grande taille.";
-      } else {
-        macroDescription = "Entité astronomique : corps céleste ou structure cosmique.";
-      }
-      
-      setCurrentScaleValues({
-        macroDescription,
-        quantumBits,
-        upQuarks,
-        downQuarks,
-        electrons,
-        protonCount,
-        neutronCount,
-        carbonAtoms,
-        hydrogenAtoms,
-        oxygenAtoms,
-        nitrogenAtoms,
-        proteinCount,
-        dnaIntegrity,
-        lipidBalance
-      });
-    }
+  // Handlers pour les modifications
+  const handleMacroChange = (field: keyof HumanState, value: number | boolean) => {
+    const newState = { ...humanState, [field]: value };
+    recalculateAllLevels(newState, 'macro');
+  };
+
+  const handleQuantumChange = (value: number) => {
+    const newState = { ...humanState, quantumBits: value };
+    recalculateAllLevels(newState, 'planck');
   };
 
   const resetToDefault = () => {
-    setSelectedEntityName(ENTITY_DEFINITIONS[0].name);
-    setLastModifiedScale('entity');
+    recalculateAllLevels(initialHumanState, 'planck');
   };
 
   const formatLargeNumber = (num: number): string => {
-    if (num >= 1e57) return `${(num / 1e57).toFixed(1)}×10⁵⁷`;
-    if (num >= 1e54) return `${(num / 1e54).toFixed(1)}×10⁵⁴`;
-    if (num >= 1e51) return `${(num / 1e51).toFixed(1)}×10⁵¹`;
-    if (num >= 1e48) return `${(num / 1e48).toFixed(1)}×10⁴⁸`;
-    if (num >= 1e45) return `${(num / 1e45).toFixed(1)}×10⁴⁵`;
-    if (num >= 1e42) return `${(num / 1e42).toFixed(1)}×10⁴²`;
-    if (num >= 1e39) return `${(num / 1e39).toFixed(1)}×10³⁹`;
-    if (num >= 1e36) return `${(num / 1e36).toFixed(1)}×10³⁶`;
-    if (num >= 1e33) return `${(num / 1e33).toFixed(1)}×10³³`;
-    if (num >= 1e30) return `${(num / 1e30).toFixed(1)}×10³⁰`;
-    if (num >= 1e27) return `${(num / 1e27).toFixed(1)}×10²⁷`;
     if (num >= 1e24) return `${(num / 1e24).toFixed(1)}×10²⁴`;
     if (num >= 1e21) return `${(num / 1e21).toFixed(1)}×10²¹`;
     if (num >= 1e18) return `${(num / 1e18).toFixed(1)}×10¹⁸`;
@@ -300,37 +235,16 @@ export const HierarchicalExamplesPage: React.FC = () => {
             Laboratoire Interactif
           </h1>
           <p className="text-base sm:text-lg lg:text-xl text-purple-200 max-w-4xl mx-auto px-4 leading-relaxed">
-            Sélectionnez une entité ou modifiez l'échelle de Planck et observez les répercussions en temps réel !
+            Modifiez n'importe quelle échelle et observez les répercussions en temps réel sur toutes les autres !
           </p>
         </header>
-
-        {/* Avertissement de simplification */}
-        <div className="max-w-6xl mx-auto mb-6 lg:mb-8">
-          <div className="bg-gradient-to-r from-yellow-900/40 to-orange-900/30 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-yellow-400/40 shadow-2xl">
-            <div className="flex items-start">
-              <AlertTriangle className="w-6 h-6 sm:w-8 sm:h-8 mr-3 text-yellow-400 flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-lg sm:text-xl font-bold text-yellow-300 mb-2">
-                  ⚠️ Simulation Analogique Simplifiée
-                </h3>
-                <p className="text-sm sm:text-base text-yellow-100 leading-relaxed">
-                  Cette simulation illustre le <strong>concept</strong> d'interconnexion entre les échelles, mais utilise des formules très simplifiées. 
-                  Dans la réalité, il faudrait prendre en compte un nombre astronomique de variables supplémentaires : 
-                  interactions quantiques complexes, forces électromagnétiques, liaisons chimiques spécifiques, 
-                  structures cristallines, propriétés thermodynamiques, et bien plus encore. 
-                  Cette version est une <strong>analogie pédagogique</strong> pour comprendre le principe général.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Indicateur de dernière modification */}
         {lastModifiedScale && (
           <div className="text-center mb-6">
-            <div className="inline-block bg-blue-900/30 backdrop-blur-sm rounded-lg px-4 py-2 border border-blue-400/30">
-              <p className="text-blue-200 text-sm">
-                Dernière modification : <strong>{lastModifiedScale === 'entity' ? 'Sélection d\'Entité' : 'Échelle de Planck'}</strong>
+            <div className="inline-block bg-yellow-900/30 backdrop-blur-sm rounded-lg px-4 py-2 border border-yellow-400/30">
+              <p className="text-yellow-200 text-sm">
+                Dernière modification : <strong>{lastModifiedScale === 'macro' ? 'Échelle Macroscopique' : 'Échelle de Planck'}</strong>
               </p>
             </div>
           </div>
@@ -339,36 +253,106 @@ export const HierarchicalExamplesPage: React.FC = () => {
         {/* Système interactif */}
         <div className="max-w-7xl mx-auto space-y-6 lg:space-y-8">
           
-          {/* Sélection d'entité macroscopique - CONTRÔLABLE */}
+          {/* Échelle Macroscopique - CONTRÔLABLE */}
           <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 lg:p-8 border-2 border-blue-400/40 shadow-2xl">
             <div className="flex items-center mb-4 sm:mb-6">
               <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-blue-400" />
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-blue-300">
-                Échelle Macroscopique (10⁻⁴ m à 1 m+) - CONTRÔLABLE
+                Échelle Macroscopique (10⁻⁴ m à 1 m) - CONTRÔLABLE
               </h2>
             </div>
             
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <label className="block text-blue-200 text-sm font-medium mb-2">Sélectionnez une entité</label>
-                <select
-                  value={selectedEntityName}
-                  onChange={(e) => recalculateScales('entity', e.target.value)}
-                  className="w-full bg-white/20 text-white rounded px-3 py-2 border border-blue-400/30 focus:border-blue-400 focus:outline-none"
-                >
-                  {ENTITY_DEFINITIONS.map(entity => (
-                    <option key={entity.name} value={entity.name} className="bg-gray-800 text-white">
-                      {entity.name}
-                    </option>
-                  ))}
-                </select>
+                <label className="block text-blue-200 text-sm font-medium mb-2">Âge (années)</label>
+                <div className="flex items-center space-x-2">
+                  <button 
+                    onClick={() => handleMacroChange('age', Math.max(1, humanState.age - 1))}
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded p-1"
+                  >
+                    <Minus className="w-4 h-4" />
+                  </button>
+                  <input
+                    type="number"
+                    value={humanState.age}
+                    onChange={(e) => handleMacroChange('age', parseInt(e.target.value) || 1)}
+                    className="flex-1 bg-white/20 text-white rounded px-2 py-1 text-center"
+                    min="1"
+                    max="120"
+                  />
+                  <button 
+                    onClick={() => handleMacroChange('age', Math.min(120, humanState.age + 1))}
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded p-1"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
               
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
-                <h4 className="text-blue-200 text-sm font-medium mb-2">Description</h4>
-                <p className="text-white text-sm leading-relaxed">
-                  {currentScaleValues.macroDescription}
-                </p>
+                <label className="block text-blue-200 text-sm font-medium mb-2">Taille (cm)</label>
+                <div className="flex items-center space-x-2">
+                  <button 
+                    onClick={() => handleMacroChange('height', Math.max(50, humanState.height - 1))}
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded p-1"
+                  >
+                    <Minus className="w-4 h-4" />
+                  </button>
+                  <input
+                    type="number"
+                    value={humanState.height}
+                    onChange={(e) => handleMacroChange('height', parseInt(e.target.value) || 50)}
+                    className="flex-1 bg-white/20 text-white rounded px-2 py-1 text-center"
+                    min="50"
+                    max="250"
+                  />
+                  <button 
+                    onClick={() => handleMacroChange('height', Math.min(250, humanState.height + 1))}
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded p-1"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <label className="block text-blue-200 text-sm font-medium mb-2">Poids (kg)</label>
+                <div className="flex items-center space-x-2">
+                  <button 
+                    onClick={() => handleMacroChange('weight', Math.max(30, humanState.weight - 1))}
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded p-1"
+                  >
+                    <Minus className="w-4 h-4" />
+                  </button>
+                  <input
+                    type="number"
+                    value={humanState.weight}
+                    onChange={(e) => handleMacroChange('weight', parseInt(e.target.value) || 30)}
+                    className="flex-1 bg-white/20 text-white rounded px-2 py-1 text-center"
+                    min="30"
+                    max="200"
+                  />
+                  <button 
+                    onClick={() => handleMacroChange('weight', Math.min(200, humanState.weight + 1))}
+                    className="bg-blue-600 hover:bg-blue-700 text-white rounded p-1"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4">
+                <label className="block text-blue-200 text-sm font-medium mb-2">État</label>
+                <button
+                  onClick={() => handleMacroChange('isAlive', !humanState.isAlive)}
+                  className={`w-full py-2 px-4 rounded font-medium transition-all duration-300 ${
+                    humanState.isAlive 
+                      ? 'bg-green-600 hover:bg-green-700 text-white' 
+                      : 'bg-red-600 hover:bg-red-700 text-white'
+                  }`}
+                >
+                  {humanState.isAlive ? '✅ Vivant' : '💀 Mort'}
+                </button>
               </div>
             </div>
           </div>
@@ -382,9 +366,9 @@ export const HierarchicalExamplesPage: React.FC = () => {
               borderColor: "border-green-400/40",
               textColor: "text-green-300",
               data: [
-                { label: "Protéines", value: formatLargeNumber(currentScaleValues.proteinCount), unit: "" },
-                { label: "Intégrité ADN", value: currentScaleValues.dnaIntegrity.toString(), unit: "%" },
-                { label: "Équilibre Lipidique", value: currentScaleValues.lipidBalance.toString(), unit: "%" }
+                { label: "Protéines", value: formatLargeNumber(humanState.proteinCount), unit: "" },
+                { label: "Intégrité ADN", value: humanState.dnaIntegrity.toString(), unit: "%" },
+                { label: "Équilibre Lipidique", value: humanState.lipidBalance.toString(), unit: "%" }
               ]
             },
             {
@@ -394,10 +378,10 @@ export const HierarchicalExamplesPage: React.FC = () => {
               borderColor: "border-yellow-400/40",
               textColor: "text-yellow-300",
               data: [
-                { label: "Atomes de Carbone", value: formatLargeNumber(currentScaleValues.carbonAtoms), unit: "" },
-                { label: "Atomes d'Hydrogène", value: formatLargeNumber(currentScaleValues.hydrogenAtoms), unit: "" },
-                { label: "Atomes d'Oxygène", value: formatLargeNumber(currentScaleValues.oxygenAtoms), unit: "" },
-                { label: "Atomes d'Azote", value: formatLargeNumber(currentScaleValues.nitrogenAtoms), unit: "" }
+                { label: "Atomes de Carbone", value: formatLargeNumber(humanState.carbonAtoms), unit: "" },
+                { label: "Atomes d'Hydrogène", value: formatLargeNumber(humanState.hydrogenAtoms), unit: "" },
+                { label: "Atomes d'Oxygène", value: formatLargeNumber(humanState.oxygenAtoms), unit: "" },
+                { label: "Atomes d'Azote", value: formatLargeNumber(humanState.nitrogenAtoms), unit: "" }
               ]
             },
             {
@@ -407,8 +391,8 @@ export const HierarchicalExamplesPage: React.FC = () => {
               borderColor: "border-purple-400/40",
               textColor: "text-purple-300",
               data: [
-                { label: "Protons", value: formatLargeNumber(currentScaleValues.protonCount), unit: "" },
-                { label: "Neutrons", value: formatLargeNumber(currentScaleValues.neutronCount), unit: "" }
+                { label: "Protons", value: formatLargeNumber(humanState.protonCount), unit: "" },
+                { label: "Neutrons", value: formatLargeNumber(humanState.neutronCount), unit: "" }
               ]
             },
             {
@@ -418,9 +402,9 @@ export const HierarchicalExamplesPage: React.FC = () => {
               borderColor: "border-red-400/40",
               textColor: "text-red-300",
               data: [
-                { label: "Quarks Up", value: formatLargeNumber(currentScaleValues.upQuarks), unit: "" },
-                { label: "Quarks Down", value: formatLargeNumber(currentScaleValues.downQuarks), unit: "" },
-                { label: "Électrons", value: formatLargeNumber(currentScaleValues.electrons), unit: "" }
+                { label: "Quarks Up", value: formatLargeNumber(humanState.upQuarks), unit: "" },
+                { label: "Quarks Down", value: formatLargeNumber(humanState.downQuarks), unit: "" },
+                { label: "Électrons", value: formatLargeNumber(humanState.electrons), unit: "" }
               ]
             }
           ].map((scale, index) => (
@@ -460,27 +444,27 @@ export const HierarchicalExamplesPage: React.FC = () => {
               </label>
               <div className="flex items-center space-x-4">
                 <button 
-                  onClick={() => recalculateScales('planck', Math.max(1e20, currentScaleValues.quantumBits * 0.9))}
+                  onClick={() => handleQuantumChange(Math.max(1e20, humanState.quantumBits * 0.9))}
                   className="bg-gray-600 hover:bg-gray-700 text-white rounded px-4 py-2"
                 >
                   ÷ 1.1
                 </button>
                 <div className="flex-1 text-center">
                   <div className="text-white text-lg font-bold">
-                    {formatLargeNumber(currentScaleValues.quantumBits)} bits
+                    {formatLargeNumber(humanState.quantumBits)} bits
                   </div>
                   <input
                     type="range"
                     min={1e20}
-                    max={1e58}
+                    max={1e28}
                     step={1e24}
-                    value={currentScaleValues.quantumBits}
-                    onChange={(e) => recalculateScales('planck', parseInt(e.target.value))}
+                    value={humanState.quantumBits}
+                    onChange={(e) => handleQuantumChange(parseInt(e.target.value))}
                     className="w-full mt-2"
                   />
                 </div>
                 <button 
-                  onClick={() => recalculateScales('planck', Math.min(1e58, currentScaleValues.quantumBits * 1.1))}
+                  onClick={() => handleQuantumChange(Math.min(1e28, humanState.quantumBits * 1.1))}
                   className="bg-gray-600 hover:bg-gray-700 text-white rounded px-4 py-2"
                 >
                   × 1.1
@@ -499,15 +483,15 @@ export const HierarchicalExamplesPage: React.FC = () => {
               <div className="bg-blue-900/30 backdrop-blur-sm rounded-lg p-4 border-l-4 border-blue-400">
                 <h3 className="text-blue-300 font-bold mb-2">⬇️ Propagation vers le bas</h3>
                 <p className="text-gray-200 text-sm leading-relaxed">
-                  Sélectionnez une <strong>entité macroscopique</strong> dans la liste déroulante et observez comment ses propriétés 
-                  se décomposent automatiquement à travers toutes les échelles inférieures : moléculaire → atomique → nucléaire → particules → Planck.
+                  Modifiez l'<strong>échelle macroscopique</strong> (âge, taille, poids) et observez comment ces changements 
+                  se répercutent automatiquement sur toutes les échelles inférieures : moléculaire → atomique → nucléaire → particules → Planck.
                 </p>
               </div>
               
               <div className="bg-purple-900/30 backdrop-blur-sm rounded-lg p-4 border-l-4 border-purple-400">
                 <h3 className="text-purple-300 font-bold mb-2">⬆️ Propagation vers le haut</h3>
                 <p className="text-gray-200 text-sm leading-relaxed">
-                  Modifiez l'<strong>échelle de Planck</strong> (bits quantiques) avec le slider et observez comment ces changements 
+                  Modifiez l'<strong>échelle de Planck</strong> (bits quantiques) et observez comment ces changements 
                   remontent automatiquement à travers toutes les échelles : particules → nucléaire → atomique → moléculaire → macroscopique.
                 </p>
               </div>
@@ -515,8 +499,8 @@ export const HierarchicalExamplesPage: React.FC = () => {
             
             <div className="mt-6 bg-yellow-900/30 backdrop-blur-sm rounded-lg p-4 border-l-4 border-yellow-400">
               <p className="text-gray-200 text-sm leading-relaxed">
-                <strong className="text-yellow-300">Expérimentez !</strong> Comparez un être humain avec une étoile naine, 
-                ou modifiez drastiquement les bits quantiques pour voir une entité complètement différente émerger des calculs !
+                <strong className="text-yellow-300">Expérimentez !</strong> Essayez de "tuer" l'être humain en modifiant son état, 
+                ou changez drastiquement les bits quantiques pour voir un être humain complètement différent émerger !
               </p>
             </div>
           </div>
