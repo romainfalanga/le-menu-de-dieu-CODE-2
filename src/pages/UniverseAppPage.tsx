@@ -447,6 +447,12 @@ export const UniverseAppPage: React.FC = () => {
                       <p>
                         <strong className="text-green-300">Dans l'application :</strong> Dès l'échelle JavaScript, les composants logiciels (fonctions, variables, objets...) peuvent exister dans une superposition de plusieurs implémentations possibles. Un composant React peut potentiellement se comporter de multiples façons selon son code interne - comme s'il "passait par plusieurs chemaux d'exécution à la fois" ! Leur comportement exact n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'une inspection du code "révèle" leur implémentation concrète.
                       </p>
+                      <p>
+                        <strong className="text-green-300">Dans l'application :</strong> Si on applique la logique de la mécanique quantique à l'application de l'univers, le code JavaScript n'existe pas d'une seule manière fixe. Il n'est qu'une <strong className="text-yellow-300">probabilité</strong> parmi une quantité infinie de façons possibles de coder un composant. Dans l'application de l'univers, le JavaScript n'existe concrètement que lorsqu'on "observe" sous le capot d'un composant React - comme si l'acte d'inspection "matérialisait" une implémentation spécifique parmi toutes les possibilités !
+                      </p>
+                      <p className="font-semibold text-pink-300 bg-pink-900/20 p-2 sm:p-3 rounded-lg border border-pink-400/30">
+                       <strong className="text-green-300">Dans l'application :</strong> A l'échelle de JavaScript, les composants logiciels (fonctions, variables, objets...) existent dans une superposition de plusieurs implémentations possibles. Un composant React peut potentiellement arriver au même résultat de multiples façons selon son code interne. Comme s'il existait de toutes les manière possible jusqu'a ce qu'il en choisisse un lorsqu'on l'observe ! Leur code exact n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'une inspection du composant le "révèle".
+                      </p>
                     </div>
                   </div>
 
