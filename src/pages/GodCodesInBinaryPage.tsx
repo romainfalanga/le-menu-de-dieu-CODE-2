@@ -164,11 +164,11 @@ export const GodCodesInBinaryPage: React.FC = () => {
         {/* Bouton retour */}
         <div className="mb-4 sm:mb-6">
           <Link
-            to="/"
+            to="/universe"
             className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour à l'univers
+            Retour à l'échelle de Planck
           </Link>
         </div>
 
@@ -211,14 +211,14 @@ export const GodCodesInBinaryPage: React.FC = () => {
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
               <p>
                 Si l'univers est une application, alors à l'échelle de Planck se trouve son <strong className="text-yellow-300">code source binaire</strong>. 
-                Chaque quantum d'espace-temps peut être vu comme un bit d\'information : 0 ou 1, vide ou plein, existence ou néant.
+                Chaque quantum d'espace-temps peut être vu comme un bit d'information : 0 ou 1, vide ou plein, existence ou néant.
               </p>
               
               <div className="bg-orange-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-orange-400">
                 <h4 className="font-semibold text-orange-200 mb-3">⚖️ L'Échelle des Modifications</h4>
                 <p className="font-medium text-orange-100 mb-2">
                   <strong>Modification locale :</strong> Changer un seul bit (0→1 ou 1→0) ne modifie qu'une seule particule fondamentale, 
-                  qui n'affecte qu\'un seul atome, puis qu\'une seule molécule, créant un changement microscopique dans la réalité.
+                  qui n'affecte qu'un seul atome, puis qu'une seule molécule, créant un changement microscopique dans la réalité.
                 </p>
                 <p className="font-medium text-orange-100">
                   <strong>Modification macroscopique :</strong> Pour des changements visibles (faire apparaître un objet, changer la couleur d'une montagne), 
@@ -229,8 +229,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
               <div className="bg-yellow-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-yellow-400">
                 <p className="font-semibold text-yellow-200">
                   <strong>L'hypothèse divine :</strong> Une entité capable de manipuler directement ces "bits de réalité" 
-                  pourrait soit créer des "bugs" cosmiques (modifications isolées) soit orchestrer des "miracles" 
-                  (modifications massives et coordonnées) en réécrivant la réalité depuis ses fondations les plus profondes.
+                  pourrait orchestrer des "miracles" (modifications massives et coordonnées) en réécrivant la réalité depuis ses fondations les plus profondes.
                 </p>
               </div>
             </div>
