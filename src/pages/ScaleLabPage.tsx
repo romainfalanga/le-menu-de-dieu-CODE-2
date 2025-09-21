@@ -22,7 +22,7 @@ export const ScaleLabPage: React.FC = () => {
           <div className="flex items-center justify-center mb-4 sm:mb-6">
             <Layers className="w-12 h-12 sm:w-16 sm:h-16 text-cyan-400 mr-4" />
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-300 via-purple-300 via-pink-300 to-yellow-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(6,182,212,0.8)]">
-              Le Laboratoire des Échelles
+              Laboratoire des Échelles
             </h1>
           </div>
           <p className="text-base sm:text-lg lg:text-xl text-purple-200 max-w-4xl mx-auto px-4 leading-relaxed">

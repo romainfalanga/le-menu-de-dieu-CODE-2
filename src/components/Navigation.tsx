@@ -329,8 +329,8 @@ export const Navigation: React.FC = () => {
     },
     {
       path: '/scale-lab',
-      title: 'Le Laboratoire des Échelles',
-      shortTitle: 'Le Laboratoire des Échelles',
+      title: 'Laboratoire des Échelles',
+      shortTitle: 'Laboratoire des Échelles',
       gradient: 'from-emerald-500/20 to-green-500/20',
       hoverGradient: 'hover:from-emerald-500/10 hover:to-green-500/10',
       textColor: 'text-emerald-300',
