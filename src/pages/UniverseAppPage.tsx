@@ -369,19 +369,17 @@ export const UniverseAppPage: React.FC = () => {
                             scale: "10⁻⁴ m à 1 m", 
                             desc: "Ce que nous voyons : humains, objets, monde visible", 
                             connection: "→ Formé par l'assemblage de milliards de molécules organisées",
-                            color: "bg-purple-900/40 border-purple-400",
-                            horizontal: "l'UI est la traduction lisible d'un code invisible, tout comme le monde macroscopique est l'expression visible de structures moléculaires cachées."
+                            color: "bg-purple-900/40 border-purple-400" 
                           },
                           { 
                             level: "Échelle moléculaire", 
                             scale: "10⁻⁹ à 10⁻⁶ m", 
                             desc: "Assemblages d'atomes : ADN, protéines, matériaux", 
                             connection: "→ Propriétés émergentes par liaison d'atomes spécifiques",
-                            color: "bg-blue-900/40 border-blue-400",
-                            horizontal: "les composants React encapsulent du code pour donner un rôle précis, comme les molécules encapsulent des atomes pour leur donner des propriétés nouvelles."
+                            color: "bg-blue-900/40 border-blue-400" 
                           }
                         ].map((item, index) => (
-                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[120px] sm:min-h-[140px] flex flex-col justify-center`}>
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">
                               {item.level}
                               <span className="text-cyan-300 font-mono ml-2">{item.scale}</span>
@@ -392,9 +390,6 @@ export const UniverseAppPage: React.FC = () => {
                                 {item.connection}
                               </div>
                             )}
-                            <div className="text-emerald-200 text-xs mt-2 italic font-medium bg-emerald-900/20 p-1 rounded border-l-2 border-emerald-400">
-                              <strong>↔</strong> {item.horizontal}
-                            </div>
                           </div>
                         ))}
                       </div>
@@ -411,18 +406,16 @@ export const UniverseAppPage: React.FC = () => {
                             level: "Interface", 
                             desc: "Ce que nous voyons : pages web, applications", 
                             connection: "→ Rendu généré par la compilation des composants React",
-                            color: "bg-purple-900/40 border-purple-400",
-                            horizontal: "l'UI est la traduction lisible d'un code invisible, tout comme le monde macroscopique est l'expression visible de structures moléculaires cachées."
+                            color: "bg-purple-900/40 border-purple-400" 
                           },
                           { 
                             level: "React", 
                             desc: "Composants réutilisables : boutons, formulaires", 
                             connection: "→ Logique et structure définies par le code JavaScript",
-                            color: "bg-blue-900/40 border-blue-400",
-                            horizontal: "les composants React encapsulent du code pour donner un rôle précis, comme les molécules encapsulent des atomes pour leur donner des propriétés nouvelles."
+                            color: "bg-blue-900/40 border-blue-400" 
                           }
                         ].map((item, index) => (
-                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[120px] sm:min-h-[140px] flex flex-col justify-center`}>
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
                             <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
                             {item.connection && (
@@ -430,9 +423,6 @@ export const UniverseAppPage: React.FC = () => {
                                 {item.connection}
                               </div>
                             )}
-                            <div className="text-emerald-200 text-xs mt-2 italic font-medium bg-emerald-900/20 p-1 rounded border-l-2 border-emerald-400">
-                              <strong>↔</strong> {item.horizontal}
-                            </div>
                           </div>
                         ))}
                       </div>
@@ -449,13 +439,13 @@ export const UniverseAppPage: React.FC = () => {
                     </div>
                     <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
                       <p>
-                        À partir de l'échelle atomique (~10⁻¹⁰ m), tout change : nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
+                        À partir de l'échelle atomique, tout change : nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
                       </p>
                       <p>
-                        <strong className="text-cyan-300">Dans l'univers :</strong> à cette échelle, les entités physiques (atomes, électrons, particules) existent dans plusieurs états à la fois. Dans l'<strong className="text-purple-300">expérience de la double fente</strong>, par exemple, un électron ou un atome passe simultanément par les deux fentes, créant des interférences avec lui-même. Leur existence est une <strong className="text-yellow-300">probabilité</strong> diffuse jusqu'à ce qu\'une observation ou une mesure "effondre" cette superposition en un état défini.
+                        <strong className="text-cyan-300">Dans l'univers :</strong> Dès l'échelle atomique (10⁻¹⁰ m), les entités physiques (atomes, électrons, protons, neutrons, quarks...) peuvent exister dans des superpositions de plusieurs états quantiques simultanément. Par exemple, dans l'<strong className="text-purple-300">expérience de la double fente</strong>, un électron ou même un atome peut passer par les deux fentes à la fois, créant des interférences avec lui-même ! Leur façon d'exister n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'une observation ou mesure "effondre" cette superposition en un état défini.
                       </p>
                       <p>
-                        <strong className="text-green-300">Dans l'application :</strong> en suivant cette logique, le code Java Script d'un composant n'existe pas sous une seule forme fixe. Il est une <strong className="text-yellow-300">probabilité</strong> parmi une infinité de façons possibles de l'écrire. Ce n'est qu'au moment où l'on "observe" sous le capot d'un composant React que le code se matérialise dans une version précise, comme si l'acte d'inspection faisait émerger une implémentation unique parmi toutes les possibilités.
+                        <strong className="text-green-300">Dans l'application :</strong> Si on applique la logique de la mécanique quantique à l'application de l'univers, le code JavaScript n'existe pas d'une seule manière fixe. Il n'est qu'une <strong className="text-yellow-300">probabilité</strong> parmi une quantité infinie de façons possibles de coder un composant. Dans l'application de l'univers, le JavaScript n'existe concrètement que lorsqu'on "observe" sous le capot d'un composant React - comme si l'acte d'inspection "matérialisait" une implémentation spécifique parmi toutes les possibilités !
                       </p>
                     </div>
                   </div>
@@ -474,35 +464,31 @@ export const UniverseAppPage: React.FC = () => {
                             scale: "10⁻¹⁰ m", 
                             desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer", 
                             connection: "→ Stabilité et identité chimique données par le noyau",
-                            color: "bg-green-900/40 border-green-400",
-                            horizontal: "JavaScript est une syntaxe universelle qui permet d'assembler du code, comme les atomes offrent une grammaire universelle pour assembler la matière."
+                            color: "bg-green-900/40 border-green-400" 
                           },
                           { 
                             level: "Échelle nucléaire", 
                             scale: "10⁻¹⁵ m", 
                             desc: "Cœur des atomes révélé par observation : protons et neutrons", 
                             connection: "→ Masse et charge électrique définies par les quarks",
-                            color: "bg-yellow-900/40 border-yellow-400",
-                            horizontal: "C/C++ fournit une ossature stable pour exécuter les langages supérieurs, comme les nucléons fournissent une stabilité structurelle aux atomes."
+                            color: "bg-yellow-900/40 border-yellow-400" 
                           },
                           { 
                             level: "Échelle des particules fondamentales", 
                             scale: "10⁻¹⁸ m", 
                             desc: "Constituants ultimes révélés par mesure : quarks, leptons, bosons", 
                             connection: "→ Existence même permise par la géométrie de l'espace-temps",
-                            color: "bg-orange-900/40 border-orange-400",
-                            horizontal: "les instructions sont les ordres élémentaires de l'application, comme les particules sont les entités élémentaires de la matière et des forces."
+                            color: "bg-orange-900/40 border-orange-400" 
                           },
                           { 
                             level: "Échelle de Planck", 
                             scale: "10⁻³⁵ m", 
                             desc: "Granularité ultime de l'espace-temps - pure information quantique", 
                             connection: null,
-                            color: "bg-red-900/40 border-red-400",
-                            horizontal: "les 0 et 1 sont les briques minimales de l'information, comme l'échelle de Planck est la brique minimale de la réalité physique."
+                            color: "bg-red-900/40 border-red-400" 
                           }
                         ].map((item, index) => (
-                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[140px] sm:min-h-[160px] flex flex-col justify-center`}>
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">
                               {item.level}
                               <span className="text-cyan-300 font-mono ml-2">{item.scale}</span>
@@ -513,9 +499,6 @@ export const UniverseAppPage: React.FC = () => {
                                 {item.connection}
                               </div>
                             )}
-                            <div className="text-emerald-200 text-xs mt-2 italic font-medium bg-emerald-900/20 p-1 rounded border-l-2 border-emerald-400">
-                              <strong>↔</strong> {item.horizontal}
-                            </div>
                           </div>
                         ))}
                       </div>
@@ -532,32 +515,28 @@ export const UniverseAppPage: React.FC = () => {
                             level: "JavaScript", 
                             desc: "Langage en superposition de code : fonctions, variables, logique", 
                             connection: "→ Exécution assurée par les moteurs écrits en C/C++",
-                            color: "bg-green-900/40 border-green-400",
-                            horizontal: "JavaScript est une syntaxe universelle qui permet d'assembler du code, comme les atomes offrent une grammaire universelle pour assembler la matière."
+                            color: "bg-green-900/40 border-green-400" 
                           },
                           { 
                             level: "C/C++", 
                             desc: "Fondations système révélées par inspection : moteurs d'exécution", 
                             connection: "→ Compilation vers des instructions processeur spécifiques",
-                            color: "bg-yellow-900/40 border-yellow-400",
-                            horizontal: "C/C++ fournit une ossature stable pour exécuter les langages supérieurs, comme les nucléons fournissent une stabilité structurelle aux atomes."
+                            color: "bg-yellow-900/40 border-yellow-400" 
                           },
                           { 
                             level: "Instructions", 
                             desc: "Ordres processeur révélés par décompilation : ADD, MOV, JMP", 
                             connection: "→ Traduction directe en séquences de 0 et 1",
-                            color: "bg-orange-900/40 border-orange-400",
-                            horizontal: "les instructions sont les ordres élémentaires de l'application, comme les particules sont les entités élémentaires de la matière et des forces."
+                            color: "bg-orange-900/40 border-orange-400" 
                           },
                           { 
                             level: "Binaire", 
                             desc: "Mer de 0 et 1 - pure information quantique : base de toute réalité", 
                             connection: null,
-                            color: "bg-red-900/40 border-red-400",
-                            horizontal: "les 0 et 1 sont les briques minimales de l'information, comme l'échelle de Planck est la brique minimale de la réalité physique."
+                            color: "bg-red-900/40 border-red-400" 
                           }
                         ].map((item, index) => (
-                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[140px] sm:min-h-[160px] flex flex-col justify-center`}>
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
                             <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
                             {item.connection && (
@@ -565,9 +544,6 @@ export const UniverseAppPage: React.FC = () => {
                                 {item.connection}
                               </div>
                             )}
-                            <div className="text-emerald-200 text-xs mt-2 italic font-medium bg-emerald-900/20 p-1 rounded border-l-2 border-emerald-400">
-                              <strong>↔</strong> {item.horizontal}
-                            </div>
                           </div>
                         ))}
                       </div>
