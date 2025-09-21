@@ -83,7 +83,6 @@ const GodCodingSimulation: React.FC = () => {
   const [currentCode, setCurrentCode] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [currentCreationPhrase, setCurrentCreationPhrase] = useState('');
   
   // Génération de séquences binaires aléatoires de 15 rangées de 40 chiffres
   // Liste étendue de 200+ objets de création (du briquet à l'humain)
@@ -336,8 +335,6 @@ const GodCodingSimulation: React.FC = () => {
       return rows.join('\n');
     });
   }, [creationPhrases.length]);
-  
-  const [sequenceIndex, setSequenceIndex] = useState(0);
   
   // Initialiser avec un index aléatoire et la phrase correspondante
   const [sequenceIndex, setSequenceIndex] = useState(() => Math.floor(Math.random() * creationPhrases.length));
