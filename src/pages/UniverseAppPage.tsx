@@ -363,12 +363,48 @@ export const UniverseAppPage: React.FC = () => {
                       
                       <div className="space-y-2 sm:space-y-3">
                         {[
-                          { level: "Échelle macroscopique", scale: "10⁻⁴ m à 1 m", desc: "Ce que nous voyons : humains, objets, monde visible", color: "bg-purple-900/40 border-purple-400" },
-                          { level: "Échelle moléculaire", scale: "10⁻⁹ à 10⁻⁶ m", desc: "Assemblages d'atomes : ADN, protéines, matériaux", color: "bg-blue-900/40 border-blue-400" },
-                          { level: "Échelle atomique", scale: "10⁻¹⁰ m", desc: "Briques de la matière : hydrogène, carbone, fer", color: "bg-green-900/40 border-green-400" },
-                          { level: "Échelle nucléaire", scale: "10⁻¹⁵ m", desc: "Cœur des atomes : protons et neutrons", color: "bg-yellow-900/40 border-yellow-400" },
-                          { level: "Échelle des particules fondamentales", scale: "10⁻¹⁸ m", desc: "Constituants ultimes : quarks, leptons, bosons", color: "bg-orange-900/40 border-orange-400" },
-                          { level: "Échelle de Planck", scale: "10⁻³⁵ m", desc: "Granularité ultime de l'espace-temps", color: "bg-red-900/40 border-red-400" }
+                          { 
+                            level: "Échelle macroscopique", 
+                            scale: "10⁻⁴ m à 1 m", 
+                            desc: "Ce que nous voyons : humains, objets, monde visible", 
+                            connection: "→ Formé par l'assemblage de milliards de molécules organisées",
+                            color: "bg-purple-900/40 border-purple-400" 
+                          },
+                          { 
+                            level: "Échelle moléculaire", 
+                            scale: "10⁻⁹ à 10⁻⁶ m", 
+                            desc: "Assemblages d'atomes : ADN, protéines, matériaux", 
+                            connection: "→ Propriétés émergentes par liaison d'atomes spécifiques",
+                            color: "bg-blue-900/40 border-blue-400" 
+                          },
+                          { 
+                            level: "Échelle atomique", 
+                            scale: "10⁻¹⁰ m", 
+                            desc: "Briques de la matière : hydrogène, carbone, fer", 
+                            connection: "→ Stabilité et identité chimique données par le noyau",
+                            color: "bg-green-900/40 border-green-400" 
+                          },
+                          { 
+                            level: "Échelle nucléaire", 
+                            scale: "10⁻¹⁵ m", 
+                            desc: "Cœur des atomes : protons et neutrons", 
+                            connection: "→ Masse et charge électrique définies par les quarks",
+                            color: "bg-yellow-900/40 border-yellow-400" 
+                          },
+                          { 
+                            level: "Échelle des particules fondamentales", 
+                            scale: "10⁻¹⁸ m", 
+                            desc: "Constituants ultimes : quarks, leptons, bosons", 
+                            connection: "→ Existence même permise par la géométrie de l'espace-temps",
+                            color: "bg-orange-900/40 border-orange-400" 
+                          },
+                          { 
+                            level: "Échelle de Planck", 
+                            scale: "10⁻³⁵ m", 
+                            desc: "Granularité ultime de l'espace-temps", 
+                            connection: null,
+                            color: "bg-red-900/40 border-red-400" 
+                          }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">
@@ -376,6 +412,11 @@ export const UniverseAppPage: React.FC = () => {
                               <span className="text-cyan-300 font-mono ml-2">{item.scale}</span>
                             </div>
                             <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                            {item.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {item.connection}
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -388,16 +429,51 @@ export const UniverseAppPage: React.FC = () => {
                       
                       <div className="space-y-2 sm:space-y-3">
                         {[
-                          { level: "Interface", desc: "Ce que nous voyons : pages web, applications", color: "bg-purple-900/40 border-purple-400" },
-                          { level: "React", desc: "Composants réutilisables : boutons, formulaires", color: "bg-blue-900/40 border-blue-400" },
-                          { level: "JavaScript", desc: "Langage universel : fonctions, variables, logique", color: "bg-green-900/40 border-green-400" },
-                          { level: "C/C++", desc: "Fondations système : moteurs d'exécution", color: "bg-yellow-900/40 border-yellow-400" },
-                          { level: "Instructions", desc: "Ordres processeur : ADD, MOV, JMP", color: "bg-orange-900/40 border-orange-400" },
-                          { level: "Binaire", desc: "Mer de 0 et 1 : base de toute information", color: "bg-red-900/40 border-red-400" }
+                          { 
+                            level: "Interface", 
+                            desc: "Ce que nous voyons : pages web, applications", 
+                            connection: "→ Rendu généré par la compilation des composants React",
+                            color: "bg-purple-900/40 border-purple-400" 
+                          },
+                          { 
+                            level: "React", 
+                            desc: "Composants réutilisables : boutons, formulaires", 
+                            connection: "→ Logique et structure définies par le code JavaScript",
+                            color: "bg-blue-900/40 border-blue-400" 
+                          },
+                          { 
+                            level: "JavaScript", 
+                            desc: "Langage universel : fonctions, variables, logique", 
+                            connection: "→ Exécution assurée par les moteurs écrits en C/C++",
+                            color: "bg-green-900/40 border-green-400" 
+                          },
+                          { 
+                            level: "C/C++", 
+                            desc: "Fondations système : moteurs d'exécution", 
+                            connection: "→ Compilation vers des instructions processeur spécifiques",
+                            color: "bg-yellow-900/40 border-yellow-400" 
+                          },
+                          { 
+                            level: "Instructions", 
+                            desc: "Ordres processeur : ADD, MOV, JMP", 
+                            connection: "→ Traduction directe en séquences de 0 et 1",
+                            color: "bg-orange-900/40 border-orange-400" 
+                          },
+                          { 
+                            level: "Binaire", 
+                            desc: "Mer de 0 et 1 : base de toute information", 
+                            connection: null,
+                            color: "bg-red-900/40 border-red-400" 
+                          }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
                             <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                            {item.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {item.connection}
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>
