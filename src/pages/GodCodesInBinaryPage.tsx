@@ -471,7 +471,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
             {/* Nouveau paragraphe d'introduction */}
             <div className="bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-cyan-400 mb-4 sm:mb-6">
               <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium">
-                <strong className="text-cyan-300">Rappel de l'analogie :</strong> Dans "L'univers est une application", nous avons vu que chaque composant de notre interface utilisateur (le monde macroscopique) est fait d'une cascade descendante vers toutes les couches inférieures, jusqu'aux bits binaires à l'échelle de Planck. Chaque couche supérieure est la manifestation compilée des couches inférieures, et descendre d'échelle, c'est littéralement 'regarder sous le capot de l'échelle supérieur'. Cette interface tourne en continu. Modifier l'ensemble des 0 et 1 d'un composant depuis l'échelle de Planck, engendrerait les compilations couche par couche instantanément, ce pourrait modifier intégralement un composant de l'univers.
+                <strong className="text-cyan-300">Rappel de l'analogie :</strong> Dans "L'univers est une application", nous avons vu que chaque composant de notre interface utilisateur (le monde macroscopique) est fait d'une cascade descendante vers toutes les couches inférieures, jusqu'aux bits binaires à l'échelle de Planck. Chaque couche supérieure est la manifestation compilée des couches inférieures, et descendre d'échelle, c'est littéralement 'regarder sous le capot de l'échelle supérieur'. Cette interface tourne en continu. Modifier l'ensemble des 0 et 1 d'un composant depuis l'échelle de Planck, engendrerait les compilations couche par couche instantanément des échelles supérieur, ce qui pourrait modifier intégralement un composant de l'univers. Il serait même possible de créer des composants en codant en binaire à depuis l'échelle de Planck.
               </p>
             </div>
 
@@ -496,29 +496,29 @@ export const GodCodesInBinaryPage: React.FC = () => {
               <div className="bg-yellow-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-yellow-400">
                 <p className="font-semibold text-yellow-200">
                   <strong>L'hypothèse divine :</strong> Une entité capable de manipuler directement ces "bits de réalité" 
-                  pourrait orchestrer des "miracles" (modifications massives et coordonnées) en réécrivant la réalité depuis ses fondations les plus profondes.
+                  pourrait orchestrer des "miracles" (modifications massives et coordonnées) en réécrivant la réalité depuis ses fondations les plus profondes. 
+                  La simulation de codage binaire que vous voyez au-dessus représente exactement ce fonctionnement, mais il faut imaginer qu'il y aurait des milliards de milliards de fois plus de 0 et 1 en réalité.
                 </p>
               </div>
             </div>
           </div>
 
           {/* Comparaison Univers vs Application */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="bg-gradient-to-br from-purple-900/50 via-blue-900/40 to-cyan-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-purple-400/40 shadow-2xl">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <Atom className="w-8 h-8 mr-3 text-purple-400" />
+              <Cpu className="w-8 h-8 mr-3 text-blue-400" />
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
+                Univers ↔ Application : Analogie Complète
+              </h3>
+            </div>
             
-            {/* Côté Univers */}
-            <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-purple-400/40 shadow-2xl">
-              <div className="flex items-center mb-4 sm:mb-6">
-                <Atom className="w-8 h-8 mr-3 text-purple-400" />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-purple-300">
-                  Dans l'Univers
-                </h3>
-              </div>
-              
-              <div className="space-y-4 text-sm sm:text-base text-gray-200">
+            <div className="space-y-6 text-sm sm:text-base text-gray-200">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div className="bg-purple-800/30 p-3 sm:p-4 rounded-lg">
                   <h4 className="font-bold text-purple-200 mb-2 flex items-center">
                     <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                    Échelle de Planck (10⁻³⁵ m)
+                    Univers : Échelle de Planck (10⁻³⁵ m)
                   </h4>
                   <p className="text-gray-300 leading-relaxed">
                     Granularité ultime de l'espace-temps. Chaque "pixel" de réalité peut être dans un état quantique 
@@ -526,10 +526,23 @@ export const GodCodesInBinaryPage: React.FC = () => {
                   </p>
                 </div>
                 
+                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
+                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                    Application : Code binaire (0 et 1)
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    Niveau le plus bas de l'application. Chaque bit contrôle directement le comportement 
+                    du processeur et détermine tout ce qui s'affiche.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div className="bg-purple-800/30 p-3 sm:p-4 rounded-lg">
                   <h4 className="font-bold text-purple-200 mb-2 flex items-center">
                     <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                    Modification divine (exemple simplifié)
+                    Univers : Modification divine
                   </h4>
                   <p className="text-gray-300 leading-relaxed">
                     <strong>Un seul bit :</strong> Dieu change un bit → Une particule change → Un atome est affecté → Une molécule évolue → Un détail microscopique change.
@@ -538,59 +551,36 @@ export const GodCodesInBinaryPage: React.FC = () => {
                   </p>
                 </div>
                 
-                <div className="bg-green-900/30 p-3 sm:p-4 rounded-lg border-l-4 border-green-400">
-                  <h4 className="font-bold text-green-300 mb-2">Exemples concrets</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    <strong>Changement local :</strong> Modifier un bit pourrait changer le spin d'un électron dans un atome de carbone d'une feuille.
+                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
+                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                    Application : Modification divine
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    <strong>Un seul bit :</strong> Dieu change un bit → Une instruction change → Un code JavaScript est affecté → Un composant React évolue → Un détail de l'interface est modifié.
                     <br/><br/>
-                    <strong>Changement global :</strong> Changer la couleur de toutes les feuilles d'un arbre nécessiterait de modifier des trillions de bits 
-                    dans des milliards de molécules de chlorophylle.
+                    <strong>Nouvelle fonctionnalité :</strong> Dieu réécrit des millions de bits de manière coordonnée pour ajouter un composant complet à l'interface.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Côté Application */}
-            <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-blue-400/40 shadow-2xl">
-              <div className="flex items-center mb-4 sm:mb-6">
-                <Cpu className="w-8 h-8 mr-3 text-blue-400" />
-                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-300">
-                  Dans l'Application
-                </h3>
               </div>
               
-              <div className="space-y-4 text-sm sm:text-base text-gray-200">
-                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                    Code binaire (0 et 1)
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Niveau le plus bas de l'application. Chaque bit contrôle directement le comportement 
-                    du processeur et détermine tout ce qui s'affiche.
-                  </p>
-                </div>
-                
-                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                    Modification divine (exemple simplifié)
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    <strong>Un seul bit :</strong> Dieu change un bit → Une instruction change → Un pixel change de couleur → Un détail de l'interface est modifié.
-                    <br/><br/>
-                    <strong>Nouvelle fonctionnalité :</strong> Dieu réécrit des millions de bits de manière coordonnée pour ajouter un bouton complet à l'interface.
-                  </p>
-                </div>
-                
-                <div className="bg-green-900/30 p-3 sm:p-4 rounded-lg border-l-4 border-green-400">
-                  <h4 className="font-bold text-green-300 mb-2">Exemples concrets</h4>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    <strong>Changement local :</strong> Modifier un bit pourrait changer la couleur d'un pixel ou corriger une faute de frappe.
-                    <br/><br/>
-                    <strong>Changement global :</strong> Créer un nouveau composant React nécessite de modifier des milliers de bits 
-                    dans le code JavaScript compilé.
-                  </p>
+              <div className="bg-green-900/30 p-3 sm:p-4 rounded-lg border-l-4 border-green-400">
+                <h4 className="font-bold text-green-300 mb-2">Exemples concrets comparés</h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="text-gray-300 leading-relaxed">
+                      <strong>Univers - Changement local :</strong> Modifier un bit pourrait changer le spin d'un électron dans un atome de carbone d'une feuille.
+                      <br/><br/>
+                      <strong>Univers - Changement global :</strong> Changer la couleur de toutes les feuilles d'un arbre nécessiterait de modifier des trillions de bits dans des milliards de molécules de chlorophylle.
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 leading-relaxed">
+                      <strong>Application - Changement local :</strong> Modifier un bit pourrait changer la couleur d'un pixel ou corriger une faute de frappe.
+                      <br/><br/>
+                      <strong>Application - Changement global :</strong> Créer un nouveau composant React nécessite de modifier des milliers de bits dans le code JavaScript compilé.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -601,24 +591,24 @@ export const GodCodesInBinaryPage: React.FC = () => {
             <div className="flex items-center mb-4 sm:mb-6">
               <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-emerald-400" />
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-300">
-                La Cascade Divine : Du Bit à la Réalité
+                La Cascade Divine : Création d'un Téléphone
               </h2>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-bold text-emerald-200 mb-4">
-                  🌌 Cascade Universelle
+                  🌌 Cascade Universelle (Physique)
                 </h3>
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Planck", desc: "Dieu modifie des milliards de bits quantiques", color: "bg-red-900/40 border-red-400" },
-                    { level: "Particules", desc: "Des milliards de fermions et bosons changent", color: "bg-orange-900/40 border-orange-400" },
-                    { level: "Nucléons", desc: "Des millions de protons et neutrons se réorganisent", color: "bg-yellow-900/40 border-yellow-400" },
-                    { level: "Atomes", desc: "Des milliers d'atomes acquièrent de nouvelles propriétés", color: "bg-green-900/40 border-green-400" },
-                    { level: "Molécules", desc: "Des centaines de molécules interagissent différemment", color: "bg-blue-900/40 border-blue-400" },
-                    { level: "Macroscopique", desc: "Un changement visible apparaît dans la réalité", color: "bg-purple-900/40 border-purple-400" }
+                    { level: "Planck", desc: "Dieu modifie des trillions de trillions de bits quantiques (pour former les matériaux)", color: "bg-red-900/40 border-red-400" },
+                    { level: "Particules", desc: "Des milliards de milliards de fermions et bosons s'organisent (électrons, quarks pour silicium, métaux)", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "Nucléons", desc: "Des milliards de milliards de protons et neutrons se combinent (pour les noyaux des atomes)", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "Atomes", desc: "Des centaines de milliards d'atomes acquièrent de nouvelles propriétés (silicium, cuivre, or, oxygène, carbone)", color: "bg-green-900/40 border-green-400" },
+                    { level: "Molécules", desc: "Des dizaines de milliards de molécules interagissent différemment (polymères, cristaux liquides, semi-conducteurs)", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Macroscopique", desc: "Un téléphone complet apparaît dans la réalité (écran, batterie, circuits, coque)", color: "bg-purple-900/40 border-purple-400" }
                   ].map((item, index) => (
                     <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color}`}>
                       <div className="font-bold text-white text-sm">{item.level}</div>
@@ -630,17 +620,17 @@ export const GodCodesInBinaryPage: React.FC = () => {
               
               <div className="space-y-4">
                 <h3 className="text-lg sm:text-xl font-bold text-emerald-200 mb-4">
-                  💻 Cascade Informatique
+                  💻 Cascade Informatique (Logicielle)
                 </h3>
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Binaire", desc: "Dieu modifie des millions de bits coordonnés", color: "bg-red-900/40 border-red-400" },
-                    { level: "Instructions", desc: "Des milliers d'opcodes processeur changent", color: "bg-orange-900/40 border-orange-400" },
-                    { level: "C/C++", desc: "Des centaines de fonctions système modifiées", color: "bg-yellow-900/40 border-yellow-400" },
-                    { level: "JavaScript", desc: "Des dizaines de scripts changent de comportement", color: "bg-green-900/40 border-green-400" },
-                    { level: "React", desc: "Plusieurs composants se comportent différemment", color: "bg-blue-900/40 border-blue-400" },
-                    { level: "Interface", desc: "Un nouvel élément apparaît à l'écran", color: "bg-purple-900/40 border-purple-400" }
+                    { level: "Binaire", desc: "Dieu modifie des trillions de trillions de bits coordonnés (pour le système d'exploitation et les applications)", color: "bg-red-900/40 border-red-400" },
+                    { level: "Instructions", desc: "Des milliards de milliards d'opcodes processeur changent (pour exécuter le code)", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "C/C++", desc: "Des centaines de millions de fonctions système modifiées (noyau du système d'exploitation, pilotes)", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "JavaScript/Swift/Kotlin", desc: "Des dizaines de millions de scripts/fonctions changent de comportement (applications, interface utilisateur)", color: "bg-green-900/40 border-green-400" },
+                    { level: "React Native/SwiftUI/Compose", desc: "Des milliers de composants se comportent différemment (éléments de l'interface utilisateur du téléphone)", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Interface", desc: "Un téléphone fonctionnel apparaît à l'écran (avec son OS et ses apps)", color: "bg-purple-900/40 border-purple-400" }
                   ].map((item, index) => (
                     <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color}`}>
                       <div className="font-bold text-white text-sm">{item.level}</div>
@@ -652,44 +642,6 @@ export const GodCodesInBinaryPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Implications philosophiques */}
-          <div className="bg-gradient-to-br from-gray-900/80 to-slate-900/60 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-gray-400/40 shadow-2xl">
-            <div className="flex items-center mb-4 sm:mb-6">
-              <Eye className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-gray-400" />
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-300">
-                Implications Philosophiques
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 text-sm sm:text-base">
-              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600/50">
-                <h3 className="font-bold text-gray-200 mb-3">🎭 Le Libre Arbitre</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Si Dieu peut orchestrer des modifications massives de bits pour influencer nos pensées, 
-                  nos choix sont-ils vraiment libres ? Ou sommes-nous des "utilisateurs" d'une interface 
-                  dont le code source nous échappe complètement ?
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600/50">
-                <h3 className="font-bold text-gray-200 mb-3">🔍 La Connaissance</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  La science tente de "reverse-engineer" l'univers en observant les effets macroscopiques, 
-                  comme un développeur qui analyserait une application sans accès au code source, 
-                  essayant de deviner les milliards de bits qui créent chaque fonctionnalité.
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 p-4 sm:p-6 rounded-lg border border-gray-600/50">
-                <h3 className="font-bold text-gray-200 mb-3">⚡ Les Miracles</h3>
-                <p className="text-gray-400 leading-relaxed">
-                  Un "miracle" serait Dieu orchestrant instantanément des modifications de trillions de bits 
-                  à l'échelle de Planck, causant des changements impossibles selon les "règles" que nous observons 
-                  à l'interface macroscopique.
-                </p>
-              </div>
-            </div>
-          </div>
 
           {/* Conclusion */}
           <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/40 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-indigo-400/40 shadow-2xl text-center">
@@ -703,13 +655,6 @@ export const GodCodesInBinaryPage: React.FC = () => {
               Nous, les êtres conscients, sommes les <strong className="text-cyan-300">"utilisateurs"</strong> de cette application cosmique, 
               percevant seulement l'interface finale sans jamais voir les trillions de 0 et 1 qui la génèrent à chaque instant.
             </p>
-            
-            <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gradient-to-r from-yellow-900/40 to-orange-900/30 rounded-lg border border-yellow-400/30">
-              <p className="text-sm sm:text-base text-yellow-200 italic leading-relaxed">
-                "Au commencement était le Verbe... et le Verbe était Code, et le Code était une symphonie 
-                de trillions de bits orchestrés à la perfection, et chaque modification coordonnée créait un miracle."
-              </p>
-            </div>
           </div>
         </div>
       </div>
