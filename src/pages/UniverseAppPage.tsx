@@ -439,16 +439,16 @@ export const UniverseAppPage: React.FC = () => {
                     </div>
                     <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
                       <p>
-                        <strong className="text-indigo-300">À partir de ce point, tout change :</strong> nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
+                        <strong className="text-indigo-300">À partir de l'échelle atomique, tout change :</strong> nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
                       </p>
                       <p>
-                        <strong className="text-cyan-300">Dans l'univers :</strong> Un atome existe dans une superposition de tous ses états possibles tant qu'on ne "mesure" pas ses composants nucléaires et particulaires. Sa façon d'exister n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'on regarde sous le capot.
+                        <strong className="text-cyan-300">Dans l'univers :</strong> Dès l'échelle atomique, les entités physiques (atomes, électrons, protons, neutrons, quarks...) existent dans une superposition de tous leurs états possibles. Leur façon d'exister n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'une observation ou mesure "effondre" cette superposition en un état défini.
                       </p>
                       <p>
-                        <strong className="text-green-300">Dans l'application :</strong> Un composant React existe dans une superposition de toutes ses implémentations possibles tant qu'on n'inspecte pas son code JavaScript et C++. Son comportement exact n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'on ouvre le code source.
+                        <strong className="text-green-300">Dans l'application :</strong> Dès l'échelle JavaScript, les composants logiciels (fonctions, variables, objets...) existent dans une superposition de toutes leurs implémentations possibles. Leur comportement exact n'est qu'une <strong className="text-yellow-300">probabilité</strong> jusqu'à ce qu'une inspection du code "révèle" leur implémentation concrète.
                       </p>
                       <p className="font-semibold text-pink-300 bg-pink-900/20 p-2 sm:p-3 rounded-lg border border-pink-400/30">
-                        💫 <strong>L'acte d'observation/inspection</strong> "effondre" la superposition et révèle l'état ou l'implémentation concrète.
+                        💫 <strong>L'acte d'observation (physique) ou d'inspection (code)</strong> "effondre" la superposition et révèle l'état ou l'implémentation concrète. Dans les deux cas, regarder "sous le capot" transforme la probabilité en réalité définie.
                       </p>
                     </div>
                   </div>
