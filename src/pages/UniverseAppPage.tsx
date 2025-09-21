@@ -382,14 +382,14 @@ export const UniverseAppPage: React.FC = () => {
                       )}
                       
                       {/* Ligne d'échelle : Physique, Informatique, Connexion Horizontale */}
-                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6">
+                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 lg:items-stretch">
                         {/* Cascade Universelle (Physique) */}
                         <div className="space-y-3 lg:order-1">
                           <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
                             🌌 Cascade Universelle (Physique)
                           </h3>
                           
-                          <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-purple-900/40 border-purple-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                          <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-purple-900/40 border-purple-400 h-full flex flex-col justify-center">
                             <div className="font-bold text-white text-xs sm:text-sm">
                               {section.title}
                               <span className="text-cyan-300 font-mono ml-2">{section.scale}</span>
@@ -409,7 +409,7 @@ export const UniverseAppPage: React.FC = () => {
                             💻 Cascade Informatique (Logicielle)
                           </h3>
                           
-                          <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-blue-900/40 border-blue-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                          <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-blue-900/40 border-blue-400 h-full flex flex-col justify-center">
                             <div className="font-bold text-white text-xs sm:text-sm">
                               {section.content.application.split(',')[0]}
                             </div>
@@ -423,7 +423,7 @@ export const UniverseAppPage: React.FC = () => {
                             ↔ Connexions
                           </h3>
                           
-                          <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-emerald-900/40 border-emerald-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                          <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-emerald-900/40 border-emerald-400 h-full flex flex-col justify-center">
                             <div className="font-bold text-emerald-200 mb-1 text-xs sm:text-sm">↔ Connexion</div>
                             <div className="text-gray-300 text-xs mt-1 leading-relaxed">
                               {section.content.connectionHorizontal}
