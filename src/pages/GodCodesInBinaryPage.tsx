@@ -84,7 +84,6 @@ const GodCodingSimulation: React.FC = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   
-  // Génération de séquences binaires aléatoires de 15 rangées de 40 chiffres
   // Liste étendue de 200+ objets de création (du briquet à l'humain)
   const creationPhrases = React.useMemo(() => [
     // Objets du quotidien
@@ -503,89 +502,6 @@ export const GodCodesInBinaryPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Comparaison Univers vs Application */}
-          <div className="bg-gradient-to-br from-purple-900/50 via-blue-900/40 to-cyan-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-purple-400/40 shadow-2xl">
-            <div className="flex items-center mb-4 sm:mb-6">
-              <Atom className="w-8 h-8 mr-3 text-purple-400" />
-              <Cpu className="w-8 h-8 mr-3 text-blue-400" />
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
-                Univers ↔ Application : Analogie Complète
-              </h3>
-            </div>
-            
-            <div className="space-y-6 text-sm sm:text-base text-gray-200">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <div className="bg-purple-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-purple-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                    Univers : Échelle de Planck (10⁻³⁵ m)
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Granularité ultime de l'espace-temps. Chaque "pixel" de réalité peut être dans un état quantique 
-                    fondamental : 0 ou 1, comme un bit cosmique.
-                  </p>
-                </div>
-                
-                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                    Application : Code binaire (0 et 1)
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    Niveau le plus bas de l'application. Chaque bit contrôle directement le comportement 
-                    du processeur et détermine tout ce qui s'affiche.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <div className="bg-purple-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-purple-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                    Univers : Modification divine
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    <strong>Un seul bit :</strong> Dieu change un bit → Une particule change → Un atome est affecté → Une molécule évolue → Un détail microscopique change.
-                    <br/><br/>
-                    <strong>Miracle macroscopique :</strong> Dieu orchestre des milliards de milliards de changements de bits simultanés pour transformer la réalité visible.
-                  </p>
-                </div>
-                
-                <div className="bg-blue-800/30 p-3 sm:p-4 rounded-lg">
-                  <h4 className="font-bold text-blue-200 mb-2 flex items-center">
-                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                    Application : Modification divine
-                  </h4>
-                  <p className="text-gray-300 leading-relaxed">
-                    <strong>Un seul bit :</strong> Dieu change un bit → Une instruction change → Un code JavaScript est affecté → Un composant React évolue → Un détail de l'interface est modifié.
-                    <br/><br/>
-                    <strong>Nouvelle fonctionnalité :</strong> Dieu réécrit des millions de bits de manière coordonnée pour ajouter un composant complet à l'interface.
-                  </p>
-                </div>
-              </div>
-              
-              <div className="bg-green-900/30 p-3 sm:p-4 rounded-lg border-l-4 border-green-400">
-                <h4 className="font-bold text-green-300 mb-2">Exemples concrets comparés</h4>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <p className="text-gray-300 leading-relaxed">
-                      <strong>Univers - Changement local :</strong> Modifier un bit pourrait changer le spin d'un électron dans un atome de carbone d'une feuille.
-                      <br/><br/>
-                      <strong>Univers - Changement global :</strong> Changer la couleur de toutes les feuilles d'un arbre nécessiterait de modifier des trillions de bits dans des milliards de molécules de chlorophylle.
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-gray-300 leading-relaxed">
-                      <strong>Application - Changement local :</strong> Modifier un bit pourrait changer la couleur d'un pixel ou corriger une faute de frappe.
-                      <br/><br/>
-                      <strong>Application - Changement global :</strong> Créer un nouveau composant React nécessite de modifier des milliers de bits dans le code JavaScript compilé.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Le processus de cascade */}
           <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/40 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-emerald-400/40 shadow-2xl">
             <div className="flex items-center mb-4 sm:mb-6">
@@ -642,7 +558,6 @@ export const GodCodesInBinaryPage: React.FC = () => {
             </div>
           </div>
 
-
           {/* Conclusion */}
           <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/40 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-indigo-400/40 shadow-2xl text-center">
             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-300 mb-4 sm:mb-6">
@@ -658,3 +573,6 @@ export const GodCodesInBinaryPage: React.FC = () => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
