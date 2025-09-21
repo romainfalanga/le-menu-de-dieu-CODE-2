@@ -202,7 +202,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
               <p>
                 Si l'univers est une application, alors à l'échelle de Planck se trouve son <strong className="text-yellow-300">code source binaire</strong>. 
-                Chaque quantum d'espace-temps peut être vu comme un bit d'information : 0 ou 1, vide ou plein, existence ou néant.
+                Chaque quantum d'espace-temps peut être vu comme un bit d\'information : 0 ou 1, vide ou plein, existence ou néant.
               </p>
               
               <div className="bg-yellow-900/40 p-4 sm:p-6 rounded-lg border-l-4 border-yellow-400">
