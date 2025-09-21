@@ -405,13 +405,13 @@ export const UniverseAppPage: React.FC = () => {
                           { 
                             level: "Interface utilisateur", 
                             desc: "Ce que nous voyons : humains, objets, monde visible", 
-                            connection: "→ Rendu généré par la compilation des composants React",
+                            connection: "→ Rendu généré par la du HTML/CSS",
                             color: "bg-purple-900/40 border-purple-400" 
                           },
                           { 
-                            level: "React", 
-                            desc: "Composants réutilisables : boutons, formulaires", 
-                            connection: "→ Logique et structure définies par le code JavaScript",
+                            level: "HTML/CSS (DOM)", 
+                            desc: "L'HTML et le CSS décrive la réalité et son fonctionnement", 
+                            connection: "→ L'HTML et le CSS sont généré par les composants Reacts",
                             color: "bg-blue-900/40 border-blue-400" 
                           }
                         ].map((item, index) => (
@@ -512,21 +512,21 @@ export const UniverseAppPage: React.FC = () => {
                       <div className="space-y-2 sm:space-y-3">
                         {[
                           { 
-                            level: "JavaScript", 
+                            level: "Composants React", 
+                            desc: "Composants réutilisables : boutons, formulaires", 
+                            connection: "→ Logique et structure définies par le code JavaScript",
+                            color: "bg-green-900/40 border-green-400" 
+                          },
+                          { 
+                            level: "Java Script", 
                             desc: "Langage en superposition de code : fonctions, variables, logique", 
                             connection: "→ Exécution assurée par les moteurs écrits en C/C++",
-                            color: "bg-green-900/40 border-green-400" 
+                            color: "bg-yellow-900/40 border-yellow-400" 
                           },
                           { 
                             level: "C/C++", 
                             desc: "Fondations système révélées par inspection : moteurs d'exécution", 
                             connection: "→ Compilation vers des instructions processeur spécifiques",
-                            color: "bg-yellow-900/40 border-yellow-400" 
-                          },
-                          { 
-                            level: "Instructions", 
-                            desc: "Ordres processeur révélés par décompilation : ADD, MOV, JMP", 
-                            connection: "→ Traduction directe en séquences de 0 et 1",
                             color: "bg-orange-900/40 border-orange-400" 
                           },
                           { 
