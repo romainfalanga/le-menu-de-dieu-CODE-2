@@ -342,7 +342,7 @@ export const UniverseAppPage: React.FC = () => {
                       
                       <div className="bg-gradient-to-r from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-yellow-400/40 glow-border-yellow">
                         <p className="text-base sm:text-lg lg:text-xl text-yellow-100 leading-relaxed font-semibold">
-                          Ce que nous voyons à l'échelle humaine : "le monde macroscopique" est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à l'échelle de Planck.
+                          Ce que nous voyons à l'échelle humaine : "le monde macroscopique" est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1.
                         </p>
                       </div>
                     </div>
@@ -361,7 +361,7 @@ export const UniverseAppPage: React.FC = () => {
                   <div className="flex items-center mb-4 sm:mb-6">
                     <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 text-emerald-400 animate-pulse" />
                     <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-emerald-300 neon-text-emerald">
-                      La Cascade des Échelles : Du Visible à l'Invisible
+                      La Cascade des Échelles
                     </h2>
                   </div>
                   
@@ -369,7 +369,7 @@ export const UniverseAppPage: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        Cascade Universelle (Physique)
+                        Cascade Universelle
                       </h3>
                       
                       <div className="space-y-2 sm:space-y-3">
@@ -407,7 +407,7 @@ export const UniverseAppPage: React.FC = () => {
                     
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        Cascade Informatique (Logicielle)
+                        Cascade Informatique
                       </h3>
                       
                       <div className="space-y-2 sm:space-y-3">
