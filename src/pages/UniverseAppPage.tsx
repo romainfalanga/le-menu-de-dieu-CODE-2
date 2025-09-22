@@ -206,9 +206,6 @@ export const UniverseAppPage: React.FC = () => {
                     <p className="font-medium">
                       <strong className="text-blue-200">Cadre invisible qui régit la réalité :</strong> c'est la toile décrite par la relativité générale d'Einstein, qui définit les règles fondamentales de gravité, de géométrie et de causalité de l'univers.
                     </p>
-                    <p className="text-cyan-200 italic font-medium">
-                      → Toutes les échelles du monde physique (particules, atomes, molécules, objets macroscopiques) existent à l'intérieur du tissu de l'espace-temps et sont soumises à ses lois.
-                    </p>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                       Sans ce cadre spatio-temporel, aucune particule ne pourrait se déplacer, aucune force ne pourrait s'exercer, et aucune échelle de la réalité physique ne pourrait exister ou interagir.
                     </p>
@@ -228,8 +225,6 @@ export const UniverseAppPage: React.FC = () => {
                       <strong className="text-purple-200">Support matériel invisible qui rend possible l'application :</strong> c'est l'ordinateur, le smartphone ou le serveur qui interprète, compile et affiche le code pour créer l'interface utilisateur.
                     </p>
                     <p className="text-indigo-200 italic font-medium">
-                      → Toutes les échelles de l'informatique (binaire, JavaScript, composants React, HTML/CSS, interface) existent à l'intérieur de l'appareil électronique et dépendent de sa puissance de calcul.
-                    </p>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                       Sans ce support matériel, aucun code ne pourrait s'exécuter, aucune compilation ne pourrait avoir lieu, et aucune interface utilisateur ne pourrait être générée ou affichée.
                     </p>
