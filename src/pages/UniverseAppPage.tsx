@@ -239,7 +239,7 @@ export const UniverseAppPage: React.FC = () => {
               
               <div className="mt-6 sm:mt-8 bg-gradient-to-r from-gray-900/60 to-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-gray-400">
                 <p className="text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed font-medium">
-                  <strong className="text-white">Point clé :</strong> Ces cadres supérieurs ne sont pas des "échelles" au sens où nous l'entendons dans la cascade qui suit. Ils sont les <strong className="text-gray-300">fondations invisibles</strong> qui permettent à toutes les échelles d'exister et d'interagir. Dans l'analogie, le tissu de l'espace-temps et l'appareil électronique jouent le même rôle : ils sont les <strong className="text-gray-300">environnements d'exécution</strong> de leurs cascades respectives.
+                  <strong className="text-white">Point clé :</strong> Ces cadres supérieurs ne sont pas des "échelles" au sens où nous l'entendons dans la cascade qui suit. Ils sont les <strong className="text-gray-300">fondations invisibles</strong> qui permettent à toutes les échelles d'exister et d\'interagir. Dans l'analogie, le tissu de l\'espace-temps et l'appareil électronique jouent le même rôle : ils sont les <strong className="text-gray-300">environnements d\'exécution</strong> de leurs cascades respectives.
                 </p>
               </div>
             </div>
