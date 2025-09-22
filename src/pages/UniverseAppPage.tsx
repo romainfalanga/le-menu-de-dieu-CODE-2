@@ -464,20 +464,117 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
 
                   {/* Deuxième partie : Échelles en "superposition quantique" */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                    {/* Titres des cascades */}
-                    <div>
+                    {/* Cascade Universelle (Physique) - Suite */}
+                    <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
                         Cascade Universelle (Physique) - Suite
                       </h3>
+                      {(() => {
+                        const pairedCascadeItems = [
+                          {
+                            physical: { 
+                              level: "Échelle atomique", 
+                              scale: "10⁻¹⁰ m", 
+                              desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer", 
+                              connection: "→ Formés par l'assemblage de protons, neutrons et électrons",
+                              color: "bg-green-900/40 border-green-400" 
+                            }
+                          },
+                          {
+                            physical: { 
+                              level: "Échelle nucléaire", 
+                              scale: "10⁻¹⁵ m", 
+                              desc: "Cœur des atomes révélé par observation : protons et neutrons", 
+                              connection: "→ Constitués de protons et de neutrons eux-mêmes composés de quarks",
+                              color: "bg-yellow-900/40 border-yellow-400" 
+                            }
+                          },
+                          {
+                            physical: { 
+                              level: "Échelle des particules fondamentales", 
+                              scale: "10⁻¹⁸ m", 
+                              desc: "Constituants ultimes révélés par mesure : quarks, leptons, bosons", 
+                              connection: "→ Révélées comme briques ultimes",
+                              color: "bg-orange-900/40 border-orange-400" 
+                            }
+                          }
+                        ];
+                        
+                        return pairedCascadeItems.map((item, index) => (
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.physical.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">
+                              {item.physical.level}
+                              {item.physical.scale && <span className="text-cyan-300 font-mono ml-2">{item.physical.scale}</span>}
+                            </div>
+                            <div className="text-gray-300 text-xs mt-1">{item.physical.desc}</div>
+                            {item.physical.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {item.physical.connection}
+                              </div>
+                            )}
+                          </div>
+                        ));
+                      })()}
                     </div>
-                    <div>
+                    
+                    {/* Cascade Informatique (Logicielle) - Suite */}
+                    <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
                         Cascade Informatique (Logicielle) - Suite
                       </h3>
+                      {(() => {
+                        const pairedCascadeItems = [
+                          {
+                            software: { 
+                              level: "Composants React", 
+                              desc: "Composants réutilisables : boutons, formulaires", 
+                              connection: "→ Logique et structure définies par le code JavaScript",
+                              color: "bg-green-900/40 border-green-400" 
+                            }
+                          },
+                          {
+                            software: { 
+                              level: "JavaScript", 
+                              desc: "Langage en superposition de code : fonctions, variables, logique", 
+                              connection: "→ Exécution assurée par des moteurs qui sont eux-mêmes des programmes compilés en 0 et 1",
+                              color: "bg-yellow-900/40 border-yellow-400" 
+                            }
+                          },
+                          {
+                            software: { 
+                              level: "0 et 1 (Binaire)", 
+                              desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1. C'est la brique ultime du code.", 
+                              connection: null,
+                              color: "bg-orange-900/40 border-orange-400" 
+                            }
+                          }
+                        ];
+                        
+                        return pairedCascadeItems.map((item, index) => (
+                          <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.software.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">{item.software.level}</div>
+                            <div className="text-gray-300 text-xs mt-1">{item.software.desc}</div>
+                            {item.software.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {item.software.connection}
+                              </div>
+                            )}
+                          </div>
+                        ));
+                      })()}
                     </div>
-                    
-                    {/* Éléments alignés par paires */}
-                    {(() => {
+                  </div>
+                  
+                  {/* Échelle de Planck - section séparée */}
+                  <div className="mt-4 sm:mt-6">
+                    <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                      <div className="font-bold text-white text-xs sm:text-sm">
+                        Échelle de Planck
+                        <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
+                      </div>
+                      <div className="text-gray-300 text-xs mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
+                    </div>
+                  </div>
                       const pairedCascadeItems = [
                         {
                           physical: { 
