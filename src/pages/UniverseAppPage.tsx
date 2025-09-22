@@ -974,6 +974,7 @@ De la même façon, votre corps est constitué de molécules, elles-mêmes faite
                 )}
               </div>
             </div>
+          </div>
           ) : (
             // Pages des échelles
             <div className={`w-full bg-gradient-to-br ${currentSectionData.bgGradient} flex items-start justify-center p-4 sm:p-6 relative z-20`}>
