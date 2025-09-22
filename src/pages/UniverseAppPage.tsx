@@ -550,7 +550,7 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                     <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
                       <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L’interface utilisateur que vous voyez est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
 
-De la même façon, votre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l\'échelle atomique, tout existe en superposition quantique jusqu'à ce qu\'on "regarde sous le capot".</strong>
+De la même façon, votre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l'échelle atomique, tout existe en superposition quantique jusqu'à ce qu'on "regarde sous le capot".</strong>
                     </p>
                   </div>
                 </div>
