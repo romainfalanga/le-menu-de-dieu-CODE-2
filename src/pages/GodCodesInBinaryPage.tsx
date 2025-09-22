@@ -455,9 +455,9 @@ export const GodCodesInBinaryPage: React.FC = () => {
             </div>
             
             {/* Nouveau paragraphe d'introduction */}
-            <div className="bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-cyan-400 mb-4 sm:mb-6">
+                Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d'un composant depuis cette échelle engendrerait les compilations couche par couche des échelles supérieures, jusqu'à modifier intégralement un composant de l'univers.
               <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium">
-                <strong className="text-cyan-300">Rappel de l'analogie :</strong> Dans « L'univers est une application », nous avons vu que chaque composant de notre interface utilisateur (le monde macroscopique) est fait d'une cascade descendante vers toutes les couches inférieures, jusqu'aux bits binaires (0 et 1) à l'échelle des particules fondamentales. Chaque couche supérieure est la manifestation compilée des couches inférieures, et descendre d'échelle revient littéralement à regarder sous le capot de l'échelle supérieure.
+                En prenant en compte la mécanique quantique dans ce schéma, les composants React, le JavaScript et même les 0 et 1 n'existent pas de manière déterminée tant qu'on ne les observe pas. Ils existent sous forme de probabilités, et l'acte d'observer les contraint à « choisir » une seule manière d'être.
               </p>
             </div>
 
