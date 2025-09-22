@@ -435,9 +435,6 @@ export const GodCodesInBinaryPage: React.FC = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-yellow-300 via-orange-300 via-red-300 to-purple-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(255,215,0,0.8)] mb-3 sm:mb-4 px-2">
             Dieu code en Binaire
           </h1>
-          <p className="text-base sm:text-lg lg:text-xl text-yellow-200 max-w-4xl mx-auto px-4 leading-relaxed">
-            À l'échelle de Planck, la réalité devient programmable en Binaire
-          </p>
         </header>
 
         {/* Simulation de codage divin */}
