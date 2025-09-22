@@ -455,122 +455,110 @@ export const UniverseAppPage: React.FC = () => {
                         <strong className="text-cyan-300">Dans l'univers :</strong> à cette échelle, les entités physiques (atomes, électrons, particules) existent dans plusieurs états à la fois. Dans l'<strong className="text-purple-300">expérience de la double fente</strong>, par exemple, un électron ou un atome passe simultanément par les deux fentes, créant des interférences avec lui-même. Leur existence est une <strong className="text-yellow-300">probabilité</strong> diffuse jusqu'à ce qu\'une observation ou une mesure "effondre" cette superposition en un état défini.
                       </p>
                       <p>
-                        <strong className="text-green-300">Dans l'application :</strong> En suivant cette logique, l’organisation des composants React qui produit le HTML et le CSS n’existe pas sous une forme unique et figée. Elle se déploie comme un ensemble de <strong className="text-yellow-300">probabilités</strong> d’agencements possibles. Ce n’est qu’au moment où l’on observe cette organisation que les composants “choisissent” une configuration particulière.
+                        <strong className="text-green-300">Dans l'application :</strong> En suivant cette logique, l'organisation des composants React qui produit le HTML et le CSS n'existe pas sous une forme unique et figée. Elle se déploie comme un ensemble de <strong className="text-yellow-300">probabilités</strong> d'agencements possibles. Ce n'est qu'au moment où l'on observe cette organisation que les composants "choisissent" une configuration particulière.
 
-De même, le JavaScript qui compose un composant React n’existe pas à l’avance sous une seule écriture. Il est une <strong className="text-yellow-300">probabilité</strong> parmi une infinité de manières de produire le même rendu. Ce n’est qu’au moment où l’on “ouvre” le composant et que l’on regarde sous son capot que le code se matérialise dans une version précise, comme si l’acte d’observation faisait émerger une implémentation unique parmi toutes les possibilités.
+De même, le JavaScript qui compose un composant React n'existe pas à l'avance sous une seule écriture. Il est une <strong className="text-yellow-300">probabilité</strong> parmi une infinité de manières de produire le même rendu. Ce n'est qu'au moment où l'on "ouvre" le composant et que l'on regarde sous son capot que le code se matérialise dans une version précise, comme si l'acte d'observation faisait émerger une implémentation unique parmi toutes les possibilités.
                       </p>
                     </div>
                   </div>
 
                   {/* Deuxième partie : Échelles en "superposition quantique" */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                    {/* Titres des cascades */}
-                    <div>
+                    {/* Cascade Universelle (Physique) - Suite */}
+                    <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
                         Cascade Universelle (Physique) - Suite
                       </h3>
+                      {[
+                        {
+                          level: "Échelle atomique",
+                          scale: "10⁻¹⁰ m",
+                          desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer",
+                          connection: "→ Formés par l'assemblage de protons, neutrons et électrons",
+                          color: "bg-green-900/40 border-green-400"
+                        },
+                        {
+                          level: "Échelle nucléaire",
+                          scale: "10⁻¹⁵ m",
+                          desc: "Cœur des atomes révélé par observation : protons et neutrons",
+                          connection: "→ Constitués de protons et de neutrons eux-mêmes composés de quarks",
+                          color: "bg-yellow-900/40 border-yellow-400"
+                        },
+                        {
+                          level: "Échelle des particules fondamentales",
+                          scale: "10⁻¹⁸ m",
+                          desc: "Constituants ultimes révélés par mesure : quarks, leptons, bosons",
+                          connection: "→ Révélées comme briques ultimes",
+                          color: "bg-orange-900/40 border-orange-400"
+                        }
+                      ].map((item, index) => (
+                        <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
+                          <div className="font-bold text-white text-xs sm:text-sm">
+                            {item.level}
+                            {item.scale && <span className="text-cyan-300 font-mono ml-2">{item.scale}</span>}
+                          </div>
+                          <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                          {item.connection && (
+                            <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                              {item.connection}
+                            </div>
+                          )}
+                        </div>
+                      ))}
                     </div>
-                    <div>
+                    
+                    {/* Cascade Informatique (Logicielle) - Suite */}
+                    <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
                         Cascade Informatique (Logicielle) - Suite
                       </h3>
-                    </div>
-                    
-                    {/* Éléments alignés par paires */}
-                    {(() => {
-                      const pairedCascadeItems = [
+                      {[
                         {
-                          physical: { 
-                            level: "Échelle atomique", 
-                            scale: "10⁻¹⁰ m", 
-                            desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer", 
-                            connection: "→ Formés par l'assemblage de protons, neutrons et électrons",
-                            color: "bg-green-900/40 border-green-400" 
-                          },
-                          software: { 
-                            level: "Composants React", 
-                            desc: "Composants réutilisables : boutons, formulaires", 
-                            connection: "→ Logique et structure définies par le code JavaScript",
-                            color: "bg-green-900/40 border-green-400" 
-                          }
+                          level: "Composants React",
+                          desc: "Composants réutilisables : boutons, formulaires",
+                          connection: "→ Logique et structure définies par le code JavaScript",
+                          color: "bg-green-900/40 border-green-400"
                         },
                         {
-                          physical: { 
-                            level: "Échelle nucléaire", 
-                            scale: "10⁻¹⁵ m", 
-                            desc: "Cœur des atomes révélé par observation : protons et neutrons", 
-                            connection: "→ Constitués de protons et de neutrons eux-mêmes composés de quarks",
-                            color: "bg-yellow-900/40 border-yellow-400" 
-                          },
-                          software: { 
-                            level: "JavaScript", 
-                            desc: "Langage en superposition de code : fonctions, variables, logique", 
-                            connection: "→ Exécution assurée par des moteurs qui sont eux-mêmes des programmes compilés en 0 et 1",
-                            color: "bg-yellow-900/40 border-yellow-400" 
-                          }
+                          level: "JavaScript",
+                          desc: "Langage en superposition de code : fonctions, variables, logique",
+                          connection: "→ Exécution assurée par des moteurs qui sont eux-mêmes des programmes compilés en 0 et 1",
+                          color: "bg-yellow-900/40 border-yellow-400"
                         },
                         {
-                          physical: { 
-                            level: "Échelle des particules fondamentales", 
-                            scale: "10⁻¹⁸ m", 
-                            desc: "Constituants ultimes révélés par mesure : quarks, leptons, bosons", 
-                            connection: "→ Révélées comme briques ultimes",
-                            color: "bg-orange-900/40 border-orange-400" 
-                          },
-                          software: { 
-                            level: "0 et 1 (Binaire)", 
-                            desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1. C'est la brique ultime du code.", 
-                            connection: null,
-                            color: "bg-orange-900/40 border-orange-400" 
-                          }
+                          level: "0 et 1 (Binaire)",
+                          desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1. C'est la brique ultime du code.",
+                          connection: null,
+                          color: "bg-orange-900/40 border-orange-400"
                         }
-                      ];
-                      
-                      return pairedCascadeItems.map((pair, pairIndex) => (
-                        <React.Fragment key={pairIndex}>
-                          {/* Élément physique */}
-                          <div className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.physical.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
-                            <div className="font-bold text-white text-xs sm:text-sm">
-                              {pair.physical.level}
-                              {pair.physical.scale && <span className="text-cyan-300 font-mono ml-2">{pair.physical.scale}</span>}
+                      ].map((item, index) => (
+                        <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
+                          <div className="font-bold text-white text-xs sm:text-sm">{item.level}</div>
+                          <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                          {item.connection && (
+                            <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                              {item.connection}
                             </div>
-                            <div className="text-gray-300 text-xs mt-1">{pair.physical.desc}</div>
-                            {pair.physical.connection && (
-                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
-                                {pair.physical.connection}
-                              </div>
-                            )}
-                          </div>
-                          
-                          {/* Élément informatique */}
-                          <div className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.software.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
-                            <div className="font-bold text-white text-xs sm:text-sm">{pair.software.level}</div>
-                            <div className="text-gray-300 text-xs mt-1">{pair.software.desc}</div>
-                            {pair.software.connection && (
-                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
-                                {pair.software.connection}
-                              </div>
-                            )}
-                          </div>
-                        </React.Fragment>
-                      ));
-                    })()}
-                    
-                    {/* Échelle de Planck - élargie sur desktop */}
-                    <div className="md:col-span-2 mt-4 sm:mt-6">
-                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
-                        <div className="font-bold text-white text-xs sm:text-sm">
-                          Échelle de Planck
-                          <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
+                          )}
                         </div>
-                        <div className="text-gray-300 text-xs mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Échelle de Planck - section séparée */}
+                  <div className="mt-4 sm:mt-6">
+                    <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                      <div className="font-bold text-white text-xs sm:text-sm">
+                        Échelle de Planck
+                        <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
                       </div>
+                      <div className="text-gray-300 text-xs mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
                     </div>
                   </div>
                   
                   <div className="mt-4 sm:mt-6 bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border-l-4 border-cyan-400">
                     <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
-                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L’interface utilisateur que vous voyez est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
+                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L'interface utilisateur que vous voyez est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
 
 De la même façon, votre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l\'échelle atomique, tout existe en superposition quantique jusqu\'à ce qu\'on "regarde sous le capot".</strong>
                     </p>
