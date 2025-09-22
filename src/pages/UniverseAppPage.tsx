@@ -445,9 +445,9 @@ export const UniverseAppPage: React.FC = () => {
                         <strong className="text-cyan-300">Dans l'univers :</strong> à cette échelle, les entités physiques (atomes, électrons, particules) existent dans plusieurs états à la fois. Dans l'<strong className="text-purple-300">expérience de la double fente</strong>, par exemple, un électron ou un atome passe simultanément par les deux fentes, créant des interférences avec lui-même. Leur existence est une <strong className="text-yellow-300">probabilité</strong> diffuse jusqu'à ce qu\'une observation ou une mesure "effondre" cette superposition en un état défini.
                       </p>
                       <p>
-                        <strong className="text-green-300">Dans l'application :</strong> En suivant cette logique, l'organisation des composants React qui produit le HTML et le CSS n'existe pas sous une forme unique et figée. Elle se déploie comme un ensemble de <strong className="text-yellow-300">probabilités</strong> d'agencements possibles. Ce n'est qu'au moment où l'on observe cette organisation que les composants "choisissent" une configuration particulière.
+                        <strong className="text-green-300">Dans l'application :</strong> En suivant cette logique, l’organisation des composants React qui produit le HTML et le CSS n’existe pas sous une forme unique et figée. Elle se déploie comme un ensemble de <strong className="text-yellow-300">probabilités</strong> d’agencements possibles. Ce n’est qu’au moment où l’on observe cette organisation que les composants “choisissent” une configuration particulière.
 
-De même, le JavaScript qui compose un composant React n'existe pas à l'avance sous une seule écriture. Il est une <strong className="text-yellow-300">probabilité</strong> parmi une infinité de manières de produire le même rendu. Ce n'est qu'au moment où l'on "ouvre" le composant et que l'on regarde sous son capot que le code se matérialise dans une version précise, comme si l'acte d'observation faisait émerger une implémentation unique parmi toutes les possibilités.
+De même, le JavaScript qui compose un composant React n’existe pas à l’avance sous une seule écriture. Il est une <strong className="text-yellow-300">probabilité</strong> parmi une infinité de manières de produire le même rendu. Ce n’est qu’au moment où l’on “ouvre” le composant et que l’on regarde sous son capot que le code se matérialise dans une version précise, comme si l’acte d’observation faisait émerger une implémentation unique parmi toutes les possibilités.
                       </p>
                     </div>
                   </div>
@@ -503,145 +503,64 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                           physical: { 
                             level: "Échelle des particules fondamentales", 
                             scale: "10⁻¹⁸ m", 
-                            desc: "Particules élémentaires : quarks, leptons, bosons", 
-                            connection: "→ Émergent de l'échelle de Planck",
+                            desc: "Constituants ultimes révélés par mesure : quarks, leptons, bosons", 
+                            connection: "→ Révélées comme briques ultimes",
                             color: "bg-orange-900/40 border-orange-400" 
                           },
                           software: { 
-                            level: "C/C++", 
-                            desc: "Langages systèmes : gestion mémoire, performance", 
-                            connection: "→ Compilés en instructions binaires 0 et 1",
+                            level: "0 et 1 (Binaire)", 
+                            desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1. C'est la brique ultime du code.", 
+                            connection: null,
                             color: "bg-orange-900/40 border-orange-400" 
                           }
                         }
                       ];
-
-                      return (
-                        <>
-                          {/* Version mobile : cascades séparées */}
-                          <div className="md:hidden">
-                            <div className="space-y-4 sm:space-y-6">
-                              {/* Cascade Universelle (Physique) - Suite */}
-                              <div className="space-y-3">
-                                <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                                  Cascade Universelle (Physique) - Suite
-                                </h3>
-                                
-                                <div className="space-y-2 sm:space-y-3">
-                                  {pairedCascadeItems.map((pair, pairIndex) => (
-                                    <div key={pairIndex} className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.physical.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
-                                      <div className="font-bold text-white text-xs sm:text-sm">
-                                        {pair.physical.level}
-                                        {pair.physical.scale && <span className="text-cyan-300 font-mono ml-2">{pair.physical.scale}</span>}
-                                      </div>
-                                      <div className="text-gray-300 text-xs mt-1">{pair.physical.desc}</div>
-                                      {pair.physical.connection && (
-                                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
-                                          {pair.physical.connection}
-                                        </div>
-                                      )}
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                              
-                              {/* Cascade Informatique (Logicielle) - Suite */}
-                              <div className="space-y-3">
-                                <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                                  Cascade Informatique (Logicielle) - Suite
-                                </h3>
-                                
-                                <div className="space-y-2 sm:space-y-3">
-                                  {pairedCascadeItems.map((pair, pairIndex) => (
-                                    <div key={pairIndex} className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.software.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
-                                      <div className="font-bold text-white text-xs sm:text-sm">{pair.software.level}</div>
-                                      <div className="text-gray-300 text-xs mt-1">{pair.software.desc}</div>
-                                      {pair.software.connection && (
-                                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
-                                          {pair.software.connection}
-                                        </div>
-                                      )}
-                                    </div>
-                                  ))}
-                                </div>
-                              </div>
-                              
-                              {/* Échelle de Planck sur mobile */}
-                              <div className="mt-4 sm:mt-6">
-                                <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
-                                  <div className="font-bold text-white text-xs sm:text-sm">
-                                    Échelle de Planck
-                                    <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
-                                  </div>
-                                  <div className="text-gray-300 text-xs mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
-                                </div>
-                              </div>
+                      
+                      return pairedCascadeItems.map((pair, pairIndex) => (
+                        <React.Fragment key={pairIndex}>
+                          {/* Élément physique */}
+                          <div className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.physical.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">
+                              {pair.physical.level}
+                              {pair.physical.scale && <span className="text-cyan-300 font-mono ml-2">{pair.physical.scale}</span>}
                             </div>
+                            <div className="text-gray-300 text-xs mt-1">{pair.physical.desc}</div>
+                            {pair.physical.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {pair.physical.connection}
+                              </div>
+                            )}
                           </div>
                           
-                          {/* Version desktop : cascades alignées */}
-                          <div className="hidden md:grid md:grid-cols-2 gap-4 sm:gap-6">
-                            {/* Titres des cascades */}
-                            <div>
-                              <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                                Cascade Universelle (Physique) - Suite
-                              </h3>
-                            </div>
-                            <div>
-                              <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                                Cascade Informatique (Logicielle) - Suite
-                              </h3>
-                            </div>
-                            
-                            {/* Éléments alignés par paires */}
-                            {pairedCascadeItems.map((pair, pairIndex) => (
-                              <React.Fragment key={pairIndex}>
-                                {/* Élément physique */}
-                                <div className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.physical.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
-                                  <div className="font-bold text-white text-xs sm:text-sm">
-                                    {pair.physical.level}
-                                    {pair.physical.scale && <span className="text-cyan-300 font-mono ml-2">{pair.physical.scale}</span>}
-                                  </div>
-                                  <div className="text-gray-300 text-xs mt-1">{pair.physical.desc}</div>
-                                  {pair.physical.connection && (
-                                    <div className="text-yellow-200 text-xs mt-1 italic font-medium">
-                                      {pair.physical.connection}
-                                    </div>
-                                  )}
-                                </div>
-                                
-                                {/* Élément informatique */}
-                                <div className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.software.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
-                                  <div className="font-bold text-white text-xs sm:text-sm">{pair.software.level}</div>
-                                  <div className="text-gray-300 text-xs mt-1">{pair.software.desc}</div>
-                                  {pair.software.connection && (
-                                    <div className="text-yellow-200 text-xs mt-1 italic font-medium">
-                                      {pair.software.connection}
-                                    </div>
-                                  )}
-                                </div>
-                              </React.Fragment>
-                            ))}
-                            
-                            {/* Échelle de Planck - élargie sur desktop */}
-                            <div className="col-span-2 mt-4 sm:mt-6">
-                              <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
-                                <div className="font-bold text-white text-xs sm:text-sm">
-                                  Échelle de Planck
-                                  <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
-                                </div>
-                                <div className="text-gray-300 text-xs mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
+                          {/* Élément informatique */}
+                          <div className={`p-2 sm:p-3 rounded-lg border-l-4 ${pair.software.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center mb-2 sm:mb-3`}>
+                            <div className="font-bold text-white text-xs sm:text-sm">{pair.software.level}</div>
+                            <div className="text-gray-300 text-xs mt-1">{pair.software.desc}</div>
+                            {pair.software.connection && (
+                              <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                                {pair.software.connection}
                               </div>
-                            </div>
+                            )}
                           </div>
-                        </>
-                      );
+                        </React.Fragment>
+                      ));
                     })()}
+                    
+                    {/* Échelle de Planck - élargie sur desktop */}
+                    <div className="md:col-span-2 mt-4 sm:mt-6">
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">
+                          Échelle de Planck
+                          <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
+                        </div>
+                        <div className="text-gray-300 text-xs mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
+                      </div>
+                    </div>
                   </div>
                   
                   <div className="mt-4 sm:mt-6 bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border-l-4 border-cyan-400">
                     <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
-                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L'interface utilisateur que vous voyez est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
+                      <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L’interface utilisateur que vous voyez est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
 
 De la même façon, votre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l\'échelle atomique, tout existe en superposition quantique jusqu\'à ce qu\'on "regarde sous le capot".</strong>
                     </p>
