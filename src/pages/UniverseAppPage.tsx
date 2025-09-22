@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Code, Layers, Zap, Atom, Cpu, Binary, ArrowDown } from 'lucide-react';
+import { Code, Layers, Zap, Atom, Cpu, Binary, ArrowDown, Globe } from 'lucide-react';
 
 // Composant pour les chiffres binaires qui se téléportent
 const TeleportingBinaryDigits: React.FC = () => {
@@ -176,6 +176,70 @@ export const UniverseAppPage: React.FC = () => {
               <div className="bg-red-900/30 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-red-400/40 glow-border-red">
                 <p className="text-sm sm:text-base lg:text-lg text-red-100 leading-relaxed italic font-medium">
                   Contrairement à une vraie application, ce code n'est pas modifiable par un développeur extérieur : nous n'avons pas accès aux sources. Nous percevons uniquement l'interface finale.
+                </p>
+              </div>
+            </div>
+
+            {/* Section des Cadres Supérieurs - nouvelle section */}
+            <div className="bg-gradient-to-br from-slate-800/60 to-gray-800/50 backdrop-blur-md rounded-2xl p-6 sm:p-8 border-2 border-gray-400/50 shadow-2xl mb-6 sm:mb-8 floating-card">
+              <div className="flex items-center mb-4 sm:mb-6">
+                <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 text-gray-400 animate-pulse" />
+                <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-300">
+                  Les Cadres Supérieurs de la Réalité
+                </h2>
+              </div>
+              
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-6 sm:mb-8 font-medium">
+                Avant d'explorer les échelles qui composent la réalité, il faut comprendre que toutes ces échelles - qu'elles soient physiques ou informatiques - ne peuvent exister que parce qu'il y a un <strong className="text-white">cadre supérieur</strong> qui les contient et les rend possibles.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                {/* Cadre Universel : Tissu de l'espace-temps */}
+                <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/30 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-blue-400/40 shadow-xl">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <Globe className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 text-blue-400" />
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-blue-300">
+                      Tissu de l'espace-temps
+                    </h3>
+                  </div>
+                  <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
+                    <p className="font-medium">
+                      <strong className="text-blue-200">Cadre invisible qui régit la réalité :</strong> c'est la toile décrite par la relativité générale d'Einstein, qui définit les règles fondamentales de gravité, de géométrie et de causalité de l'univers.
+                    </p>
+                    <p className="text-cyan-200 italic font-medium">
+                      → Toutes les échelles du monde physique (particules, atomes, molécules, objets macroscopiques) existent à l'intérieur du tissu de l'espace-temps et sont soumises à ses lois.
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                      Sans ce cadre spatio-temporel, aucune particule ne pourrait se déplacer, aucune force ne pourrait s'exercer, et aucune échelle de la réalité physique ne pourrait exister ou interagir.
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Cadre Informatique : Appareil électronique */}
+                <div className="bg-gradient-to-r from-purple-900/40 to-indigo-900/30 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-purple-400/40 shadow-xl">
+                  <div className="flex items-center mb-3 sm:mb-4">
+                    <Cpu className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 text-purple-400" />
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-purple-300">
+                      Appareil électronique
+                    </h3>
+                  </div>
+                  <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
+                    <p className="font-medium">
+                      <strong className="text-purple-200">Support matériel invisible qui rend possible l'application :</strong> c'est l'ordinateur, le smartphone ou le serveur qui interprète, compile et affiche le code pour créer l'interface utilisateur.
+                    </p>
+                    <p className="text-indigo-200 italic font-medium">
+                      → Toutes les échelles de l'informatique (binaire, JavaScript, composants React, HTML/CSS, interface) existent à l'intérieur de l'appareil électronique et dépendent de sa puissance de calcul.
+                    </p>
+                    <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
+                      Sans ce support matériel, aucun code ne pourrait s'exécuter, aucune compilation ne pourrait avoir lieu, et aucune interface utilisateur ne pourrait être générée ou affichée.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 sm:mt-8 bg-gradient-to-r from-gray-900/60 to-slate-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-gray-400">
+                <p className="text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed font-medium">
+                  <strong className="text-white">Point clé :</strong> Ces cadres supérieurs ne sont pas des "échelles" au sens où nous l'entendons dans la cascade qui suit. Ils sont les <strong className="text-gray-300">fondations invisibles</strong> qui permettent à toutes les échelles d'exister et d'interagir. Dans l'analogie, le tissu de l'espace-temps et l'appareil électronique jouent le même rôle : ils sont les <strong className="text-gray-300">environnements d'exécution</strong> de leurs cascades respectives.
                 </p>
               </div>
             </div>
