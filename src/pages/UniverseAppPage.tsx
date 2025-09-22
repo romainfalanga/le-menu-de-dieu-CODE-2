@@ -482,13 +482,6 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                             connection: "→ Révélées comme briques ultimes",
                             color: "bg-orange-900/40 border-orange-400" 
                           },
-                          { 
-                            level: "Échelle de Planck", 
-                            scale: "10⁻³⁵ m", 
-                            desc: "Granularité ultime de l'espace-temps - pure information quantique", 
-                            connection: null,
-                            color: "bg-red-900/40 border-red-400" 
-                          }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
                             <div className="font-bold text-white text-xs sm:text-sm">
@@ -542,6 +535,17 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                             )}
                           </div>
                         ))}
+                      </div>
+                    </div>
+                    
+                    {/* Échelle de Planck - élargie sur desktop */}
+                    <div className="md:col-span-2 mt-4 sm:mt-6">
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">
+                          Échelle de Planck
+                          <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
+                        </div>
+                        <div className="text-gray-300 text-xs mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
                       </div>
                     </div>
                   </div>
