@@ -185,7 +185,7 @@ export const UniverseAppPage: React.FC = () => {
               <div className="flex items-center mb-4 sm:mb-6">
                 <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 text-gray-400 animate-pulse" />
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-300">
-                  Le cadre supérieur
+                  Le cadre de la cascade
                 </h2>
               </div>
               
@@ -222,10 +222,10 @@ export const UniverseAppPage: React.FC = () => {
                   </div>
                   <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
                     <p className="font-medium">
-                      <strong className="text-purple-200">Support matériel invisible qui rend possible l'application :</strong> c'est l'ordinateur ou le smartphone qui permet d'utiliser l'interface utilisateur de l'application.
+                      <strong className="text-purple-200">Support matériel invisible qui rend possible l'application :</strong> c'est l'ordinateur ou le smartphone qui affiche le code pour créer l'interface utilisateur.
                     </p>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                      Sans ce support matériel, aucun code ne pourrait s'exécuter, aucune compilation ne pourrait avoir lieu, et aucune interface utilisateur ne pourrait exister.
+                      Sans ce support matériel, aucun code ne pourrait s'exécuter, aucune compilation ne pourrait avoir lieu, et aucune interface utilisateur ne pourrait être générée ou affichée.
                     </p>
                   </div>
                 </div>
