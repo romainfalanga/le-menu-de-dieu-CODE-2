@@ -190,7 +190,7 @@ export const UniverseAppPage: React.FC = () => {
               </div>
               
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed mb-6 sm:mb-8 font-medium">
-                Avant d'explorer les échelles qui composent la réalité, il faut comprendre que toutes ces échelles - qu'elles soient physiques ou informatiques - ne peuvent exister que parce qu'il y a un <strong className="text-white">cadre supérieur</strong> qui les contient et les rend possibles.
+                Avant d'explorer les échelles qui composent la réalité, il faut comprendre qu'elles ne peuvent exister que parce qu'il y a un <strong className="text-white">cadre supérieur</strong> qui les contient et les rend possibles.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
