@@ -515,7 +515,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                       {[
                         {
                           level: "Composants React",
-                          desc: "Composants de la réalité réutilisables qui permettent la création d l'HTML et du CSS",
+                          desc: "Composants de la réalité réutilisables qui permettent la création du l'HTML et du CSS",
                           connection: "→ Logique et structure définies par le code JavaScript",
                           color: "bg-green-900/40 border-green-400"
                         },
