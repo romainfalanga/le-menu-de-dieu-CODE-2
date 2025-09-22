@@ -521,7 +521,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                         },
                         {
                           level: "JavaScript",
-                          desc: "Logique du fonctionnement de chaque composant",
+                          desc: "Logique du fonctionnement de chaque composant codé en Java script",
                           connection: "→ Exécution assurée par des moteurs qui sont eux-mêmes des programmes compilés en 0 et 1",
                           color: "bg-yellow-900/40 border-yellow-400"
                         },
