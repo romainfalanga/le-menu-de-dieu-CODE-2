@@ -454,13 +454,11 @@ export const GodCodesInBinaryPage: React.FC = () => {
               </h2>
             </div>
             
-            {/* Nouveau paragraphe d'introduction */}
-            <div className="bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-cyan-400 mb-4 sm:mb-6">
-              <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium">
-                <strong className="text-cyan-300">Rappel de l'analogie :</strong> Dans « L'univers est une application », nous avons vu que chaque composant de notre interface utilisateur (le monde macroscopique) est fait d'une cascade descendante vers toutes les couches inférieures, jusqu'aux bits binaires (0 et 1) à l'échelle des particules fondamentales. Chaque couche supérieure est la manifestation compilée des couches inférieures, et descendre d'échelle revient littéralement à regarder sous le capot de l'échelle supérieure.
-              </p>
-            </div>
-
+            <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium mb-4 sm:mb-6">
+              <strong className="text-cyan-300">Rappel de l'analogie :</strong> 
+              Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d'un composant \depuis cette échelle engendrerait les compilations couche par couche des éch\elles supérieures, jusqu'à modifier intégralement un composant de l'univers.
+            </p>
+            
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
               {/* Bloc Mécanique Quantique */}
               <div className="bg-gradient-to-r from-indigo-900/40 to-purple-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-indigo-400 shadow-xl">
