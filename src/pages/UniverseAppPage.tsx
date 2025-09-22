@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Code, Layers, Zap, Atom, Cpu, Binary, ArrowDown, Globe } from 'lucide-react';
+import { Code, Layers, Zap, Cpu, Binary, ArrowDown, Globe } from 'lucide-react';
 
 // Composant pour les chiffres binaires qui se téléportent
 const TeleportingBinaryDigits: React.FC = () => {
@@ -183,7 +183,7 @@ export const UniverseAppPage: React.FC = () => {
             {/* Section des Cadres Supérieurs - nouvelle section */}
             <div className="bg-gradient-to-br from-slate-800/60 to-gray-800/50 backdrop-blur-md rounded-2xl p-6 sm:p-8 border-2 border-gray-400/50 shadow-2xl mb-6 sm:mb-8 floating-card">
               <div className="flex items-center mb-4 sm:mb-6">
-                <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 text-gray-400 animate-pulse" />
+                <Code className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 text-gray-400 animate-pulse" />
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-300">
                   Le cadre supérieur
                 </h2>
@@ -323,12 +323,9 @@ export const UniverseAppPage: React.FC = () => {
 
               {/* Paragraphe de transition : Superposition Quantique */}
               <div className="bg-gradient-to-r from-indigo-900/60 to-purple-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-indigo-400/50 shadow-2xl mb-6">
-                <div className="flex items-center mb-3 sm:mb-4">
-                  <Atom className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 text-indigo-400" />
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-indigo-300">
-                    Transition vers la Superposition Quantique
-                  </h3>
-                </div>
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold text-indigo-300 text-center mb-3 sm:mb-4">
+                  Transition vers la Superposition Quantique
+                </h3>
                 <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
                   <p>
                     À partir de l'échelle atomique (~10⁻¹⁰ m), tout change : nous entrons dans le domaine de la <strong className="text-purple-300">superposition quantique</strong>.
