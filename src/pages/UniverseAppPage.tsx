@@ -251,7 +251,7 @@ export const UniverseAppPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                 <div className="space-y-3">
                   <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                   🌌 Cascade Universelle
+                    Cascade Universelle
                   </h3>
                   
                   <div className="space-y-2 sm:space-y-3">
@@ -289,7 +289,7 @@ export const UniverseAppPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                    💻 Cascade Informatique
+                    Cascade Informatique
                   </h3>
                   
                   <div className="space-y-2 sm:space-y-3">
@@ -346,7 +346,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                 {/* Cascade Universelle (Physique) - Suite */}
                 <div className="space-y-3">
                   <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                   🌌 Cascade Universelle (Suite)
+                    Cascade Universelle (Suite)
                   </h3>
                   {[
                     {
@@ -389,7 +389,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                 {/* Cascade Informatique (Logicielle) - Suite */}
                 <div className="space-y-3">
                   <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                   💻 Cascade Informatique (Suite)
+                    Cascade Informatique (Suite)
                   </h3>
                   {[
                     {
@@ -437,9 +437,9 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
               
               <div className="mt-4 sm:mt-6 bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border-l-4 border-cyan-400">
                 <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
-                  <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L'interface utilisateur que nous voyons est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript qui n'est en son essence qu'une suite de 0 et de 1.
+                  <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L'interface utilisateur que nous voyons est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
 
-De la même façon, notre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l'échelle atomique, tout existe en superposition quantique jusqu'à ce qu'on observe.</strong>
+De la même façon, notre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l\'échelle atomique, tout existe en superposition quantique jusqu'à ce qu\'on "regarde sous le capot".</strong>
                 </p>
               </div>
             </div>
