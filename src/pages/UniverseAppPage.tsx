@@ -464,19 +464,375 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
 
                   {/* Deuxième partie : Échelles en "superposition quantique" */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                    {/* Titres des cascades */}
-                    <div>
-                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
+                    {/* Colonne Cascade Universelle (Physique) - Suite */}
+                    <div className="space-y-3 sm:space-y-4">
+                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4 text-center md:text-left">
                         Cascade Universelle (Physique) - Suite
                       </h3>
-                    </div>
-                    <div>
-                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        Cascade Informatique (Logicielle) - Suite
-                      </h3>
+                      
+                      {/* Échelle atomique */}
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-green-900/40 border-green-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">
+                          Échelle atomique
+                          <span className="text-cyan-300 font-mono ml-2">10⁻¹⁰ m</span>
+                        </div>
+                        <div className="text-gray-300 text-xs mt-1">Briques de la matière en superposition quantique : hydrogène, carbone, fer</div>
+                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                          → Formés par l'assemblage de protons, neutrons et électrons
+                        </div>
+                      </div>
+                      
+                      {/* Échelle nucléaire */}
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-yellow-900/40 border-yellow-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">
+                          Échelle nucléaire
+                          <span className="text-cyan-300 font-mono ml-2">10⁻¹⁵ m</span>
+                        </div>
+                        <div className="text-gray-300 text-xs mt-1">Cœur des atomes révélé par observation : protons et neutrons</div>
+                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                          → Constitués de protons et de neutrons eux-mêmes composés de quarks
+                        </div>
+                      </div>
+                      
+                      {/* Échelle des particules fondamentales */}
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-orange-900/40 border-orange-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">
+                          Échelle des particules fondamentales
+                          <span className="text-cyan-300 font-mono ml-2">10⁻¹⁸ m</span>
+                        </div>
+                        <div className="text-gray-300 text-xs mt-1">Constituants ultimes révélés par mesure : quarks, leptons, bosons</div>
+                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                          → Révélées comme briques ultimes
+                        </div>
+                      </div>
                     </div>
                     
-                    {/* Éléments alignés par paires */}
+                    {/* Colonne Cascade Informatique (Logicielle) - Suite */}
+                    <div className="space-y-3 sm:space-y-4">
+                      <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4 text-center md:text-left">
+                        Cascade Informatique (Logicielle) - Suite
+                      </h3>
+                      
+                      {/* Composants React */}
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-green-900/40 border-green-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">Composants React</div>
+                        <div className="text-gray-300 text-xs mt-1">Composants réutilisables : boutons, formulaires</div>
+                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                          → Logique et structure définies par le code JavaScript
+                        </div>
+                      </div>
+                      
+                      {/* JavaScript */}
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-yellow-900/40 border-yellow-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">JavaScript</div>
+                        <div className="text-gray-300 text-xs mt-1">Langage en superposition de code : fonctions, variables, logique</div>
+                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                          → Exécution assurée par des moteurs qui sont eux-mêmes des programmes compilés en 0 et 1
+                        </div>
+                      </div>
+                      
+                      {/* 0 et 1 (Binaire) */}
+                      <div className="p-2 sm:p-3 rounded-lg border-l-4 bg-orange-900/40 border-orange-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center">
+                        <div className="font-bold text-white text-xs sm:text-sm">0 et 1 (Binaire)</div>
+                        <div className="text-gray-300 text-xs mt-1">Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1. C'est la brique ultime du code.</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Échelle de Planck - section séparée et centrée */}
+                  <div className="mt-4 sm:mt-6">
+                    <div className="max-w-2xl mx-auto">
+                      <div className="p-3 sm:p-4 rounded-lg border-l-4 bg-red-900/40 border-red-400 min-h-[60px] sm:min-h-[70px] flex flex-col justify-center text-center">
+                        <div className="font-bold text-white text-sm sm:text-base">
+                          Échelle de Planck
+                          <span className="text-cyan-300 font-mono ml-2">10⁻³⁵ m</span>
+                        </div>
+                        <div className="text-gray-300 text-xs sm:text-sm mt-1">Granularité ultime de l'espace-temps - pure information quantique</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-4 sm:mt-6 bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border-l-4 border-cyan-400">
+                  <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
+                    <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L'interface utilisateur que vous voyez est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
+
+De la même façon, votre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l\'échelle atomique, tout existe en superposition quantique jusqu\'à ce qu\'on "regarde sous le capot".</strong>
+                  </p>
+                </div>
+              </div>
+
+              {/* Call to action */}
+              <div className="flex flex-col items-center mb-4 sm:mb-6">
+                <p className="text-lg sm:text-xl text-cyan-300 font-bold mb-4 sm:mb-6 neon-text-cyan text-center px-4">
+                  Explorez les 6 couches de cette analogie
+                </p>
+                <div className="animate-bounce mb-4">
+                  <ArrowDown className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400 drop-shadow-[0_0_20px_rgba(6,182,212,0.8)]" />
+                </div>
+                <p className="text-sm sm:text-base text-gray-300 font-medium text-center px-4">
+                  Cliquez sur le bouton en bas pour commencer le voyage
+                </p>
+              </div>
+
+              {/* Bouton Explorer pour l'introduction */}
+              {currentSection < sections.length - 2 && (
+                <div className="flex justify-center mt-6 sm:mt-8 px-4">
+                  <button
+                    onClick={goToLowerScale}
+                    className="group relative bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:via-blue-500 hover:to-purple-500 text-white rounded-full px-6 py-3 sm:px-8 sm:py-4 lg:px-12 lg:py-6 shadow-2xl border-2 border-cyan-400/50 transition-all duration-500 transform hover:scale-110 active:scale-95 cursor-pointer cosmic-button overflow-hidden w-full max-w-md"
+                  >
+                    {/* Effet de lueur interne */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
+                    
+                    {/* Effet de scan */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-scan rounded-full"></div>
+                    
+                    {/* Contenu du bouton */}
+                    <div className="relative z-10 flex items-center justify-center">
+                      <span className="text-sm sm:text-base lg:text-xl font-black tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] text-center">
+                        Explorer l'application de l'univers
+                      </span>
+                    </div>
+                    
+                    {/* Particules orbitales */}
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
+                    <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-purple-400 rounded-full animate-ping opacity-75 animation-delay-300"></div>
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          // Pages des échelles
+          <div className={`w-full bg-gradient-to-br ${currentSectionData.bgGradient} flex items-start justify-center p-4 sm:p-6 relative z-20`}>
+            <div className="max-w-6xl mx-auto w-full">
+              
+              {/* En-tête de section */}
+              <div className="text-center mb-3 sm:mb-4">
+                {/* Bouton Élargir intégré */}
+                {currentSection > 0 && (
+                  <div className="mb-3 sm:mb-4">
+                    <button
+                      onClick={goToUpperScale}
+                      className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white rounded-full w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 shadow-2xl transition-all duration-500 transform hover:scale-110 active:scale-95 border-2 border-white/20"
+                    >
+                      <div className="flex items-center justify-center h-full transition-all duration-500 group-hover:scale-110">
+                        <span className="text-xs sm:text-sm lg:text-base font-bold transition-all duration-500 group-hover:font-extrabold text-center leading-tight px-2">Élargir</span>
+                      </div>
+                    </button>
+                  </div>
+                )}
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2 inline-block border border-white/20 max-w-full">
+                  <div className="text-xs sm:text-sm lg:text-base font-bold text-center">
+                    <span className="text-white block sm:inline">{currentSectionData.title}</span>
+                    <span className="text-cyan-300 font-mono block sm:inline sm:ml-2">{currentSectionData.scale}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contenu principal */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
+                {/* Section Univers */}
+                <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-purple-400/40 shadow-2xl">
+                  <div className="bg-purple-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 sm:mb-4 border border-purple-300/30">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-bold text-purple-200 text-center">
+                      Univers : {currentSectionData.content.universe.split(',')[0]}
+                    </h3>
+                  </div>
+                  <p className="text-gray-200 text-xs sm:text-sm lg:text-base leading-relaxed mb-3 sm:mb-4">
+                    {currentSectionData.content.universe}
+                  </p>
+                  
+                  {/* Exemples univers */}
+                  {currentSectionData.content.universeExamples && (
+                    <div className="bg-purple-800/30 backdrop-blur-sm rounded-md p-2 sm:p-3 border border-purple-300/30 mb-3 sm:mb-4">
+                      <h4 className="font-bold text-purple-200 mb-1 sm:mb-2 text-xs sm:text-sm">
+                        🌌 Exemples dans l'univers
+                      </h4>
+                      <p className="text-gray-300 text-xs sm:text-sm leading-relaxed italic">
+                        {currentSectionData.content.universeExamples}
+                      </p>
+                    </div>
+                  )}
+                  
+                  {/* Connexions univers */}
+                  <div className="space-y-2 sm:space-y-3">
+                    {currentSectionData.content.universeConnections?.above && (
+                      <div className="bg-green-900/30 backdrop-blur-sm rounded-md p-2 sm:p-3 border border-green-400/30">
+                        <h4 className="font-bold text-green-300 mb-1 flex items-center text-xs sm:text-sm">
+                          <ChevronUp className="w-3 h-3 mr-1 flex-shrink-0" />
+                          Au-dessus
+                        </h4>
+                        <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
+                          {currentSectionData.content.universeConnections.above}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {currentSectionData.content.universeConnections?.below && (
+                      <div className="bg-orange-900/30 backdrop-blur-sm rounded-md p-2 sm:p-3 border border-orange-400/30">
+                        <h4 className="font-bold text-orange-300 mb-1 flex items-center text-xs sm:text-sm">
+                          <ChevronDown className="w-3 h-3 mr-1 flex-shrink-0" />
+                          En dessous
+                        </h4>
+                        <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
+                          {currentSectionData.content.universeConnections.below}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Section Informatique */}
+                <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-blue-400/40 shadow-2xl">
+                  <div className="bg-blue-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 sm:mb-4 border border-blue-300/30">
+                    <h3 className="text-sm sm:text-base lg:text-lg font-bold text-blue-200 text-center">
+                      Application : {currentSectionData.content.application.split(',')[0]}
+                    </h3>
+                  </div>
+                  <p className="text-gray-200 text-xs sm:text-sm lg:text-base leading-relaxed mb-3 sm:mb-4">
+                    {currentSectionData.content.application}
+                  </p>
+                  
+                  {/* Connexions application */}
+                  <div className="space-y-2 sm:space-y-3">
+                    {currentSectionData.content.applicationConnections?.above && (
+                      <div className="bg-green-900/30 backdrop-blur-sm rounded-md p-2 sm:p-3 border border-green-400/30">
+                        <h4 className="font-bold text-green-300 mb-1 flex items-center text-xs sm:text-sm">
+                          <ChevronUp className="w-3 h-3 mr-1 flex-shrink-0" />
+                          Au-dessus
+                        </h4>
+                        <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
+                          {currentSectionData.content.applicationConnections.above}
+                        </p>
+                      </div>
+                    )}
+                    
+                    {currentSectionData.content.applicationConnections?.below && (
+                      <div className="bg-orange-900/30 backdrop-blur-sm rounded-md p-2 sm:p-3 border border-orange-400/30">
+                        <h4 className="font-bold text-orange-300 mb-1 flex items-center text-xs sm:text-sm">
+                          <ChevronDown className="w-3 h-3 mr-1 flex-shrink-0" />
+                          En dessous
+                        </h4>
+                        <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
+                          {currentSectionData.content.applicationConnections.below}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Connexion horizontale */}
+              <div className="bg-gradient-to-r from-emerald-900/50 to-teal-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-emerald-400/40 shadow-2xl mb-4 sm:mb-6">
+                <div className="bg-emerald-800/30 backdrop-blur-sm rounded-lg px-3 py-2 mb-3 sm:mb-4 border border-emerald-300/30">
+                  <h4 className="font-bold text-emerald-200 text-sm sm:text-base lg:text-lg text-center">
+                    Connexion horizontale application ↔ univers
+                  </h4>
+                </div>
+                <p className="text-gray-200 text-xs sm:text-sm lg:text-base leading-relaxed font-medium text-center">
+                  {currentSectionData.content.connectionHorizontal}
+                </p>
+              </div>
+
+              {/* Bouton Rétrécir pour les pages d'échelles */}
+              {currentSection < sections.length - 2 && currentSection !== 5 && (
+                <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3">
+                  <button
+                    onClick={goToLowerScale}
+                    className="group bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 shadow-2xl transition-all duration-500 transform hover:scale-90 active:scale-95 border-2 border-white/20"
+                  >
+                    <div className="flex items-center justify-center h-full transition-all duration-500 group-hover:scale-90">
+                      <span className="text-xs sm:text-sm lg:text-base font-bold transition-all duration-500 group-hover:font-extrabold text-center leading-tight px-2">Rétrécir</span>
+                    </div>
+                  </button>
+                </div>
+              )}
+
+              {/* Bouton spécial "Dieu code en Binaire" pour l'échelle de Planck */}
+              {currentSection === 5 && (
+                <div className="flex justify-center mt-4 sm:mt-6 mb-2 sm:mb-3 px-4">
+                  <Link
+                    to="/god-binary"
+                    className="group relative bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 hover:from-yellow-700 hover:via-orange-700 hover:to-red-700 text-white rounded-full px-6 py-3 sm:px-8 sm:py-4 lg:px-12 lg:py-6 shadow-2xl transition-all duration-700 transform hover:scale-115 active:scale-95 border-4 border-yellow-400/60 hover:border-yellow-300/80 overflow-hidden w-full max-w-md"
+                  >
+                    {/* Effet de lueur divine */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/30 via-orange-400/30 to-red-400/30 rounded-full blur-2xl animate-pulse group-hover:blur-3xl transition-all duration-700"></div>
+                    
+                    {/* Particules divines */}
+                    <div className="absolute inset-0 overflow-hidden rounded-full">
+                      {[...Array(12)].map((_, i) => (
+                        <div
+                          key={i}
+                          className="absolute w-1 h-1 bg-yellow-300 rounded-full animate-ping opacity-80 group-hover:opacity-100"
+                          style={{
+                            top: `${Math.random() * 100}%`,
+                            left: `${Math.random() * 100}%`,
+                            animationDelay: `${Math.random() * 3}s`,
+                            animationDuration: `${1 + Math.random() * 2}s`
+                          }}
+                        />
+                      ))}
+                    </div>
+                    
+                    {/* Anneaux énergétiques orbitaux */}
+                    <div className="absolute -inset-4 border-2 border-yellow-400/30 rounded-full animate-spin opacity-40 group-hover:opacity-70 transition-all duration-700" style={{ animationDuration: '8s' }}></div>
+                    <div className="absolute -inset-6 border border-orange-400/20 rounded-full animate-spin opacity-30 group-hover:opacity-60 transition-all duration-700" style={{ animationDuration: '12s', animationDirection: 'reverse' }}></div>
+                    <div className="absolute -inset-8 border border-red-400/15 rounded-full animate-spin opacity-20 group-hover:opacity-50 transition-all duration-700" style={{ animationDuration: '16s' }}></div>
+                    
+                    {/* Effet de scan divin */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-scan rounded-full"></div>
+                    
+                    {/* Effet de pulsation divine */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 via-orange-500/20 to-red-500/20 rounded-full animate-pulse opacity-50 group-hover:opacity-80 transition-all duration-700"></div>
+                    
+                    {/* Contenu du bouton */}
+                    <div className="relative z-10 flex items-center justify-center">
+                      <Binary className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 mr-2 sm:mr-3 group-hover:animate-pulse drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] flex-shrink-0" />
+                      <span className="text-sm sm:text-base lg:text-xl font-black group-hover:text-yellow-100 transition-colors duration-500 drop-shadow-[0_0_15px_rgba(255,255,255,0.6)] text-center">
+                        Dieu Code en Binaire
+                      </span>
+                    </div>
+                    
+                    {/* Bordure lumineuse animée */}
+                    <div className="absolute -inset-3 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 rounded-full opacity-40 blur-xl animate-pulse group-hover:opacity-80 group-hover:blur-2xl transition-all duration-700"></div>
+                    
+                    {/* Particules orbitales externes */}
+                    <div className="absolute -top-3 -right-3 w-4 h-4 bg-yellow-400 rounded-full animate-ping opacity-60 group-hover:opacity-90 transition-opacity duration-700"></div>
+                    <div className="absolute -bottom-3 -left-3 w-4 h-4 bg-orange-400 rounded-full animate-ping opacity-60 group-hover:opacity-90 transition-opacity duration-700 animation-delay-300"></div>
+                    <div className="absolute -top-3 -left-3 w-3 h-3 bg-red-400 rounded-full animate-ping opacity-50 group-hover:opacity-80 transition-opacity duration-700 animation-delay-500"></div>
+                    <div className="absolute -bottom-3 -right-3 w-3 h-3 bg-yellow-300 rounded-full animate-ping opacity-50 group-hover:opacity-80 transition-opacity duration-700 animation-delay-700"></div>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Indicateurs de navigation */}
+      {currentSection !== -1 && (
+        <div className="fixed right-2 sm:right-4 lg:right-6 top-1/2 transform -translate-y-1/2 z-50">
+          <div className="flex flex-col space-y-2 sm:space-y-3">
+            {sections.slice(1).map((section, index) => (
+              <button
+                key={section.id}
+                onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
+                className={`w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 rounded-full transition-all duration-500 transform hover:scale-125 ${
+                  index === currentSection
+                    ? `bg-gradient-to-r ${section.color} shadow-lg scale-125 glow-dot`
+                    : 'bg-white/40 hover:bg-white/60 hover:shadow-lg'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
                     {(() => {
                       const pairedCascadeItems = [
                         {
