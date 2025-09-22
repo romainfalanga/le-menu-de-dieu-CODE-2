@@ -455,7 +455,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
             </div>
             
             <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium mb-4 sm:mb-6">
-              <strong className="text-cyan-300">Rappel de l'analogie :</strong> 
+              <strong className="text-cyan-300">Rappel de l'analogie : </strong> 
               Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d'un composant depuis cette échelle engendrerait les compilations couche par couche des échelles supérieures, jusqu'à modifier intégralement un composant de l'univers.
             </p>
             
