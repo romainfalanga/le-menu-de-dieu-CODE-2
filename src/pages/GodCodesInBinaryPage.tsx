@@ -463,7 +463,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
               {/* Bloc Mécanique Quantique */}
               <div className="bg-gradient-to-r from-indigo-900/40 to-purple-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-indigo-400 shadow-xl">
                 <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-                  <strong className="text-indigo-300">Mécanique Quantique :</strong> 
+                  <strong className="text-indigo-300">Mécanique Quantique : </strong> 
                   En prenant en compte la mécanique quantique dans ce schéma, les composants React, le JavaScript et même les 0 et 1 n'existent pas de manière déterminée tant qu'on ne les observe pas. Ils existent sous forme de probabilités, et l'acte d'observer les contraint à « choisir » une seule manière d'être.
                 </p>
               </div>
@@ -471,7 +471,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
               {/* Bloc Modifier la Réalité - Fusion des deux derniers blocs */}
               <div className="bg-gradient-to-r from-purple-900/40 to-red-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-purple-400 shadow-xl">
                 <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-                  <strong className="text-purple-300">Modifier la Réalité :</strong> 
+                  <strong className="text-purple-300">Modifier la Réalité : </strong> 
                   Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d'un composant depuis cette échelle engendrerait les compilations couche par couche des échelles supérieures, jusqu'à modifier intégralement un composant de l'univers.
                   <br /><br />
                   Mais il y a une possibilité encore plus vertigineuse : une entité capable de manipuler directement ces bits (particules fondamentales) pourrait, le temps d'une fraction de seconde, figer les probabilités de chaque échelle. Chaque composant existerait alors pleinement, avant de redevenir incertain l'instant suivant. L'interface utilisateur, elle, resterait stable, mais sous le capot, les échelles de la mécanique quantique retourneraient à leur état de probabilités. Une telle puissance permettrait non seulement de modifier des composants, mais aussi d'en créer, comme le représente la simulation de codage binaire ci-dessus, mais à une échelle infiniment plus vaste.
