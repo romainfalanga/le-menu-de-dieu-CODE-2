@@ -481,7 +481,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                           level: "Échelle nucléaire",
                           scale: "10⁻¹⁵ m",
                           desc: "Cœur des atomes révélé par observation : protons et neutrons",
-                          connection: "→ Constitués de protons et de neutrons eux-mêmes composés de quarks",
+                          connection: "→ Constitués de protons et de neutrons",
                           color: "bg-yellow-900/40 border-yellow-400"
                         },
                         {
