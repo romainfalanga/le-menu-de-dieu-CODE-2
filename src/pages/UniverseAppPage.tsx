@@ -224,7 +224,6 @@ export const UniverseAppPage: React.FC = () => {
                     <p className="font-medium">
                       <strong className="text-purple-200">Support matériel invisible qui rend possible l'application :</strong> c'est l'ordinateur, le smartphone ou le serveur qui interprète, compile et affiche le code pour créer l'interface utilisateur.
                     </p>
-                    <p className="text-indigo-200 italic font-medium">
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
                       Sans ce support matériel, aucun code ne pourrait s'exécuter, aucune compilation ne pourrait avoir lieu, et aucune interface utilisateur ne pourrait être générée ou affichée.
                     </p>
