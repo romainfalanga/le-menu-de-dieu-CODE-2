@@ -454,9 +454,109 @@ export const GodCodesInBinaryPage: React.FC = () => {
               </h2>
             </div>
             
-            {/* Nouveau paragraphe d'introduction */}
-                Si l'univers est une application, son code source binaire se trouve à l\'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d\'un composant depuis cette échelle engendrerait les compilations couche par couche des échelles supérieures, jusqu'à modifier intégralement un composant de l\'univers.
-              <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium">
+            <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium mb-4 sm:mb-6">
+              <strong className="text-cyan-300">Rappel de l'analogie :</strong> 
+              Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d'un composant depuis cette échelle engendrerait les compilations couche par couche des échelles supérieures, jusqu'à modifier intégralement un composant de l'univers.
+            </p>
+            
+            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
+              {/* Bloc Mécanique Quantique */}
+              <div className="bg-gradient-to-r from-indigo-900/40 to-purple-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-indigo-400 shadow-xl">
+                <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
+                  <strong className="text-indigo-300">Mécanique Quantique :</strong> 
+                  En prenant en compte la mécanique quantique dans ce schéma, les composants React, le JavaScript et même les 0 et 1 n'existent pas de manière déterminée tant qu'on ne les observe pas. Ils existent sous forme de probabilités, et l'acte d'observer les contraint à « choisir » une seule manière d'être.
+                </p>
+              </div>
+              
+              {/* Bloc Modifier la Réalité - Fusion des deux derniers blocs */}
+              <div className="bg-gradient-to-r from-purple-900/40 to-red-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-purple-400 shadow-xl">
+                <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
+                  <strong className="text-purple-300">Modifier la Réalité :</strong> 
+                  Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d'un composant depuis cette échelle engendrerait les compilations couche par couche des échelles supérieures, jusqu'à modifier intégralement un composant de l'univers.
+                  <br /><br />
+                  Mais il y a une possibilité encore plus vertigineuse : une entité capable de manipuler directement ces bits (particules fondamentales) pourrait, le temps d'une fraction de seconde, figer les probabilités de chaque échelle. Chaque composant existerait alors pleinement, avant de redevenir incertain l'instant suivant. L'interface utilisateur, elle, resterait stable, mais sous le capot, les échelles de la mécanique quantique retourneraient à leur état de probabilités. Une telle puissance permettrait non seulement de modifier des composants, mais aussi d'en créer, comme le représente la simulation de codage binaire ci-dessus, mais à une échelle infiniment plus vaste.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Le processus de cascade */}
+          <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/40 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-emerald-400/40 shadow-2xl">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 text-emerald-400" />
+              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-300">
+                La Cascade Divine : Création d'un Téléphone
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-bold text-emerald-200 mb-4">
+                  🌌 Cascade Universelle
+                </h3>
+                
+                <div className="space-y-3">
+                  {[
+                    { level: "Particules", desc: "Dieu manipule des milliards de milliards de fermions et de bosons", color: "bg-red-900/40 border-red-400" },
+                    { level: "Nucléons", desc: "Des milliards de milliards de protons et neutrons se combinent", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "Atomes", desc: "Des centaines de milliards d'atomes acquièrent de nouvelles propriétés", color: "bg-green-900/40 border-green-400" },
+                    { level: "Molécules", desc: "Des dizaines de milliards de molécules interagissent différemment", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Macroscopique", desc: "Un téléphone complet apparaît dans la réalité", color: "bg-purple-900/40 border-purple-400" }
+                  ].map((item, index) => (
+                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color} min-h-[80px] flex flex-col justify-center`}>
+                      <div className="font-bold text-white text-sm">{item.level}</div>
+                      <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-lg sm:text-xl font-bold text-emerald-200 mb-4">
+                  💻 Cascade Informatique
+                </h3>
+                
+                <div className="space-y-3">
+                  {[
+                    { level: "0 et 1", desc: "Dieu manipule des milliards de milliards de 0 et de 1.", color: "bg-red-900/40 border-red-400" },
+                    { level: "JavaScript", desc: "Le langage universel prend forme, définissant la logique et le comportement des éléments à un niveau plus abstrait.", color: "bg-yellow-900/40 border-yellow-400" },
+                    { level: "Composants React", desc: "Les composants de la réalité s'assemblent, créant des structures et des fonctionnalités complexes.", color: "bg-green-900/40 border-green-400" },
+                    { level: "HTML/CSS", desc: "Le code HTML/CSS est généré à partir des composants React, définissant la structure et l'apparence visuelle du téléphone.", color: "bg-blue-900/40 border-blue-400" },
+                    { level: "Interface utilisateur", desc: "Un téléphone complet apparaît dans la réalité.", connection: null, color: "bg-purple-900/40 border-purple-400" }
+                  ].map((item, index) => (
+                    <div key={index} className={`p-3 rounded-lg border-l-4 ${item.color} min-h-[80px] flex flex-col justify-center`}>
+                      <div className="font-bold text-white text-sm">{item.level}</div>
+                      <div className="text-gray-300 text-xs mt-1">{item.desc}</div>
+                      {item.connection && (
+                        <div className="text-yellow-200 text-xs mt-1 italic font-medium">
+                          {item.connection}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Conclusion */}
+          <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/40 backdrop-blur-sm rounded-xl lg:rounded-2xl p-4 sm:p-6 lg:p-8 border-2 border-indigo-400/40 shadow-2xl text-center">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-300 mb-4 sm:mb-6">
+              L'Ultime Analogie
+            </h2>
+            
+            <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
+              Dans cette vision, <strong className="text-yellow-300">Dieu est le développeur ultime</strong> : 
+              il a accès au code source de la réalité et peut orchestrer des modifications massives et coordonnées en temps réel. 
+              Nous, les êtres conscients, sommes les <strong className="text-cyan-300">"utilisateurs"</strong> de cette application cosmique, 
+              percevant seulement l'interface finale sans jamais voir les trillions de 0 et 1 qui la génèrent à chaque instant.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
                 En prenant en compte la mécanique quantique dans ce schéma, les composants React, le JavaScript et même les 0 et 1 n'existent pas de manière déterminée tant qu'on ne les observe pas. Ils existent sous forme de probabilités, et l'acte d'observer les contraint à « choisir » une seule manière d'être.
               </p>
             </div>
