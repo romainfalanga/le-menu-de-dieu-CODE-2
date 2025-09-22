@@ -226,6 +226,102 @@ body {
   animation: gradient-x 4s ease infinite;
 }
 
+/* Nouvelles animations pour les effets cosmiques */
+@keyframes star-field {
+  0%, 100% {
+    background-position: 0% 0%, 100% 100%, 50% 50%;
+  }
+  33% {
+    background-position: 100% 0%, 0% 100%, 25% 75%;
+  }
+  66% {
+    background-position: 0% 100%, 100% 0%, 75% 25%;
+  }
+}
+
+@keyframes cosmic-glow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-star-field {
+  animation: star-field 20s ease-in-out infinite;
+}
+
+.animate-cosmic-glow {
+  animation: cosmic-glow 8s ease-in-out infinite;
+}
+
+/* Effets de lueur et de néon */
+.neon-glow {
+  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 10px #06b6d4, 0 0 20px #06b6d4, 0 0 30px #06b6d4;
+}
+
+.neon-text-emerald {
+  text-shadow: 0 0 10px #10b981, 0 0 20px #10b981, 0 0 30px #10b981;
+}
+
+/* Effets de bordure lumineuse */
+.glow-border-yellow {
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.3), inset 0 0 20px rgba(251, 191, 36, 0.1);
+}
+
+.glow-border-red {
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3), inset 0 0 20px rgba(239, 68, 68, 0.1);
+}
+
+.glow-border-emerald {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.4), inset 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+/* Effet de carte flottante */
+.floating-card {
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.floating-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Bouton cosmique */
+.cosmic-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cosmic-button::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #06b6d4, #3b82f6, #8b5cf6, #06b6d4);
+  border-radius: inherit;
+  z-index: -1;
+  animation: cosmic-border 3s linear infinite;
+}
+
+@keyframes cosmic-border {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Effet de point lumineux pour la navigation */
+.glow-dot {
+  box-shadow: 0 0 15px currentColor, 0 0 30px currentColor;
+}
+
 /* Animations pour la navigation */
 @keyframes slideInFromBottom {
   from {

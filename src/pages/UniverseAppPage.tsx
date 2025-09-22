@@ -293,13 +293,21 @@ export const UniverseAppPage: React.FC = () => {
   const currentSectionData = sections[currentSection + 1]; // +1 car l'intro est à l'index -1
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden">
       <div 
-        className="min-h-screen overflow-hidden relative"
+        className="min-h-screen relative z-10"
       >
-        {/* Effet de particules en arrière-plan */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-indigo-900/20"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(147,51,234,0.05)_50%,transparent_75%)] bg-[length:60px_60px] animate-pulse"></div>
+        {/* Effets d'arrière-plan améliorés */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/30 via-transparent to-indigo-900/30 z-0"></div>
+        
+        {/* Champ d'étoiles animé */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3),transparent_50%),radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%),radial-gradient(circle_at_40%_40%,rgba(120,219,255,0.2),transparent_50%)] animate-star-field z-0"></div>
+        
+        {/* Grille quantique subtile */}
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(147,51,234,0.03)_50%,transparent_75%)] bg-[length:80px_80px] animate-pulse opacity-60 z-0"></div>
+        
+        {/* Effet de lueur cosmique */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-cosmic-glow z-0"></div>
         
         {/* Chiffres binaires téléportants pour la dernière section */}
         {currentSection === 5 && <TeleportingBinaryDigits />}
@@ -309,48 +317,50 @@ export const UniverseAppPage: React.FC = () => {
         <div className="flex items-start justify-center pt-2">
           {currentSection === -1 ? (
             // Page d'introduction
-            <div className="w-full flex items-start justify-center p-2 sm:p-4 pt-2">
+            <div className="w-full flex items-start justify-center p-4 sm:p-6 pt-4 relative z-20">
               <div className="max-w-4xl mx-auto w-full text-center">
                 
                 {/* Titre principal */}
-                <div className="mb-3 sm:mb-4">
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-300 via-purple-300 via-pink-300 to-yellow-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(6,182,212,0.8)] mb-3 sm:mb-4 leading-tight">
+                <div className="mb-6 sm:mb-8">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-r from-cyan-300 via-purple-300 via-pink-300 to-yellow-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_40px_rgba(6,182,212,1)] mb-4 sm:mb-6 leading-tight tracking-wide neon-glow">
                     L'univers est une application
                   </h1>
                 </div>
 
-                {/* Contenu d'introduction */}
-                <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20">
-                    <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-                      Imaginons que l'univers fonctionne comme une application informatique.
-                    </p>
+                {/* Contenu d'introduction consolidé */}
+                <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+                  {/* Bloc principal d'introduction */}
+                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl floating-card">
+                    <div className="space-y-4 sm:space-y-5">
+                      <p className="text-base sm:text-lg lg:text-xl text-gray-100 leading-relaxed font-medium">
+                        Imaginons que l'univers fonctionne comme une application informatique.
+                      </p>
+                      
+                      <p className="text-base sm:text-lg lg:text-xl text-gray-100 leading-relaxed font-medium">
+                        Chaque couche correspond à un langage ou à un niveau d'abstraction, qui encapsule le précédent et prépare le suivant.
+                      </p>
+                      
+                      <div className="bg-gradient-to-r from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-4 sm:p-5 border border-yellow-400/40 glow-border-yellow">
+                        <p className="text-base sm:text-lg lg:text-xl text-yellow-100 leading-relaxed font-semibold">
+                          Ce que nous voyons à l'échelle humaine : "le monde macroscopique" est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à l'échelle de Planck.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                   
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20">
-                    <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
-                      Chaque couche correspond à un langage ou à un niveau d'abstraction, qui encapsule le précédent et prépare le suivant.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-yellow-900/30 to-amber-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-yellow-400/30">
-                    <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed font-medium">
-                      Ce que nous voyons à l'échelle humaine : "le monde macroscopique" est une interface utilisateur : le rendu final d'un immense processus de compilation qui descend jusqu'à une mer de 0 et 1 à l'échelle de Planck.
-                    </p>
-                  </div>
-                  
-                  <div className="bg-red-900/30 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-red-400/30">
-                    <p className="text-xs sm:text-sm lg:text-base text-gray-300 leading-relaxed italic">
+                  {/* Note technique séparée */}
+                  <div className="bg-red-900/30 backdrop-blur-md rounded-xl p-4 sm:p-5 border border-red-400/40 glow-border-red">
+                    <p className="text-sm sm:text-base lg:text-lg text-red-100 leading-relaxed italic font-medium">
                       Contrairement à une vraie application, ce code n'est pas modifiable par un développeur extérieur : nous n'avons pas accès aux sources. Nous percevons uniquement l'interface finale.
                     </p>
                   </div>
                 </div>
 
                 {/* Cascade des échelles - Section ajoutée */}
-                <div className="bg-gradient-to-br from-emerald-900/50 to-teal-900/40 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-emerald-400/40 shadow-2xl mb-3 sm:mb-4">
-                  <div className="flex items-center mb-3 sm:mb-4">
-                    <Layers className="w-6 h-6 sm:w-8 sm:h-8 mr-2 sm:mr-3 text-emerald-400" />
-                    <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-emerald-300">
+                <div className="bg-gradient-to-br from-emerald-900/60 to-teal-900/50 backdrop-blur-md rounded-2xl p-6 sm:p-8 border-2 border-emerald-400/50 shadow-2xl mb-6 sm:mb-8 floating-card glow-border-emerald">
+                  <div className="flex items-center mb-4 sm:mb-6">
+                    <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 text-emerald-400 animate-pulse" />
+                    <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-emerald-300 neon-text-emerald">
                       La Cascade des Échelles : Du Visible à l'Invisible
                     </h2>
                   </div>
@@ -568,28 +578,41 @@ De la même façon, votre corps est constitué de molécules, elles-mêmes faite
                 </div>
 
                 {/* Call to action */}
-                <div className="flex flex-col items-center mb-2 sm:mb-3">
-                  <p className="text-base sm:text-lg text-cyan-300 font-bold mb-3 sm:mb-4">
+                <div className="flex flex-col items-center mb-4 sm:mb-6">
+                  <p className="text-lg sm:text-xl text-cyan-300 font-bold mb-4 sm:mb-6 neon-text-cyan">
                     Explorez les 6 couches de cette analogie
                   </p>
-                  <div className="animate-bounce">
-                    <ArrowDown className="w-6 h-6 sm:w-8 sm:h-8 text-cyan-400" />
+                  <div className="animate-bounce mb-4">
+                    <ArrowDown className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-400 drop-shadow-[0_0_20px_rgba(6,182,212,0.8)]" />
                   </div>
-                  <p className="text-xs sm:text-sm text-gray-400 mt-2">
+                  <p className="text-sm sm:text-base text-gray-300 font-medium">
                     Cliquez sur le bouton en bas pour commencer le voyage
                   </p>
                 </div>
 
                 {/* Bouton Explorer pour l'introduction */}
                 {currentSection < sections.length - 2 && (
-                  <div className="flex justify-center mt-2 sm:mt-3">
+                  <div className="flex justify-center mt-6 sm:mt-8">
                     <button
                       onClick={goToLowerScale}
-                      className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white rounded-full px-6 py-3 sm:px-8 sm:py-4 shadow-2xl border-2 border-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
+                      className="group relative bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 hover:from-cyan-500 hover:via-blue-500 hover:to-purple-500 text-white rounded-full px-8 py-4 sm:px-12 sm:py-6 shadow-2xl border-2 border-cyan-400/50 transition-all duration-500 transform hover:scale-110 active:scale-95 cursor-pointer cosmic-button overflow-hidden"
                     >
-                      <div className="flex items-center justify-center">
-                        <span className="text-sm sm:text-base font-bold whitespace-nowrap">Explorer l'application de l'univers</span>
+                      {/* Effet de lueur interne */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 via-blue-400/20 to-purple-400/20 rounded-full blur-xl animate-pulse"></div>
+                      
+                      {/* Effet de scan */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-scan rounded-full"></div>
+                      
+                      {/* Contenu du bouton */}
+                      <div className="relative z-10 flex items-center justify-center">
+                        <span className="text-base sm:text-lg lg:text-xl font-black whitespace-nowrap tracking-wide drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+                          Explorer l'application de l'univers
+                        </span>
                       </div>
+                      
+                      {/* Particules orbitales */}
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
+                      <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-purple-400 rounded-full animate-ping opacity-75 animation-delay-300"></div>
                     </button>
                   </div>
                 )}
@@ -597,7 +620,7 @@ De la même façon, votre corps est constitué de molécules, elles-mêmes faite
             </div>
           ) : (
             // Pages des échelles
-            <div className={`w-full bg-gradient-to-br ${currentSectionData.bgGradient} flex items-start justify-center p-2 sm:p-4`}>
+            <div className={`w-full bg-gradient-to-br ${currentSectionData.bgGradient} flex items-start justify-center p-4 sm:p-6 relative z-20`}>
               <div className="max-w-6xl mx-auto w-full">
                 
                 {/* En-tête de section */}
@@ -806,16 +829,16 @@ De la même façon, votre corps est constitué de molécules, elles-mêmes faite
 
         {/* Indicateurs de navigation */}
         {currentSection !== -1 && (
-          <div className="fixed right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-50">
-          <div className="flex flex-col space-y-2">
+          <div className="fixed right-4 sm:right-6 top-1/2 transform -translate-y-1/2 z-50">
+          <div className="flex flex-col space-y-3">
             {sections.slice(1).map((section, index) => (
               <button
                 key={section.id}
                 onClick={() => setCurrentSection(index)} // index direct car on a supprimé l'intro avec slice(1)
-                className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
+                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-500 transform hover:scale-125 ${
                   index === currentSection
-                    ? `bg-gradient-to-r ${section.color} shadow-lg scale-125`
-                    : 'bg-white/30 hover:bg-white/50'
+                    ? `bg-gradient-to-r ${section.color} shadow-lg scale-125 glow-dot`
+                    : 'bg-white/40 hover:bg-white/60 hover:shadow-lg'
                 }`}
               />
             ))}
