@@ -485,7 +485,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Particules", desc: "Dieu manipule des milliards de milliards de fermions et bosons", color: "bg-red-900/40 border-red-400" },
+                    { level: "Particules", desc: "Dieu manipule des milliards de milliards de fermions et de bosons", color: "bg-red-900/40 border-red-400" },
                     { level: "Nucléons", desc: "Des milliards de milliards de protons et neutrons se combinent", color: "bg-yellow-900/40 border-yellow-400" },
                     { level: "Atomes", desc: "Des centaines de milliards d'atomes acquièrent de nouvelles propriétés", color: "bg-green-900/40 border-green-400" },
                     { level: "Molécules", desc: "Des dizaines de milliards de molécules interagissent différemment", color: "bg-blue-900/40 border-blue-400" },
@@ -506,7 +506,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { level: "0 et 1", desc: "Dieu manipule des milliards de milliards 0 et 1.", color: "bg-red-900/40 border-red-400" },
+                    { level: "0 et 1", desc: "Dieu manipule des milliards de milliards de 0 et de 1.", color: "bg-red-900/40 border-red-400" },
                     { level: "JavaScript", desc: "Le langage universel prend forme, définissant la logique et le comportement des éléments à un niveau plus abstrait.", color: "bg-yellow-900/40 border-yellow-400" },
                     { level: "Composants React", desc: "Les composants de la réalité s'assemblent, créant des structures et des fonctionnalités complexes.", color: "bg-green-900/40 border-green-400" },
                     { level: "HTML/CSS", desc: "Le code HTML/CSS est généré à partir des composants React, définissant la structure et l'apparence visuelle du téléphone.", color: "bg-blue-900/40 border-blue-400" },
