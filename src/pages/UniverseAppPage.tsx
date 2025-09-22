@@ -222,10 +222,10 @@ export const UniverseAppPage: React.FC = () => {
                   </div>
                   <div className="space-y-3 sm:space-y-4 text-xs sm:text-sm lg:text-base text-gray-200 leading-relaxed">
                     <p className="font-medium">
-                      <strong className="text-purple-200">Support matériel invisible qui rend possible l'application :</strong> c'est l'ordinateur ou le smartphone qui affiche le code pour créer l'interface utilisateur.
+                      <strong className="text-purple-200">Support matériel invisible qui rend possible l'application :</strong> c'est l'ordinateur ou le smartphone qui permet d'utiliser l'interface utilisateur de l'application.
                     </p>
                     <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">
-                      Sans ce support matériel, aucun code ne pourrait s'exécuter, aucune compilation ne pourrait avoir lieu, et aucune interface utilisateur ne pourrait être générée ou affichée.
+                      Sans ce support matériel, aucun code ne pourrait s'exécuter, aucune compilation ne pourrait avoir lieu, et aucune interface utilisateur ne pourrait exister.
                     </p>
                   </div>
                 </div>
