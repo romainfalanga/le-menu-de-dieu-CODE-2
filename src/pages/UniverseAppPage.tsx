@@ -346,7 +346,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                     {
                       level: "JavaScript",
                       desc: "Logique du fonctionnement de chaque composant codé en Java script",
-                      connection: "→ Java Script n'est qu'une orchestration de 0 et de 1, rendue lisible par des programmes",
+                      connection: "→ Java Script est fait de 0 et de 1, rendue lisible par des programmes",
                       color: "bg-yellow-900/40 border-yellow-400"
                     },
                     {
