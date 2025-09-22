@@ -467,7 +467,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                     {/* Cascade Universelle (Physique) - Suite */}
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        Cascade Universelle (Physique) - Suite
+                        Cascade Universelle (Suite)
                       </h3>
                       {[
                         {
@@ -510,7 +510,7 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                     {/* Cascade Informatique (Logicielle) - Suite */}
                     <div className="space-y-3">
                       <h3 className="text-base sm:text-lg font-bold text-emerald-200 mb-3 sm:mb-4">
-                        Cascade Informatique (Logicielle) - Suite
+                        Cascade Informatique (Suite)
                       </h3>
                       {[
                         {
