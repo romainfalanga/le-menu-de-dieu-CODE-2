@@ -521,13 +521,13 @@ De même, le JavaScript qui compose un composant React n'existe pas à l'avance 
                         },
                         {
                           level: "JavaScript",
-                          desc: "Langage en superposition de code : fonctions, variables, logique",
+                          desc: "Logique du fonctionnement de chaque composant",
                           connection: "→ Exécution assurée par des moteurs qui sont eux-mêmes des programmes compilés en 0 et 1",
                           color: "bg-yellow-900/40 border-yellow-400"
                         },
                         {
                           level: "0 et 1 (Binaire)",
-                          desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1.",
+                          desc: "Les informations élémentaires de la réalité compilés en 0 et 1.",
                           connection: "→ C'est la brique ultime du code ",
                           color: "bg-orange-900/40 border-orange-400"
                         }
