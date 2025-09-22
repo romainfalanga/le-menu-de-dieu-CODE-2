@@ -457,13 +457,19 @@ export const GodCodesInBinaryPage: React.FC = () => {
             {/* Nouveau paragraphe d'introduction */}
             <div className="bg-gradient-to-r from-cyan-900/40 to-blue-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-cyan-400 mb-4 sm:mb-6">
               <p className="text-sm sm:text-base lg:text-lg text-cyan-100 leading-relaxed font-medium">
-                <strong className="text-cyan-300">Rappel de l'analogie :</strong> Dans "L'univers est une application", nous avons vu que chaque composant de notre interface utilisateur (le monde macroscopique) est fait d'une cascade descendante vers toutes les couches inférieures, jusqu'aux bits binaires (0 et 1) à l'échelle des particules fondamentales. Chaque couche supérieure est la manifestation compilée des couches inférieures, et descendre d'échelle revient littéralement regarder sous le capot de l'échelle supérieur. Cette interface tourne en continu. Modifier l'ensemble des 0 et 1 d'un composant depuis l'échelle des particules fondamentales, engendrerait les compilations couche par couche instantanément des échelles supérieur, ce qui pourrait modifier intégralement un composant de l'univers. Il serait même possible de créer des composants en codant en binaire à depuis l'échelle des particules fondamentales.
+                <strong className="text-cyan-300">Rappel de l'analogie :</strong> Dans « L'univers est une application », nous avons vu que chaque composant de notre interface utilisateur (le monde macroscopique) est fait d'une cascade descendante vers toutes les couches inférieures, jusqu'aux bits binaires (0 et 1) à l'échelle des particules fondamentales. Chaque couche supérieure est la manifestation compilée des couches inférieures, et descendre d'échelle revient littéralement à regarder sous le capot de l'échelle supérieure.
               </p>
             </div>
 
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
               <p>
-                Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Une modification locale d'un seul bit n'engendrerait qu'un changement microscopique dans la réalité. Cependant, pour des changements visibles à notre échelle, une quantité astronomique de bits devrait être modifiée de manière parfaitement coordonnée. Une entité capable de manipuler directement ces bits (particules fondamentales) pourrait orchestrer des "miracles" en réécrivant la réalité depuis ses fondations les plus profondes, comme le représente la simulation de codage binaire ci-dessus, mais à une échelle infiniment plus vaste.
+                En prenant en compte la mécanique quantique dans ce schéma, les composants React, le JavaScript et même les 0 et 1 n'existent pas de manière déterminée tant qu'on ne les observe pas. Ils existent sous forme de probabilités, et l'acte d'observer les contraint à « choisir » une seule manière d'être.
+              </p>
+              <p>
+                Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Modifier l'ensemble des 0 et 1 d'un composant depuis cette échelle engendrerait les compilations couche par couche des échelles supérieures, jusqu'à modifier intégralement un composant de l'univers.
+              </p>
+              <p>
+                Mais il y a une possibilité encore plus vertigineuse : une entité capable de manipuler directement ces bits (particules fondamentales) pourrait, le temps d'une fraction de seconde, figer les probabilités de chaque échelle. Chaque composant existerait alors pleinement, avant de redevenir incertain l'instant suivant. L'interface utilisateur, elle, resterait stable, mais sous le capot, les échelles de la mécanique quantique retourneraient à leur état de probabilités. Une telle puissance permettrait non seulement de modifier des composants, mais aussi d'en créer, comme le représente la simulation de codage binaire ci-dessus, mais à une échelle infiniment plus vaste.
               </p>
             </div>
           </div>
