@@ -577,18 +577,18 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                   </div>
                       const pairedCascadeItems = [
                         {
-                          physical: { 
-                            level: "Échelle atomique", 
-                            scale: "10⁻¹⁰ m", 
-                            desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer", 
-                            connection: "→ Formés par l'assemblage de protons, neutrons et électrons",
-                            color: "bg-green-900/40 border-green-400" 
+                          physical: {
+                            level: "Échelle atomique",
+                            scale: "10⁻¹⁰ m",
+                            desc: "Briques de la matière en superposition quantique : hydrogène, carbone, fer",
+                            color: "bg-green-900/40 border-green-400"
                           },
-                          software: { 
-                            level: "Composants React", 
-                            desc: "Composants réutilisables : boutons, formulaires", 
-                            connection: "→ Logique et structure définies par le code JavaScript",
-                            color: "bg-green-900/40 border-green-400" 
+                          software: {
+                            level: "Composants React",
+                            scale: "Niveau composant",
+                            desc: "Éléments de l'interface utilisateur par le code JavaScript",
+                            color: "bg-green-900/40 border-green-400"
+                          }
                           }
                         },
                         {
