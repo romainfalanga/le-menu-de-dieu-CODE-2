@@ -527,8 +527,8 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                           },
                           { 
                             level: "0 et 1 (Binaire)", 
-                            desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1.", 
-                            connection: "→ C'est la brique ultime du code.",
+                            desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1. C'est la brique ultime du code.", 
+                            connection: null,
                             color: "bg-orange-900/40 border-orange-400" 
                           }
                         ].map((item, index) => (
