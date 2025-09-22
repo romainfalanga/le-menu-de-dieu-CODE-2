@@ -458,8 +458,3 @@ De la même façon, votre corps est constitué de molécules, elles-mêmes faite
             </div>
           </div>
         </div>
-
-      </div>
-    </div>
-  );
-};
