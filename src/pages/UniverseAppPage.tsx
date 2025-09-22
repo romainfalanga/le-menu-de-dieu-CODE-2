@@ -185,7 +185,7 @@ export const UniverseAppPage: React.FC = () => {
               <div className="flex items-center mb-4 sm:mb-6">
                 <Layers className="w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 text-gray-400 animate-pulse" />
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-300">
-                  Le cadre de la cascade des echelles
+                  Le cadre de la cascade
                 </h2>
               </div>
               
