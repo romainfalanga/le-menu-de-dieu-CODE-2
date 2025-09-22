@@ -426,19 +426,6 @@ export const GodCodesInBinaryPage: React.FC = () => {
       
       {/* Effet de grille divine */}
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,215,0,0.1)_1px,transparent_1px),linear-gradient(rgba(255,215,0,0.1)_1px,transparent_1px)] bg-[size:30px_30px] opacity-30"></div>
-      
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 relative z-10">
-        {/* Bouton retour */}
-        <div className="mb-4 sm:mb-6 flex justify-center sm:justify-start">
-          <Link
-            to="/universe"
-            state={{ targetSection: 5 }}
-            className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour à l'échelle de Planck
-          </Link>
-        </div>
 
         {/* En-tête */}
         <header className="text-center mb-6 sm:mb-8 lg:mb-12">
