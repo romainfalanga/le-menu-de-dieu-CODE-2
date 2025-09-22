@@ -463,7 +463,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
 
             <div className="space-y-4 sm:space-y-6 text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
               <p>
-                Si l'univers est une application, son code source binaire se trouve à l'échelle de Planck, où chaque quantum d'espace-temps agit comme un bit d'information (0 ou 1). Une modification locale d'un seul bit n'engendrerait qu'un changement microscopique dans la réalité. Cependant, pour des changements macroscopiques visibles, une quantité astronomique de bits devrait être modifiée de manière parfaitement coordonnée. Une entité capable de manipuler directement ces "bits de réalité" pourrait orchestrer des "miracles" en réécrivant la réalité depuis ses fondations les plus profondes, comme le représente la simulation de codage binaire ci-dessus, mais à une échelle infiniment plus vaste.
+                Si l'univers est une application, son code source binaire se trouve à l'échelle des particules fondamentales. Une modification locale d'un seul bit n'engendrerait qu'un changement microscopique dans la réalité. Cependant, pour des changements visibles à notre échelle, une quantité astronomique de bits devrait être modifiée de manière parfaitement coordonnée. Une entité capable de manipuler directement ces bits (particules fondamentales) pourrait orchestrer des "miracles" en réécrivant la réalité depuis ses fondations les plus profondes, comme le représente la simulation de codage binaire ci-dessus, mais à une échelle infiniment plus vaste.
               </p>
             </div>
           </div>
