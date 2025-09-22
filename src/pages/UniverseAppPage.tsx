@@ -520,22 +520,16 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                             color: "bg-green-900/40 border-green-400" 
                           },
                           { 
-                            level: "Java Script", 
+                            level: "JavaScript", 
                             desc: "Langage en superposition de code : fonctions, variables, logique", 
-                            connection: "→ Exécution assurée par les moteurs écrits en C/C++",
+                            connection: "→ Exécution assurée par des moteurs qui sont eux-mêmes des programmes compilés en 0 et 1",
                             color: "bg-yellow-900/40 border-yellow-400" 
                           },
                           { 
-                            level: "C/C++", 
-                            desc: "Fondations système révélées par inspection : moteurs d'exécution", 
-                            connection: "→ Compilation vers des instructions processeur spécifiques",
-                            color: "bg-orange-900/40 border-orange-400" 
-                          },
-                          { 
-                            level: "Binaire", 
-                            desc: "Mer de 0 et 1 - pure information quantique : base de toute réalité", 
+                            level: "0 et 1 (Binaire)", 
+                            desc: "Les informations élémentaires de la réalité. Le code JavaScript est exécuté par des moteurs écrits en C/C++, qui sont ensuite compilés en 0 et 1. C'est la brique ultime du code.", 
                             connection: null,
-                            color: "bg-red-900/40 border-red-400" 
+                            color: "bg-orange-900/40 border-orange-400" 
                           }
                         ].map((item, index) => (
                           <div key={index} className={`p-2 sm:p-3 rounded-lg border-l-4 ${item.color} min-h-[60px] sm:min-h-[70px] flex flex-col justify-center`}>
@@ -556,7 +550,7 @@ De même, le JavaScript qui compose un composant React n’existe pas à l’ava
                     <p className="text-xs sm:text-sm lg:text-base text-cyan-100 leading-relaxed font-medium">
                       <strong className="text-cyan-300">Chaque couche encapsule la précédente :</strong> L’interface utilisateur que vous voyez est générée par du HTML et du CSS, eux-mêmes issus des composants React, écrits en JavaScript, exécutés par du C/C++, traduits en instructions processeur et finalement convertis en 0 et 1.
 
-De la même façon, votre corps est constitué de molécules, elles-mêmes faites d’atomes, formés de nucléons, composés de particules fondamentales, qui reposent à leur tour sur l’échelle de Planck. <strong className="text-purple-300">Mais à partir de l'échelle atomique, tout existe en superposition quantique jusqu'à ce qu'on "regarde sous le capot".</strong>
+De la même façon, votre corps est constitué de molécules, elles-mêmes faites d'atomes, formés de nucléons, composés de particules fondamentales. <strong className="text-purple-300">Mais à partir de l'échelle atomique, tout existe en superposition quantique jusqu'à ce qu'on "regarde sous le capot".</strong>
                     </p>
                   </div>
                 </div>
