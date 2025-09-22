@@ -498,8 +498,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Planck", desc: "Dieu modifie des trillions de trillions de bits quantiques", color: "bg-red-900/40 border-red-400" },
-                    { level: "Particules", desc: "Des milliards de milliards de fermions et bosons s'organisent", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "Particules", desc: "Des milliards de milliards de fermions et bosons s'organisent", color: "bg-red-900/40 border-red-400" },
                     { level: "Nucléons", desc: "Des milliards de milliards de protons et neutrons se combinent", color: "bg-yellow-900/40 border-yellow-400" },
                     { level: "Atomes", desc: "Des centaines de milliards d'atomes acquièrent de nouvelles propriétés", color: "bg-green-900/40 border-green-400" },
                     { level: "Molécules", desc: "Des dizaines de milliards de molécules interagissent différemment", color: "bg-blue-900/40 border-blue-400" },
@@ -520,8 +519,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { level: "Binaire", desc: "Dieu manipule les 0 et 1, le code source fondamental qui définit chaque instruction et chaque bit de matière.", color: "bg-red-900/40 border-red-400" },
-                    { level: "C/C++", desc: "Les modifications binaires se manifestent en opérations de bas niveau, orchestrant les fondations du système.", color: "bg-orange-900/40 border-orange-400" },
+                    { level: "C/C++ et Binaire", desc: "Dieu manipule directement les langages systèmes et les 0 et 1, le code source fondamental qui orchestre les fondations du système.", color: "bg-red-900/40 border-red-400" },
                     { level: "JavaScript", desc: "Le langage universel prend forme, définissant la logique et le comportement des éléments à un niveau plus abstrait.", color: "bg-yellow-900/40 border-yellow-400" },
                     { level: "Composants React", desc: "Les composants de la réalité s'assemblent, créant des structures et des fonctionnalités complexes.", color: "bg-green-900/40 border-green-400" },
                     { level: "HTML/CSS", desc: "Le code HTML/CSS est généré à partir des composants React, définissant la structure et l'apparence visuelle du téléphone.", color: "bg-blue-900/40 border-blue-400" },
