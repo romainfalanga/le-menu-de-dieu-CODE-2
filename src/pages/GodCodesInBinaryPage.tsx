@@ -464,7 +464,7 @@ export const GodCodesInBinaryPage: React.FC = () => {
               <div className="bg-gradient-to-r from-indigo-900/40 to-purple-900/30 backdrop-blur-sm rounded-lg p-4 sm:p-6 border-l-4 border-indigo-400 shadow-xl">
                 <p className="text-sm sm:text-base lg:text-lg text-gray-200 leading-relaxed">
                   <strong className="text-indigo-300">Mécanique Quantique : </strong> 
-                  En prenant en compte la mécanique quantique dans ce schéma, les composants React, le JavaScript et même les 0 et 1 n'existent pas de manière déterminée tant qu'on ne les observe pas. Ils existent sous forme de probabilités, et l'acte d'observer les contraint à « choisir » une seule manière d'être.
+                  En prenant en compte la mécanique quantique dans ce schéma, les composants React, le JavaScript et même les 0 et 1 n'existent pas de manière déterminée tant qu'on ne les observe pas. Ils existent sous forme de probabilités, et les d'observer les contraint à « choisir » une seule manière d'être.
                 </p>
               </div>
               
